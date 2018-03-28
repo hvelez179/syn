@@ -1,0 +1,64 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.ReportEmptyViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteDialogBackground"
+        android:fitsSystemWindows="true"
+        tools:context="com.teva.respiratoryapp.activity.view.Alert">
+
+        <include layout="@layout/dashboard_toolbar"
+            android:id="@+id/dashboard_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/colorDivider"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/text_appearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/user_report_nodata_horizontal_margin"
+            android:layout_marginStart="@dimen/user_report_nodata_horizontal_margin"
+            android:layout_marginTop="@dimen/user_report_nodata_text_top_margin"
+            android:text="@string/userReportNoData_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar"/>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/primaryButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/user_report_nodata_button_bottom_margin"
+            android:onClick="@{() -> viewmodel.onButton()}"
+            android:text="@string/tracker_add_inhaler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

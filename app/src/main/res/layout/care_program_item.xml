@@ -1,0 +1,47 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.programs.CareProgramItemViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/care_program_item_height"
+        android:foregroundGravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/care_program_item_name_style"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/care_program_item_name_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:text="@{viewmodel.programName}"
+            tools:text="Austin Respirator Program"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_appearance_hyperlink"
+            android:layout_marginBottom="@dimen/care_program_item_leave_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            app:hyperlink="@{@string/leave_program_hyperlink}"
+            app:linkClicked="@{(id) -> viewmodel.onLeaveProgram()}"
+            tools:text="Leave Program"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

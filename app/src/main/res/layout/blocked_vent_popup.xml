@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.NotificationPopupViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <View
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/popup_header_height"
+            android:background="@color/alertRed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/blocked_vent_icon_width"
+            android:layout_height="@dimen/blocked_vent_icon_width"
+            android:layout_marginStart="@dimen/blocked_vent_margin_start"
+            android:layout_marginTop="@dimen/blocked_vent_margin_top"
+            android:src="@drawable/blocked_vent_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/PopupHeaderText"
+            android:text="@string/inhalation_error_feedback_text"
+            android:layout_marginTop="@dimen/blocked_vent_title_top_margin"
+            android:layout_marginStart="@dimen/popup_horizontal_margin"
+            android:layout_marginEnd="@dimen/popup_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/PopupText"
+            android:text="@string/inhalationsFeedbackHighInhalation_part1_text"
+            android:layout_marginTop="@dimen/blocked_vent_body_top_margin"
+            android:layout_marginStart="@dimen/popup_horizontal_margin"
+            android:layout_marginEnd="@dimen/popup_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/PopupText"
+            android:text="@string/inhalationsFeedbackHighInhalation_part2_text"
+            android:layout_marginTop="@dimen/blocked_vent_body_top_margin"
+            android:layout_marginStart="@dimen/popup_horizontal_margin"
+            android:layout_marginEnd="@dimen/popup_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

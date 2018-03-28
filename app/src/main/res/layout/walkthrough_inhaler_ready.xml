@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- walkthrough_always_available.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:id="@+id/walkthrough_inhaler_ready_image"
+        android:layout_width="@dimen/walkthrough_inhaler_ready_image_width"
+        android:layout_height="@dimen/walkthrough_inhaler_ready_image_width"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginTop="@dimen/walkthrough_inhaler_ready_image_top_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_walkthrough_check"/>
+    <TextView
+        android:id="@+id/walkthrough_inhaler_ready_message1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginEnd="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginTop="@dimen/walkthrough_inhaler_ready_message1_top_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkthrough_inhaler_ready_image"
+        android:text="@string/walkthroughReadyForUse_text"
+        style="@style/text_appearance"/>
+</android.support.constraint.ConstraintLayout>

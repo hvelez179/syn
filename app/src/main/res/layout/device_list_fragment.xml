@@ -1,0 +1,129 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.DeviceListViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/dashboard_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="0dp" />
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/device_list_separator_width"
+                android:layout_marginTop="@dimen/device_list_list_margin_top"
+                android:background="@color/colorDivider" />
+
+            <include
+                android:id="@+id/message_shade"
+                layout="@layout/message_shade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="-4dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/device_list_bottom_padding"
+                    >
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/item_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadeScrollbars="true"
+                        android:scrollbars="vertical"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        tools:listitem="@layout/device_item"
+                        android:visibility="@{!viewmodel.noActiveDevices}"/>
+
+                        <View android:id="@+id/topShadow"
+                              android:layout_width="0dp"
+                              android:layout_height="@dimen/list_header_shadow_height"
+                              android:background="@drawable/list_header_shadow"
+                              app:layout_constraintTop_toTopOf="@+id/item_list"
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        style="@style/devicelist_supported_inhalers_text"
+                        android:layout_width="@dimen/devicelist_supported_inhalers_message_width"
+                        android:layout_height="@dimen/devicelist_supported_inhalers_message_height"
+                        android:layout_marginStart="@dimen/devicelist_supported_inhalers_message_start_margin"
+                        android:layout_marginTop="@dimen/devicelist_supported_inhalers_message_top_margin"
+                        android:text="@{viewmodel.devicesSupportedLabel}"
+                        android:visibility="@{viewmodel.deviceLimitReached }"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/item_list" />
+                        <ImageView
+                            android:id="@+id/grey_inhaler"
+                            android:layout_width="@dimen/devicelist_no_devices_image_width"
+                            android:layout_height="@dimen/devicelist_no_devices_image_height"
+                            android:src="@drawable/ic_inhalation_large_grey"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="@dimen/devicelist_no_devices_image_start_margin"
+                            android:layout_marginTop="@dimen/devicelist_no_devices_image_top_margin"
+                            android:visibility="@{viewmodel.noActiveDevices}"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/grey_inhaler"
+                            android:layout_marginStart="@dimen/devicelist_no_devices_text_start_margin"
+                            android:layout_marginTop="@dimen/devicelist_no_devices_text_top_margin"
+                            android:paddingBottom="@dimen/devicelist_no_devices_text_bottom_margin"
+                            android:visibility="@{viewmodel.noActiveDevices}"
+                            android:text="@string/emptyInhalerList_text"/>
+                    </android.support.constraint.ConstraintLayout>
+
+
+
+                </android.support.constraint.ConstraintLayout>
+            </ScrollView>
+            <com.teva.respiratoryapp.activity.controls.CtaButton
+                android:layout_width="@dimen/devicelist_add_inhaler_button_width"
+                android:layout_height="@dimen/devicelist_add_inhaler_button_height"
+                android:layout_marginBottom="@dimen/devicelist_add_inhaler_button_bottom_margin"
+                android:layout_marginStart="@dimen/devicelist_add_inhaler_button_start_margin"
+                android:onClick="@{() -> viewmodel.addInhaler()}"
+                android:text="@string/tracker_add_inhaler"
+                android:visibility="@{!viewmodel.deviceLimitReached }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,62 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.ContactSupportViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGradientStart"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextAppearance="@style/ToolBarTitleTextStyle"
+                android:background="@color/backgroundGradientStart"
+                android:theme="@style/ToolBarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:layout_width="@dimen/customer_support_description_width"
+            android:layout_height="@dimen/customer_support_description_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            android:text="@{viewmodel.description}"
+            style="@style/customer_support_description_text"
+            android:layout_marginStart="@dimen/customer_support_description_start_margin"
+            android:layout_marginTop="@dimen/customer_support_description_top_margin"/>
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:layout_width="@dimen/customer_support_button_width"
+            android:layout_height="@dimen/customer_support_button_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/contact_teva_support"
+            android:layout_marginStart="@dimen/customer_support_button_start_margin"
+            android:layout_marginBottom="@dimen/customer_support_button_bottom_margin"
+            android:onClick="@{() -> viewmodel.onContactSupportClicked()}"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

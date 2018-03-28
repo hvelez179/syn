@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="device_info_medication_text_size">22dp</dimen>
+    <dimen name="device_info_status_text_size">14dp</dimen>
+    <dimen name="device_info_nickname_text_size">16dp</dimen>
+    <dimen name="device_info_edit_width">24dp</dimen>
+    <dimen name="device_info_edit_height">24dp</dimen>
+    <dimen name="device_info_edit_touch_width">40dp</dimen>
+    <dimen name="device_info_edit_touch_height">40dp</dimen>
+    <dimen name="device_info_image_height">150dp</dimen>
+    <dimen name="device_info_image_width">150dp</dimen>
+    <dimen name="device_info_image_top_margin">16dp</dimen>
+    <dimen name="device_info_image_start_margin">24dp</dimen>
+    <dimen name="device_info_inhaler_type_top_margin">24dp</dimen>
+    <dimen name="device_info_inhaler_type_start_margin">24dp</dimen>
+    <dimen name="device_info_inhaler_type_text_top_margin">2dp</dimen>
+    <dimen name="device_info_inhaler_type_text_start_margin">24dp</dimen>
+    <dimen name="device_info_status_top_margin">16dp</dimen>
+    <dimen name="device_info_status_start_margin">24dp</dimen>
+    <dimen name="device_info_status_text_top_margin">2dp</dimen>
+    <dimen name="device_info_status_text_start_margin">24dp</dimen>
+    <dimen name="device_info_name_label_top_margin">16dp</dimen>
+    <dimen name="device_info_name_label_start_margin">24dp</dimen>
+    <dimen name="device_info_name_top_margin">2dp</dimen>
+    <dimen name="device_info_name_start_margin">24dp</dimen>
+    <dimen name="device_info_edit_top_margin">4dp</dimen>
+    <dimen name="device_info_edit_start_margin">15dp</dimen>
+    <dimen name="device_info_remove_link_bottom_margin">20dp</dimen>
+    <dimen name="device_info_remove_link_end_margin">99dp</dimen>
+    <dimen name="device_info_remove_link_text_size">18dp</dimen>
+
+    <style name="DeviceInfoLabelStyle" parent="text_appearance_small">
+    </style>
+
+    <style name="DeviceInfoTextStyle" parent="text_appearance_demi_large">
+    </style>
+
+    <style name="DeviceInfoMenuStyle" parent="text_appearance_hyperlink">
+        <item name="android:textColor">#003766</item>
+    </style>
+
+    <style name="DeviceInfoStatusTextStyle">
+        <item name="android:textSize">@dimen/device_info_status_text_size</item>
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="DeviceInfoNicknameTextStyle">
+        <item name="android:textSize">@dimen/device_info_nickname_text_size</item>
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="DeviceInfoNicknameLabelStyle">
+        <item name="android:textSize">@dimen/device_info_nickname_text_size</item>
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#6e6d73</item>
+    </style>
+
+    <style name="DeviceInfoRemoveLinkStyle">
+        <item name="android:textSize">@dimen/device_info_remove_link_text_size</item>
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">#007aff</item>
+    </style>
+
+</resources>

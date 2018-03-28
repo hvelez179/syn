@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="emancipated_message_title_top_margin">130dp</dimen>
+    <dimen name="emancipated_message_title_start_margin">16dp</dimen>
+    <dimen name="emancipated_message_title_width">328dp</dimen>
+    <dimen name="emancipated_message_content_top_margin">24dp</dimen>
+    <dimen name="emancipated_message_content_start_margin">16dp</dimen>
+    <dimen name="emancipated_message_content_width">328dp</dimen>
+    <dimen name="emancipated_message_support_link_bottom_margin">32dp</dimen>
+    <dimen name="emancipated_message_support_link_start_margin">77dp</dimen>
+
+    <style name="EmancipatedTitleStyle" parent="text_appearance_large">
+    </style>
+
+    <style name="EmancipatedMessageStyle" parent="text_appearance_small">
+        <item name="android:textColor">@color/colorBoldText</item>
+    </style>
+
+    <style name="EmancipatedSupportLinkStyle" parent="text_appearance_hyperlink">
+        <item name="android:textColor">@color/colorBoldText</item>
+    </style>
+</resources>

@@ -1,0 +1,92 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.CustomerSupportViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGradientStart"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/backgroundGradientStart"
+                android:theme="@style/ToolBarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/customer_support_done_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/customer_support_done_start_margin"
+                        android:layout_marginTop="@dimen/customer_support_done_top_margin"
+                        android:text="Done"
+                        android:onClick="@{() -> viewmodel.onDone()}"/>
+                    <ImageView
+                        android:id="@+id/refresh"
+                        android:layout_width="@dimen/customer_support_refresh_icon_width"
+                        android:layout_height="@dimen/customer_support_refresh_icon_height"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/customer_support_refresh_end_margin"
+                        android:layout_marginTop="@dimen/customer_support_refresh_top_margin"
+                        android:src="@drawable/ic_webpage_refresh"
+                        android:onClick="@{() -> viewmodel.onRefreshWebPage()}"/>
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@+id/done"
+                        app:layout_constraintEnd_toStartOf="@+id/refresh"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_horizontal"
+                        style="@style/customer_support_title_text"
+                        android:text="proairdigihaler.com"/>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <WebView android:id="@+id/webView"
+            android:layout_width="@dimen/customer_support_webview_width"
+            android:layout_height="@dimen/customer_support_webview_height"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar"
+            android:layout_marginStart="@dimen/customer_support_webview_start_margin"
+            android:layout_marginTop="@dimen/customer_support_webview_top_margin"
+            android:layout_marginEnd="@dimen/customer_support_webview_end_margin"
+            android:layout_marginBottom="@dimen/customer_support_webview_bottom_margin"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

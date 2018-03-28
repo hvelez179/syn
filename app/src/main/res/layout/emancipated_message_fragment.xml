@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.EmancipatedMessageViewModel"/>
+    </data>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:clickable="true"
+            android:background="@drawable/background">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="@dimen/emancipated_message_title_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@{viewmodel.title}"
+                android:layout_marginStart="@dimen/emancipated_message_title_start_margin"
+                android:layout_marginTop="@dimen/emancipated_message_title_top_margin"
+                style="@style/EmancipatedTitleStyle"/>
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="@dimen/emancipated_message_content_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:text="@{viewmodel.content}"
+                android:layout_marginStart="@dimen/emancipated_message_content_start_margin"
+                android:layout_marginTop="@dimen/emancipated_message_content_top_margin"
+                style="@style/EmancipatedMessageStyle"/>
+            <TextView
+                android:id="@+id/support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/contact_teva_support"
+                android:layout_marginStart="@dimen/emancipated_message_support_link_start_margin"
+                android:layout_marginBottom="@dimen/emancipated_message_support_link_bottom_margin"
+                android:onClick="@{() -> viewmodel.onSupportClicked()}"
+                app:underlined="@{true}"
+                style="@style/EmancipatedSupportLinkStyle"/>
+        </android.support.constraint.ConstraintLayout>
+</layout>

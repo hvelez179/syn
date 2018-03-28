@@ -1,0 +1,142 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.programs.CareProgramConsentViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteDialogBackground"
+        android:fitsSystemWindows="true"
+        tools:context="com.teva.respiratoryapp.activity.view.Alert">
+
+        <ImageButton
+            style="@style/borderless_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/alert_close_button_margin"
+            android:onClick="@{() -> viewmodel.onClose()}"
+            android:src="@drawable/ic_nav_close_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/careProgramName"
+            style="@style/text_appearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alert_content_margin"
+            android:layout_marginStart="@dimen/alert_content_margin"
+            android:layout_marginTop="@dimen/care_program_consent_name_top_margin"
+            android:text="@{viewmodel.programName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Seattle Asthma Managment" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_appearance_xlarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alert_content_margin"
+            android:layout_marginStart="@dimen/alert_content_margin"
+            android:text="@string/consent_to_share_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/careProgramName" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/cta_button_scroll_top_margin"
+            android:fadeScrollbars="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintBottom_toTopOf="@id/primaryButton">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/alert_content_margin"
+                android:layout_marginStart="@dimen/alert_content_margin"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/appsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/care_program_consent_apps_top_margin"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:orientation="vertical"/>
+                <TextView
+                    android:id="@+id/appsLabel"
+                    style="@style/text_appearance_xsmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:text="@string/apps_you_are_using" />
+                <LinearLayout
+                    android:id="@+id/otherAppsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/care_program_consent_other_apps_top_margin"
+                    android:orientation="vertical"
+                    tools:visibility="visible"/>
+                <TextView
+                    android:id="@+id/otherAppsLabel"
+                    style="@style/text_appearance_xsmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:text="@string/other_apps_you_can_use" />
+                <TextView
+                    style="@style/text_appearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/care_program_consent_message_top_margin"
+                    android:text="@{viewmodel.message}"
+                    tools:text="Nullam vitae luctus magna. Morbi sodales volutpat orci, ut dictum ligula vestibulum sit amet. Phasellus sagittis tempor nulla, et lacinia dolor ultrices ut. Donec vel porta urna, at congue lectus. Sed eu gravida risus. Aliquam ut vestibulum nisi, sed finibus felis. Curabitur ultrices quam non nulla ultrices volutpat."/>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/primaryButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/care_program_consent_cta_bottom_margin"
+            android:onClick="@{() -> viewmodel.onConsent()}"
+            android:text="@string/i_consent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="OK"/>
+
+        <TextView
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alert_secondary_top_margin"
+            app:hyperlink="@{@string/decline}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryButton"
+            app:linkClicked="@{() -> viewmodel.onDecline()}"
+            tools:text="Decline"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="care_program_add_bottom_margin">36dp</dimen>
+    <dimen name="care_program_empty_list_message_top_margin">70dp</dimen>
+
+    <dimen name="care_program_item_height">140dp</dimen>
+    <dimen name="care_program_item_name_margin">32dp</dimen>
+    <dimen name="care_program_item_leave_margin">31dp</dimen>
+
+    <dimen name="care_program_add_warning_top_margin">12dp</dimen>
+
+    <dimen name="care_program_add_clipboard_label_top_gone_margin">30dp</dimen>
+    <dimen name="care_program_add_clipboard_label_top_margin">5dp</dimen>
+
+    <dimen name="care_program_add_clipboard_text_top_margin">3dp</dimen>
+
+    <dimen name="care_program_consent_apps_top_margin">11dp</dimen>
+    <dimen name="care_program_consent_other_apps_top_margin">24dp</dimen>
+    <dimen name="care_program_consent_message_top_margin">30dp</dimen>
+    <dimen name="care_program_consent_cta_bottom_margin">51dp</dimen>
+
+    <dimen name="care_program_consent_name_top_margin">56dp</dimen>
+
+    <style name="care_program_item_name_style" parent="text_appearance_medium">
+        <item name="android:textSize">20dp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+</resources>

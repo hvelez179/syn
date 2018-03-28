@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- manual_registration_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <!-- ID Number -->
+    <dimen name="manual_id_number_instruction_top_margin">10dp</dimen>
+    <dimen name="manual_id_number_image_top_margin">8dp</dimen>
+    <dimen name="manual_id_number_image_width">108dp</dimen>
+    <dimen name="manual_id_number_image_height">108dp</dimen>
+
+    <dimen name="manual_id_number_instruction_text_size">16dp</dimen>
+    <dimen name="manual_id_number_instruction_line_spacing">1dp</dimen>
+
+    <dimen name="manual_id_number_edit_top_margin">12dp</dimen>
+    <dimen name="manual_id_number_edit_start_margin">50dp</dimen>
+    <dimen name="manual_id_number_edit_end_margin">50dp</dimen>
+    <dimen name="manual_id_number_edit_text_size">18dp</dimen>
+
+    <dimen name="manual_id_number_error_text_size">16dp</dimen>
+    <dimen name="manual_id_number_error_text_top_margin">7dp</dimen>
+
+    <color name="manual_id_number_edit_text_line_color">#b9bbbd</color>
+
+    <style name="ManualIDNumberInstructionTextStyle" parent="RegularText">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/manual_id_number_instruction_text_size</item>
+        <item name="android:textColor">#606060</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">@dimen/manual_id_number_instruction_line_spacing</item>
+    </style>
+
+    <style name="ManualIDNumberEditTextStyle" parent="RegularText">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/manual_id_number_edit_text_size</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <color name="manual_id_number_error_text_color">#ee6060</color>
+    <style name="ManualIDNumberErrorTextStyle" parent="RegularText">
+        <item name="android:fontFamily">Roboto-Light</item>
+        <item name="android:textSize">@dimen/manual_id_number_error_text_size</item>
+        <item name="android:textColor">@color/manual_id_number_error_text_color</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    
+    
+    <!-- Authentication code -->
+    <dimen name="manual_auth_code_instruction_top_margin">10dp</dimen>
+    <dimen name="manual_auth_code_image_top_margin">10dp</dimen>
+    <dimen name="manual_auth_code_image_width">108dp</dimen>
+    <dimen name="manual_auth_code_image_height">108dp</dimen>
+
+    <dimen name="manual_auth_code_instruction_text_size">16dp</dimen>
+    <dimen name="manual_auth_code_instruction_line_spacing">1dp</dimen>
+
+    <dimen name="manual_auth_code_edit_top_margin">0dp</dimen>
+    <dimen name="manual_auth_code_edit_start_margin">50dp</dimen>
+    <dimen name="manual_auth_code_edit_end_margin">50dp</dimen>
+    <dimen name="manual_auth_code_edit_text_size">18dp</dimen>
+
+    <dimen name="manual_auth_code_error_text_size">16dp</dimen>
+    <dimen name="manual_auth_code_error_text_top_margin">0dp</dimen>
+
+    <dimen name="manual_auth_code_information_text_size">16dp</dimen>
+    <dimen name="manual_auth_code_information_text_top_margin">0dp</dimen>
+
+    <color name="manual_auth_code_edit_text_line_color">#b9bbbd</color>
+
+    <style name="ManualAuthCodeInstructionTextStyle">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/manual_auth_code_instruction_text_size</item>
+        <item name="android:textColor">#606060</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="ManualAuthCodeEditTextStyle">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/manual_auth_code_edit_text_size</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <color name="manual_auth_code_error_text_color">#ee6060</color>
+    <style name="ManualAuthCodeErrorTextStyle">
+        <item name="android:fontFamily">Roboto-Light</item>
+        <item name="android:textSize">@dimen/manual_auth_code_error_text_size</item>
+        <item name="android:textColor">@color/manual_auth_code_error_text_color</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">-15dp</item>
+    </style>
+
+    <style name="ManualAuthCodeInformationTextStyle">
+        <item name="android:fontFamily">Roboto-Light</item>
+        <item name="android:textSize">@dimen/manual_auth_code_information_text_size</item>
+        <item name="android:textColor">#606060</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+</resources>

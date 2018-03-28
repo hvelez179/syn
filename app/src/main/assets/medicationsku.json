@@ -1,0 +1,4 @@
+[
+  {"productId": "", "drugUID": "745750", "initialDoseCount":200, "expirationPeriodInMonths":6},
+  {"productId": "AAA030", "drugUID": "745750", "initialDoseCount":30, "expirationPeriodInMonths":6}
+]

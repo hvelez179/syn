@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~  customer_support_styles.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<resources>
+    <dimen name="customer_support_refresh_icon_width">18dp</dimen>
+    <dimen name="customer_support_refresh_icon_height">18dp</dimen>
+    <dimen name="customer_support_done_start_margin">10dp</dimen>
+    <dimen name="customer_support_done_top_margin">3dp</dimen>
+    <dimen name="customer_support_refresh_end_margin">16dp</dimen>
+    <dimen name="customer_support_refresh_top_margin">4dp</dimen>
+    <dimen name="customer_support_webview_start_margin">16dp</dimen>
+    <dimen name="customer_support_webview_top_margin">16dp</dimen>
+    <dimen name="customer_support_webview_end_margin">16dp</dimen>
+    <dimen name="customer_support_webview_bottom_margin">16dp</dimen>
+    <dimen name="customer_support_webview_width">328dp</dimen>
+    <dimen name="customer_support_webview_height">480dp</dimen>
+    <dimen name="customer_support_description_width">328dp</dimen>
+    <dimen name="customer_support_description_height">75dp</dimen>
+    <dimen name="customer_support_description_top_margin">54dp</dimen>
+    <dimen name="customer_support_description_start_margin">16dp</dimen>
+    <dimen name="customer_support_button_width">328dp</dimen>
+    <dimen name="customer_support_button_height">40dp</dimen>
+    <dimen name="customer_support_button_bottom_margin">36dp</dimen>
+    <dimen name="customer_support_button_start_margin">16dp</dimen>
+
+    <style name="customer_support_done_text" parent="text_appearance_hyperlink">
+        <item name="android:textColor">#0d426e</item>
+    </style>
+    <style name="customer_support_title_text" parent="text_appearance">
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:textColor">#0d426e</item>
+    </style>
+    <style name="customer_support_description_text" parent="text_appearance">
+        <item name="android:textColor">#0d426e</item>
+    </style>
+</resources>

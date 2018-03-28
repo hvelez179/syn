@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.InhalerRegistrationPopupViewModel"/>
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_width="310dp"
+        tools:layout_height="200dp"
+        style="@style/InhalerRegistrationPopupTextStyle"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="@string/inhalerRegistered_text"/>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <set android:ordering="together">
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="translationZ"
+                android:valueTo="@dimen/cta_disabled_translationz"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="textColor"
+                android:valueFrom="@color/cta_white_text_color"
+                android:valueTo="@color/cta_white_text_color"
+                android:valueType="colorType" />
+        </set>
+    </item>
+
+    <item android:state_pressed="true">
+        <set android:ordering="together">
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="translationZ"
+                android:valueTo="@dimen/cta_pressed_translationz"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="textColor"
+                android:valueFrom="@color/cta_white_text_color"
+                android:valueTo="@color/cta_white_pressed_text_color"
+                android:valueType="colorType" />
+        </set>
+    </item>
+
+    <item>
+        <set android:ordering="together">
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="translationZ"
+                android:valueTo="0dp"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@integer/cta_anim_time"
+                android:propertyName="textColor"
+                android:valueFrom="@color/cta_white_pressed_text_color"
+                android:valueTo="@color/cta_white_text_color"
+                android:valueType="colorType" />
+        </set>
+    </item>
+</selector>

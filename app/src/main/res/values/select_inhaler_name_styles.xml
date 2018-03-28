@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="inhaler_name_instructions_margin">14dp</dimen>
+    <dimen name="inhaler_name_instructions_start_margin">24dp</dimen>
+    <dimen name="inhaler_name_list_top_margin">8dp</dimen>
+    <dimen name="inhaler_name_list_horizontal_margin">27dp</dimen>
+
+    <dimen name="inhaler_name_vertical_padding">7.2dp</dimen>
+    <dimen name="inhaler_name_icon_start_margin">15.9dp</dimen>
+    <dimen name="inhaler_name_icon_top_margin">20dp</dimen>
+    <dimen name="inhaler_name_start_margin">16.9dp</dimen>
+    <dimen name="inhaler_name_top_margin">25dp</dimen>
+    <dimen name="inhaler_name_item_width">312dp</dimen>
+    <dimen name="inhaler_name_item_height">72dp</dimen>
+    <dimen name="inhaler_name_item_start_margin">24dp</dimen>
+    <dimen name="inhaler_name_item_top_margin">8dp</dimen>
+    <dimen name="inhaler_name_item_bottom_margin">8dp</dimen>
+
+    <dimen name="checkmark_width">17dp</dimen>
+    <dimen name="checkmark_height">17dp</dimen>
+
+    <dimen name="inhaler_name_icon_width">32dp</dimen>
+    <dimen name="inhaler_name_icon_height">32dp</dimen>
+
+    <dimen name="inhaler_name_text_size">18dp</dimen>
+    <color name="inhaler_name_text_color">#626262</color>
+
+    <style name="InhalerNameTextStyle" parent="text_appearance">
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:textColor">@color/card_text_color</item>
+    </style>
+</resources>

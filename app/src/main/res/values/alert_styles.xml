@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="alert_content_margin">24dp</dimen>
+    <dimen name="alert_message_top_margin">17dp</dimen>
+    <dimen name="alert_primary_bottom_margin">68dp</dimen>
+    <dimen name="alert_secondary_top_margin">18dp</dimen>
+    <dimen name="alert_close_button_margin">17dp</dimen>
+    <dimen name="alert_image_top_margin">58dp</dimen>
+    <dimen name="alert_image_width">28dp</dimen>
+    <dimen name="alert_image_height">32dp</dimen>
+    <dimen name="alert_image_text_top_margin">6dp</dimen>
+    <dimen name="alert_image_text_start_margin">12dp</dimen>
+    <dimen name="alert_image_start_margin">16dp</dimen>
+</resources>

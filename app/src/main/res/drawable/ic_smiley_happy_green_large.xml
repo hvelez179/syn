@@ -1,0 +1,17 @@
+<!-- -->
+<!-- ic_smiley_happy_green_large.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright © 2018 Teva. All rights reserved -->
+<!-- -->
+
+<vector android:height="120dp" android:viewportHeight="48.0"
+    android:viewportWidth="48.0" android:width="120dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00AA8F" android:fillType="nonZero" android:pathData="M24,41.61c9.73,0 17.61,-7.88 17.61,-17.61 0,-9.73 -7.88,-17.61 -17.61,-17.61 -9.73,0 -17.61,7.88 -17.61,17.61 0,9.73 7.88,17.61 17.61,17.61zM24,43.52C13.22,43.52 4.48,34.78 4.48,24 4.48,13.22 13.22,4.48 24,4.48 34.78,4.48 43.52,13.22 43.52,24c0,10.78 -8.74,19.52 -19.52,19.52z"/>
+    <path android:fillColor="#00AA8F" android:fillType="evenOdd" android:pathData="M18.97,19.69m-1.44,0a1.44,1.44 0,1 1,2.88 0a1.44,1.44 0,1 1,-2.88 0"/>
+    <path android:fillColor="#00AA8F" android:fillType="evenOdd" android:pathData="M29.03,19.69m-1.44,0a1.44,1.44 0,1 1,2.88 0a1.44,1.44 0,1 1,-2.88 0"/>
+    <path android:fillAlpha="0.2" android:fillColor="#00AA8F"
+        android:fillType="evenOdd"
+        android:pathData="M41.54,26.52c-1.36,-9.75 -9.8,-17.26 -20.01,-17.26 -3.93,0 -7.6,1.11 -10.7,3.04a17.7,17.7 0,0 1,13.23 -5.9c9.76,0 17.68,7.85 17.68,17.53 0,0.88 -0.06,1.75 -0.19,2.59z" android:strokeAlpha="0.2"/>
+    <path android:fillColor="#00AA8F" android:fillType="nonZero" android:pathData="M18,28.7c0,3.48 2.91,6.3 6.5,6.3s6.5,-2.82 6.5,-6.3c0,-0.39 -0.32,-0.7 -0.72,-0.7a0.71,0.71 0,0 0,-0.72 0.7c0,2.71 -2.26,4.9 -5.06,4.9 -2.79,0 -5.06,-2.19 -5.06,-4.9 0,-0.39 -0.32,-0.7 -0.72,-0.7a0.71,0.71 0,0 0,-0.72 0.7z"/>
+</vector>

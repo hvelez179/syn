@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Scan Intro Fragment Styles -->
+    <dimen name="start_scanning_bottom_margin">20dp</dimen>
+
+    <dimen name="scan_intro_button_width">328dp</dimen>
+    <dimen name="scan_intro_button_height">40dp</dimen>
+    <dimen name="scan_intro_button_top_margin">20dp</dimen>
+    <dimen name="scan_intro_button_start_margin">16dp</dimen>
+
+    <dimen name="scan_intro_image1_width">150.4dp</dimen>
+    <dimen name="scan_intro_image1_height">120dp</dimen>
+    <dimen name="scan_intro_image1_top_margin">8dp</dimen>
+    <dimen name="scan_intro_image1_start_margin">112dp</dimen>
+
+    <dimen name="scan_intro_text1_top_margin">10dp</dimen>
+    <dimen name="scan_intro_text1_number_start_margin">14dp</dimen>
+    <dimen name="scan_intro_text1_start_margin">16dp</dimen>
+
+    <dimen name="scan_intro_image2_width">212dp</dimen>
+    <dimen name="scan_intro_image2_height">142dp</dimen>
+    <dimen name="scan_intro_image2_top_margin">21dp</dimen>
+    <dimen name="scan_intro_image2_start_margin">80dp</dimen>
+
+    <dimen name="scan_intro_image3_width">143dp</dimen>
+    <dimen name="scan_intro_image3_height">150dp</dimen>
+    <dimen name="scan_intro_image3_top_margin">1dp</dimen>
+    <dimen name="scan_intro_image3_end_margin">64dp</dimen>
+
+    <dimen name="scan_intro_text2_top_margin">16dp</dimen>
+    <dimen name="scan_intro_text2_number_start_margin">13dp</dimen>
+    <dimen name="scan_intro_text2_start_margin">16dp</dimen>
+
+    <dimen name="scan_intro_text3_top_margin">14dp</dimen>
+    <dimen name="scan_intro_text3_start_margin">65dp</dimen>
+
+    <dimen name="scan_intro_button_text_size">18dp</dimen>
+    <dimen name="scan_intro_text_size_1">18dp</dimen>
+    <dimen name="scan_intro_text_size_2">16dp</dimen>
+
+    <style name="ScanIntroTextStyle" parent="text_appearance">
+        <item name="android:textColor">#06426e</item>
+    </style>
+
+    <style name="ScanIntroTextStyle2">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/scan_intro_text_size_1</item>
+        <item name="android:textColor">#606060</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="ScanIntroTextStyle3">
+        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textSize">@dimen/scan_intro_text_size_2</item>
+        <item name="android:textColor">#606060</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <!-- Scan Fragment Styles -->
+    <dimen name="scan_preview_height">240dp</dimen>
+    <dimen name="scan_reticle_width">148dp</dimen>
+    <dimen name="scan_reticle_height">148dp</dimen>
+    <dimen name="scan_reticle_start_margin">106dp</dimen>
+    <dimen name="scan_reticle_top_margin">52dp</dimen>
+
+    <dimen name="scan_instructions_text_size">28dp</dimen>
+    <dimen name="scan_instructions_text_top_margin">16dp</dimen>
+    <dimen name="scan_instructions_text_start_margin">30dp</dimen>
+
+    <dimen name="scan_instruction_1_image_width">143dp</dimen>
+    <dimen name="scan_instruction_1_image_height">114dp</dimen>
+    <dimen name="scan_instruction_1_image_top_margin">8dp</dimen>
+    <dimen name="scan_instruction_1_image_start_margin">109dp</dimen>
+    <dimen name="scan_instruction_1_text_top_margin">24dp</dimen>
+    <dimen name="scan_instruction_1_text_start_margin">16dp</dimen>
+
+    <dimen name="scan_instruction_2_image_width">133dp</dimen>
+    <dimen name="scan_instruction_2_image_height">139dp</dimen>
+    <dimen name="scan_instruction_2_image_top_margin">16dp</dimen>
+    <dimen name="scan_instruction_2_image_start_margin">114dp</dimen>
+    <dimen name="scan_instruction_2_text_top_margin">24dp</dimen>
+    <dimen name="scan_instruction_2_text_number_start_margin">17dp</dimen>
+    <dimen name="scan_instruction_2_text_start_margin">16dp</dimen>
+
+    <dimen name="scan_got_it_image_width">59dp</dimen>
+    <dimen name="scan_got_it_image_height">59dp</dimen>
+    <dimen name="scan_got_it_image_top_margin">64dp</dimen>
+    <dimen name="scan_got_it_image_start_margin">152dp</dimen>
+
+    <dimen name="scan_got_it_text_size">40dp</dimen>
+    <dimen name="scan_got_it_top_margin">21dp</dimen>
+    <dimen name="scan_got_it_start_margin">133dp</dimen>
+    <dimen name="scan_please_wait_text_size">20dp</dimen>
+    <dimen name="scan_please_wait_start_margin">133dp</dimen>
+    <dimen name="scan_please_wait_top_margin">9dp</dimen>
+
+    <dimen name="trouble_scanning_bottom_margin">15dp</dimen>
+
+    <dimen name="scan_instruction_1_line_spacing">-2.5dp</dimen>
+    <dimen name="scan_instruction_2_line_spacing">1.8dp</dimen>
+    <dimen name="trouble_scanning_line_spacing">1dp</dimen>
+    <dimen name="got_it_line_spacing">-4dp</dimen>
+    <dimen name="please_wait_line_spacing">-2.2dp</dimen>
+
+    <style name="ScanInstructionsTextStyle" parent="text_appearance_small">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="ScanGotItTextStyle" parent="text_appearance_large">
+        <item name="android:textColor">#003766</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+    </style>
+
+    <style name="ScanPleaseWaitTextStyle" parent="text_appearance">
+        <item name="android:textColor">#0d426e</item>
+    </style>
+
+    <style name="ScanInstructionTextStyle1" parent="text_appearance">
+        <item name="android:textColor">#0d426e</item>
+    </style>
+
+    <style name="ScanInstructionTextStyle2" parent="text_appearance">
+        <item name="android:textColor">#0d426e</item>
+    </style>
+
+    <style name="TroubleScanningTextStyle" parent="text_appearance_hyperlink">
+        <item name="android:textColor">#003766</item>
+     </style>
+</resources>

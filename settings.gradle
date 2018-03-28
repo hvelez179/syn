@@ -1,0 +1,1 @@
+include ':app', ':teva_common', ':teva_devices', ':teva_medication', ':teva_analysis', ':teva_cloud', ':teva_environment', ':teva_location', ':teva_notifications', ':teva_userfeedback', ':teva_dhp', ':teva_dhp', ':teva_utilities', ':teva_utilities'

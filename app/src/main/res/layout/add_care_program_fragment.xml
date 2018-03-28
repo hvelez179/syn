@@ -1,0 +1,172 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable name="isKeyboardVisible" type="Boolean"/>
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.programs.AddCareProgramViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:foregroundGravity="center_vertical"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:theme="@style/ToolBarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextAppearance="@style/ToolBarTitleTextStyle" />
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/text_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:text="@string/add_program_instructions"/>
+
+        <TextView
+            android:id="@+id/invitationCodeLabel"
+            style="@style/text_appearance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/profile_top_input_field_spacing"
+            android:text="@string/invitation_code"/>
+
+        <com.teva.respiratoryapp.activity.controls.InputField
+            android:id="@+id/invitationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/input_field_style"
+            android:text="@={viewmodel.invitationCode}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invitationCodeLabel"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/input_field_label_margin"
+            android:hint="@string/invitation_code"
+            android:maxLength="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/warning"
+            style="@style/text_field_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/care_program_add_warning_top_margin"
+            android:text="@{viewmodel.errorMessage}"
+            android:visibility="@{viewmodel.errorMessage != null}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invitationCode"
+            tools:text="You have already joined this program"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/clipboardLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_appearance"
+            app:layout_goneMarginTop="@dimen/care_program_add_clipboard_label_top_gone_margin"
+            android:layout_marginTop="@dimen/care_program_add_clipboard_label_top_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/warning"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="@{viewmodel.clipboardValid &amp;&amp; ((isKeyboardVisible != null) ? !isKeyboardVisible : true) }"
+            android:textSize="@dimen/demi_large_text_size"
+            android:text="@string/add_care_program_add_clipboard"/>
+
+        <TextView
+            android:id="@+id/clipboardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_appearance"
+            android:alpha="0.4"
+            android:layout_marginTop="@dimen/care_program_add_clipboard_text_top_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/clipboardLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="@{viewmodel.clipboardValid &amp;&amp; ((isKeyboardVisible != null) ? !isKeyboardVisible : true) }"
+            android:textSize="@dimen/demi_large_text_size"
+            android:text="@{viewmodel.clipboardText}"
+            tools:text="9876543210"/>
+
+        <TextView
+            android:id="@+id/addHyperlink"
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:hyperlink="@{@string/add_care_program_add_clipboard_hyperlink}"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/care_program_add_clipboard_text_top_margin"
+            android:visibility="@{viewmodel.clipboardValid &amp;&amp; ((isKeyboardVisible != null) ? !isKeyboardVisible : true) }"
+            app:layout_goneMarginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clipboardText"
+            app:layout_constraintBottom_toBottomOf="@+id/clipboardText"
+            app:linkClicked="@{() -> viewmodel.onAddClipboard()}"
+            tools:text="@string/add_care_program_add_clipboard_hyperlink" />
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/nextButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/profile_hyperlink_top_margin"
+            android:onClick="@{() -> viewmodel.onSignUp()}"
+            android:text="@string/sign_up"
+            android:enabled="@{viewmodel.valid}"
+            app:layout_constraintBottom_toTopOf="@+id/hyperlink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/hyperlink"
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_hyperlink_bottom_margin"
+            app:hyperlink="@{@string/contact_teva_support}"
+            android:visibility="@{!isKeyboardVisible}"
+            app:layout_goneMarginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:linkClicked="@{() -> viewmodel.onContactSupport()}"
+            tools:text="@string/contact_teva_support" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

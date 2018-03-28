@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:actionMenuTextColor">@color/colorBlueText</item>
+        <item name="android:actionMenuTextAppearance">@style/ToolBarMenuTextStyle</item>
+        <item name="android:textColorPrimary">@color/colorNormalText</item>
+        <item name="android:textColorLink">@color/blue</item>
+        <item name="android:textColorHint">@color/blue30</item>
+        <item name="android:textViewStyle">@style/text_appearance</item>
+        <item name="android:checkboxStyle">@style/checkbox_style</item>
+        <item name="android:radioButtonStyle">@style/radiobutton_style</item>
+        <item name="inputFieldStyle">@style/input_field_style</item>
+        <item name="ctaButtonStyle">@style/cta_button</item>
+    </style>
+
+    <style name="DashboardTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="FadeStyle">
+        <item name="android:windowEnterAnimation">@anim/dialog_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_fade_out</item>
+    </style>
+
+    <style name="DialogTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowAnimationStyle">@style/FadeStyle</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+</resources>

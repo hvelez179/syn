@@ -1,0 +1,12 @@
+<!--
+  ~
+  ~  strings.xml
+  ~  160TevaAndroid
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<resources>
+    <string name="app_name">teva_utilities</string>
+</resources>

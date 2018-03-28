@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.ReportViewModel"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teva.respiratoryapp.activity.view.tracker.UserReportDescriptionFragment">
+
+    <TextView
+        android:id="@+id/user_report_purpose"
+        style="@style/user_report_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/user_report_description_horizontal_margin"
+        android:layout_marginEnd="@dimen/user_report_description_horizontal_margin"
+        android:layout_marginTop="@dimen/user_report_description_margin_top"
+        android:text="@string/hcpReportDisclaimer_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/user_report_description_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/daily_report_label_text"
+        android:layout_marginTop="@dimen/user_report_description_name_top_margin"
+        android:text="@{viewmodel.name}"
+        app:layout_constraintTop_toBottomOf="@id/user_report_purpose"
+        app:layout_constraintStart_toStartOf="@id/user_report_purpose"
+        tools:text="Jane Smith (04/08/1987)"/>
+
+    <TextView
+        android:id="@+id/user_report_description_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/daily_report_label_text"
+        android:layout_marginTop="@dimen/user_report_description_date_top_margin"
+        android:text="@{viewmodel.currentDisplayDate}"
+        app:layout_constraintTop_toBottomOf="@id/user_report_description_name"
+        app:layout_constraintStart_toStartOf="@id/user_report_description_name"
+        tools:text="Oct 30, 2016"/>
+
+    <TextView
+        android:id="@+id/user_report_description_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/daily_report_label_text"
+        android:text="@{viewmodel.currentDisplayTime}"
+        app:layout_constraintTop_toBottomOf="@id/user_report_description_date"
+        app:layout_constraintStart_toStartOf="@id/user_report_purpose"
+        android:layout_marginTop="@dimen/user_report_description_time_top_margin"
+        tools:text="4:03 PM"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_report_page_indicator_top_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_report_description_time">
+        <View style="@style/page_capsule" />
+
+        <View style="@style/page_capsule_dim" />
+
+        <View style="@style/page_capsule_dim" />
+
+        <View style="@style/page_capsule_dim" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- checkbox_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <dimen name="checkbox_width">24dp</dimen>
+    <dimen name="checkbox_height">24dp</dimen>
+    <dimen name="checkbox_padding_top">2dp</dimen>
+    <dimen name="checkbox_padding_start">16dp</dimen>
+
+    <dimen name="radiobutton_width">20dp</dimen>
+    <dimen name="radiobutton_height">20dp</dimen>
+
+
+    <dimen name="checkbox_mark_width">18dp</dimen>
+    <dimen name="checkbox_mark_height">18dp</dimen>
+    <dimen name="checkbox_mark_margin_start">3dp</dimen>
+    <dimen name="checkbox_mark_margin_top">2dp</dimen>
+    <dimen name="checkbox_box_margin_top">6dp</dimen>
+    <dimen name="checkbox_text_offset_start">30dp</dimen>
+    <dimen name="checkbox_text_offset_top">-5dp</dimen>
+    <dimen name="checkbox_text_margin_start">10dp</dimen>
+
+    <dimen name="white_checkbox_width">18dp</dimen>
+    <dimen name="white_checkbox_height">18dp</dimen>
+    <dimen name="white_checkbox_mark_width">14dp</dimen>
+    <dimen name="white_checkbox_mark_height">14dp</dimen>
+    <dimen name="white_checkbox_mark_margin_start">2dp</dimen>
+    <dimen name="white_checkbox_mark_margin_top">2dp</dimen>
+
+    <style name="checkbox_style" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textAppearance">@style/text_appearance</item>
+        <item name="android:textColor">@color/colorLightText</item>
+        <item name="android:gravity">top</item>
+        <item name="android:paddingTop">@dimen/checkbox_padding_top</item>
+        <item name="android:paddingStart">@dimen/checkbox_padding_start</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+    </style>
+
+    <style name="radiobutton_style" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/text_appearance</item>
+        <item name="android:textColor">@color/colorLightText</item>
+        <item name="android:gravity">top</item>
+        <item name="android:paddingTop">@dimen/checkbox_padding_top</item>
+        <item name="android:paddingStart">@dimen/checkbox_padding_start</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:button">@drawable/radiobutton_selector</item>
+    </style>
+</resources>

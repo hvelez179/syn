@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="daily_report_title_margin_top">10dp</dimen>
+    <dimen name="daily_report_date_margin">6dp</dimen>
+    <dimen name="daily_report_start_margin">17dp</dimen>
+    <dimen name="daily_report_event_count_top_margin">7dp</dimen>
+    <dimen name="daily_report_inhaler_count_top_margin">3dp</dimen>
+    <dimen name="daily_report_header_margin_top">13dp</dimen>
+    <dimen name="daily_report_list_margin_top">3dp</dimen>
+    <dimen name="daily_report_icon_start_margin">9dp</dimen>
+    <dimen name="daily_report_icon_end_margin">8dp</dimen>
+    <dimen name="daily_report_item_height">95dp</dimen>
+    <dimen name="daily_report_inhaler_name_top_margin">1dp</dimen>
+    <dimen name="daily_report_id_top_margin">2dp</dimen>
+
+    <dimen name="daily_report_event_icon_top_margin">16dp</dimen>
+    <dimen name="daily_report_event_icon_start_margin">83dp</dimen>
+
+    <dimen name="daily_report_inhaler_icon_width">32dp</dimen>
+    <dimen name="daily_report_inhaler_icon_height">32dp</dimen>
+
+    <dimen name="daily_report_stroke_width">1dp</dimen>
+    <dimen name="daily_report_stroke_xoffset">99dp</dimen>
+    <dimen name="daily_report_stroke_yoffset">32dp</dimen>
+
+    <dimen name="daily_report_status_label_margin">118dp</dimen>
+
+    <dimen name="daily_report_overflow_text_size">12dp</dimen>
+
+    <style name="daily_report_title_text" parent="text_appearance_large">
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+    </style>
+
+    <style name="daily_report_date_text" parent="text_appearance">
+    </style>
+
+    <style name="daily_report_header_text" parent="text_appearance">
+    </style>
+
+    <style name="daily_report_info_text" parent="text_appearance">
+    </style>
+
+    <style name="daily_report_time_text" parent="text_appearance_xsmall">
+    </style>
+
+    <style name="daily_report_id_text" parent="text_appearance_xsmall">
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="daily_report_status_text" parent="text_appearance_demi_large">
+    </style>
+
+    <!--<dimen name="daily_report_card_margin">10dp</dimen>-->
+    <!--<dimen name="daily_report_status_margin">90dp</dimen>-->
+    <!--<dimen name="daily_report_item_top_margin">8dp</dimen>-->
+    <!--<dimen name="daily_report_item_bottom_margin">0dp</dimen>-->
+    <!--<dimen name="daily_report_user_feeling_top_margin">4dp</dimen>-->
+    <!--<dimen name="daily_report_user_feeling_bottom_margin">4dp</dimen>-->
+    <!--<dimen name="daily_report_card_start_margin">6dp</dimen>-->
+    <!--<dimen name="daily_report_card_top_margin">48dp</dimen>-->
+    <!--<dimen name="daily_report_card_width">316dp</dimen>-->
+    <!--<dimen name="daily_report_card_height">490dp</dimen>-->
+    <!--<dimen name="daily_report_title_top_margin">2dp</dimen>-->
+    <!--<dimen name="daily_report_title_text_size">18dp</dimen>-->
+    <!--<dimen name="daily_report_date_text_size">16dp</dimen>-->
+    <!--<dimen name="daily_report_date_top_margin">3dp</dimen>-->
+    <!--<dimen name="daily_report_header_text_size">16dp</dimen>-->
+    <!--<dimen name="daily_report_status_text_size">16dp</dimen>-->
+    <!--<dimen name="daily_report_id_bottom_margin">0dp</dimen>-->
+    <!--<dimen name="daily_report_dsa_image_width">28dp</dimen>-->
+    <!--<dimen name="daily_report_dsa_image_height">25dp</dimen>-->
+    <!--<dimen name="daily_report_dsa_time_top_margin">0dp</dimen>-->
+    <!--<dimen name="daily_report_dsa_image_top_margin">0dp</dimen>-->
+    <!--<dimen name="daily_report_dsa_image_start_margin">28dp</dimen>-->
+    <!--<dimen name="daily_report_status_icon_padding">5dp</dimen>-->
+
+    <!--<style name="daily_report_light_text">-->
+        <!--<item name="android:fontFamily">sans-serif-light</item>-->
+        <!--<item name="android:textColor">#686868</item>-->
+    <!--</style>-->
+
+    <!--<style name="daily_report_regular_text">-->
+        <!--<item name="android:fontFamily">sans-serif</item>-->
+        <!--<item name="android:textColor">#686868</item>-->
+    <!--</style>-->
+
+
+
+    <!--<style name="daily_report_item_text" parent="daily_report_regular_text">-->
+        <!--<item name="android:textSize">14sp</item>-->
+    <!--</style>-->
+
+    <!--<style name="daily_report_item_info_text" parent="daily_report_light_text">-->
+        <!--<item name="android:textSize">14sp</item>-->
+    <!--</style>-->
+
+</resources>

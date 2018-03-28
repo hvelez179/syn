@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="intro_title_text_size">30dp</dimen>
+    <dimen name="intro_title_text_line_spacing">-1dp</dimen>
+    <dimen name="intro_title_margin_top">110dp</dimen>
+    <dimen name="intro_page1_title_margin_start">32dp</dimen>
+    <dimen name="intro_page2_title_margin_start">40dp</dimen>
+    <dimen name="intro_content_text_size">20dp</dimen>
+    <dimen name="intro_content_text_line_spacing">5dp</dimen>
+    <dimen name="intro_content_margin_top">155dp</dimen>
+    <dimen name="intro_page1_content_margin_start">32dp</dimen>
+    <dimen name="intro_page2_content_margin_start">40dp</dimen>
+    <dimen name="intro_content_width">296dp</dimen>
+    <dimen name="intro_page_indicator_top_margin">11dp</dimen>
+    <dimen name="intro_page_indicator_start_margin">142dp</dimen>
+    <dimen name="intro_get_started_bottom_margin">31.3dp</dimen>
+    <dimen name="intro_get_started_end_margin">20dp</dimen>
+
+    <dimen name="slider_dots_width">44dp</dimen>
+    <dimen name="slider_dots_height">4dp</dimen>
+    <dimen name="slider_dots_start_margin">40dp</dimen>
+    <dimen name="slider_dots_top_margin">389dp</dimen>
+
+    <dimen name="page_capsule_radius">3dp</dimen>
+    <dimen name="page_capsule_width">12dp</dimen>
+    <dimen name="page_capsule_height">4dp</dimen>
+    <dimen name="page_capsule_margin">2dp</dimen>
+
+    <dimen name="intro_animation_title_offset">-10dp</dimen>
+    <dimen name="intro_animation_desc_offset">10dp</dimen>
+    <dimen name="intro_animation_blur_offset">15dp</dimen>
+    <integer name="intro_animation_text_duration">650</integer>
+    <integer name="intro_animation_text_start">350</integer>
+    <integer name="intro_animation_blur_duration">1000</integer>
+    <dimen name="intro_get_started_text_letter_spacing">0.94</dimen>
+
+    <style name="intro_title_text">
+        <item name="android:textSize">@dimen/intro_title_text_size</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/intro_title_text_line_spacing</item>
+        <item name="android:textColor">@color/colorBoldText</item>
+    </style>
+
+    <style name="intro_content_text" >
+        <item name="android:textSize">@dimen/intro_content_text_size</item>
+        <item name="android:fontFamily">@font/avenir_next_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/intro_content_text_line_spacing</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="intro_get_started_text" parent="@style/text_appearance_hyperlink">
+        <item name="android:letterSpacing">@dimen/intro_get_started_text_letter_spacing</item>
+    </style>
+
+    <style name="page_capsule">
+        <item name="android:layout_width">@dimen/page_capsule_width</item>
+        <item name="android:layout_height">@dimen/page_capsule_height</item>
+        <item name="android:layout_marginEnd">@dimen/page_capsule_margin</item>
+        <item name="android:background">@drawable/page_capsule</item>
+    </style>
+
+    <style name="page_capsule_dim" parent="@style/page_capsule">
+        <item name="android:background">@drawable/page_capsule</item>
+        <item name="android:alpha">0.3</item>
+    </style>
+</resources>

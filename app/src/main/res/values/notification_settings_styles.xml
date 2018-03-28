@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- notification_settings_styles -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <dimen name="notification_settings_self_assessment_top_margin">20dp</dimen>
+    <dimen name="notification_settings_self_assessment_start_margin">20dp</dimen>
+    <dimen name="notification_settings_self_assessment_button_top_margin">25dp</dimen>
+    <dimen name="notification_settings_self_assessment_button_end_margin">20dp</dimen>
+    <dimen name="notification_settings_self_assessment_button_width">32dp</dimen>
+    <dimen name="notification_settings_self_assessment_button_height">20dp</dimen>
+
+    <dimen name="notification_settings_separator_top_margin">20dp</dimen>
+    <dimen name="notification_settings_separator_start_margin">10dp</dimen>
+    <dimen name="notification_settings_separator_end_margin">10dp</dimen>
+
+    <dimen name="notification_settings_environment_top_margin">20dp</dimen>
+    <dimen name="notification_settings_environment_start_margin">20dp</dimen>
+    <dimen name="notification_settings_environment_button_top_margin">25dp</dimen>
+    <dimen name="notification_settings_environment_button_end_margin">20dp</dimen>
+    <dimen name="notification_settings_environment_button_width">32dp</dimen>
+    <dimen name="notification_settings_environment_button_height">20dp</dimen>
+</resources>

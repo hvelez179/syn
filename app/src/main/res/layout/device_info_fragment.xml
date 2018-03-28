@@ -1,0 +1,130 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.DeviceInfoViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorBackground">
+
+        <include
+            android:id="@+id/dashboard_toolbar"
+            layout="@layout/dashboard_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/device_list_separator_width"
+            android:background="@color/colorDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar"/>
+
+        <View
+            android:id="@+id/icon"
+            android:layout_width="@dimen/device_info_image_width"
+            android:layout_height="@dimen/device_info_image_height"
+            android:layout_marginTop="@dimen/device_info_image_top_margin"
+            android:layout_marginStart="@dimen/device_info_image_start_margin"
+            android:background="@drawable/img_inhaler_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar" />
+
+        <TextView
+            android:id="@+id/inhalerTypeLabel"
+            style="@style/DeviceInfoLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/device_info_inhaler_type_start_margin"
+            android:layout_marginTop="@dimen/device_info_inhaler_type_top_margin"
+            android:text="@string/editDeviceInhalerType_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon"
+            tools:text="TradeName" />
+        <TextView
+            android:id="@+id/inhalerType"
+            style="@style/DeviceInfoTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/device_info_inhaler_type_text_start_margin"
+            android:layout_marginTop="@dimen/device_info_inhaler_type_text_top_margin"
+            android:text="@{viewmodel.medicationName}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inhalerTypeLabel"
+            tools:text="TradeName" />
+
+        <TextView
+            android:id="@+id/statusLabel"
+            style="@style/DeviceInfoLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/device_info_status_top_margin"
+            android:layout_marginStart="@dimen/device_info_status_start_margin"
+            android:text="@string/editDeviceStatus_text"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inhalerType"
+            tools:text="Searching..." />
+        <TextView
+            android:id="@+id/statusText"
+            style="@style/DeviceInfoTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/device_info_status_text_top_margin"
+            android:layout_marginStart="@dimen/device_info_status_text_start_margin"
+            android:text="@{viewmodel.status}"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusLabel"
+            tools:text="Searching..." />
+
+        <TextView
+            android:id="@+id/name_label"
+            style="@style/DeviceInfoLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/device_info_name_label_top_margin"
+            android:layout_marginStart="@dimen/device_info_name_label_start_margin"
+            android:text="@string/name_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusText" />
+
+        <TextView
+            android:id="@+id/nickname"
+            style="@style/DeviceInfoTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/device_info_name_top_margin"
+            android:layout_marginStart="@dimen/device_info_name_start_margin"
+            android:text="@{viewmodel.nickname}"
+            app:layout_constraintTop_toBottomOf="@+id/name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Sports" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="@dimen/device_info_edit_width"
+            android:layout_height="@dimen/device_info_edit_height"
+            android:layout_marginStart="@dimen/device_info_edit_start_margin"
+            android:layout_marginTop="@dimen/device_info_edit_top_margin"
+            android:background="@drawable/ic_edit_device"
+            android:onClick="@{() -> viewmodel.onEditName()}"
+            app:layout_constraintStart_toEndOf="@id/nickname"
+            app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

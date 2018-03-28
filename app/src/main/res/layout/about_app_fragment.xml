@@ -1,0 +1,266 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.AboutAppViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/about_app_toolbar"
+            layout="@layout/dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp" />
+        <View
+            android:id="@+id/toolbar_info_separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/about_app_separator_height"
+            android:background="@color/colorDivider"
+            />
+        <View android:id="@+id/topShadow"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/list_header_shadow_height"
+              android:background="@drawable/list_header_shadow"
+              />
+
+        <ScrollView
+            android:id="@+id/item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_info_separator">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/about_app_bottom_margin">
+
+                <TextView
+                    android:id="@+id/about_app_version_label"
+                    style="@style/about_app_version_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/about_app_version_start_margin"
+                    android:layout_marginTop="@dimen/about_app_version_top_margin"
+                    android:text="@{viewmodel.version}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/about_app_to_learn_label"
+                    style="@style/about_app_learn_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/about_app_learn_more_start_margin"
+                    android:layout_marginTop="@dimen/about_app_learn_more_top_margin"
+                    android:text="@string/learnMore_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_app_version_label" />
+
+                <TextView
+                    android:id="@+id/about_app_to_learn_link"
+                    style="@style/about_app_learn_more_link_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/about_app_learn_more_link_start_margin"
+                    android:layout_marginTop="@dimen/about_app_learn_more_link_top_margin"
+                    android:onClick="@{() -> viewmodel.onClickInstructionsForUse()}"
+                    android:text="@string/improveYourTechnique_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_app_to_learn_label"
+                    app:underlined="@{true}" />
+
+                <TextView
+                    android:id="@+id/about_app_customer_support_label"
+                    style="@style/about_app_customer_support_text"
+                    android:layout_width="@dimen/about_app_customer_support_text_width"
+                    android:layout_height="@dimen/about_app_customer_support_text_height"
+                    android:layout_marginStart="@dimen/about_app_customer_support_start_margin"
+                    android:layout_marginTop="@dimen/about_app_customer_support_top_margin"
+                    android:text="@{viewmodel.customerSupportText}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_app_to_learn_link" />
+
+                <TextView
+                    android:id="@+id/about_app_customer_support_link"
+                    style="@style/about_app_customer_support_link_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/about_app_customer_support_link_start_margin"
+                    android:layout_marginTop="@dimen/about_app_customer_support_link_top_margin"
+                    android:onClick="@{() -> viewmodel.onContactSupportClicked()}"
+                    android:text="@string/contact_teva_support"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_app_customer_support_label"
+                    app:underlined="@{true}" />
+                <View
+                    android:id="@+id/customer_support_website_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/about_app_separator_height"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_app_customer_support_link"
+                    android:layout_marginTop="@dimen/about_app_customer_support_website_separator_top_margin"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/website_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/customer_support_website_separator"
+                    android:layout_marginTop="@dimen/about_app_website_layout_top_margin"
+                    android:onClick="@{() -> viewmodel.onWebsiteClick()}">
+                    <TextView
+                        android:id="@+id/website_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/about_app_website_start_margin"
+                        android:text="@string/menuWebLinkItem_text"
+                        style="@style/about_app_navigation_text"/>
+                    <ImageView
+                        android:id="@+id/website_chevron"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/about_app_website_chevron_end_margin"
+                        android:layout_marginTop="@dimen/about_app_website_chevron_top_margin"
+                        android:layout_width="@dimen/about_app_chevron_width"
+                        android:layout_height="@dimen/about_app_chevron_height"
+                        android:src="@drawable/ic_about_app_chevron"
+                        />
+                </android.support.constraint.ConstraintLayout>
+                <View
+                    android:id="@+id/website_terms_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/about_app_separator_height"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/website_layout"
+                    android:layout_marginTop="@dimen/about_app_customer_support_website_separator_top_margin"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/terms_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/website_terms_separator"
+                    android:layout_marginTop="@dimen/about_app_website_layout_top_margin"
+                    android:onClick="@{() -> viewmodel.onTermsOfUseClick()}">
+                    <TextView
+                        android:id="@+id/termse_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/about_app_website_start_margin"
+                        android:text="@string/termsOfUseLink_text"
+                        style="@style/about_app_navigation_text"/>
+                    <ImageView
+                        android:id="@+id/terms_chevron"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/about_app_website_chevron_end_margin"
+                        android:layout_marginTop="@dimen/about_app_website_chevron_top_margin"
+                        android:layout_width="@dimen/about_app_chevron_width"
+                        android:layout_height="@dimen/about_app_chevron_height"
+                        android:src="@drawable/ic_about_app_chevron"
+                        />
+                </android.support.constraint.ConstraintLayout>
+                <View
+                    android:id="@+id/terms_privacy_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/about_app_separator_height"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/terms_layout"
+                    android:layout_marginTop="@dimen/about_app_customer_support_website_separator_top_margin"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/privacy_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/terms_privacy_separator"
+                    android:layout_marginTop="@dimen/about_app_website_layout_top_margin"
+                    android:onClick="@{() -> viewmodel.onPrivacyNoticeClick()}">
+                    <TextView
+                        android:id="@+id/privacy_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/about_app_website_start_margin"
+                        android:text="@string/privacyNoticeLink_text"
+                        style="@style/about_app_navigation_text"/>
+                    <ImageView
+                        android:id="@+id/privacy_chevron"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/about_app_website_chevron_end_margin"
+                        android:layout_marginTop="@dimen/about_app_website_chevron_top_margin"
+                        android:layout_width="@dimen/about_app_chevron_width"
+                        android:layout_height="@dimen/about_app_chevron_height"
+                        android:src="@drawable/ic_about_app_chevron"
+                        />
+                </android.support.constraint.ConstraintLayout>
+                <View
+                    android:id="@+id/privacy_licenses_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/about_app_separator_height"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacy_layout"
+                    android:layout_marginTop="@dimen/about_app_customer_support_website_separator_top_margin"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/licenses_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacy_licenses_separator"
+                    android:layout_marginTop="@dimen/about_app_website_layout_top_margin"
+                    android:onClick="@{() -> viewmodel.onLicensesClick()}">
+                    <TextView
+                        android:id="@+id/licenses_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/about_app_website_start_margin"
+                        android:text="@string/licensesLink_text"
+                        style="@style/about_app_navigation_text"/>
+                    <ImageView
+                        android:id="@+id/licenses_chevron"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/about_app_website_chevron_end_margin"
+                        android:layout_marginTop="@dimen/about_app_website_chevron_top_margin"
+                        android:layout_width="@dimen/about_app_chevron_width"
+                        android:layout_height="@dimen/about_app_chevron_height"
+                        android:src="@drawable/ic_about_app_chevron"
+                        />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,229 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="android.view.Gravity"/>
+        <import type="com.teva.userfeedback.enumerations.UserFeeling"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupDashboardButton"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupColor"/>
+        <import type="com.teva.respiratoryapp.activity.view.popup.DashboardPopupFragment"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.DsaPopupViewModel"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include android:id="@+id/popup_background"
+            layout="@layout/dashboard_popup_background"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_card_container_height"
+                android:layout_marginTop="@dimen/popup_card_arrow_top_margin"
+                android:layout_gravity="top">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cardBackground"
+                    android:layout_height="@dimen/dsa_card_height"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/standard_horizontal_margin"
+                    android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                    android:layout_marginTop="@dimen/popup_card_offset"
+                    android:background="#ffffff"
+                    android:elevation="@dimen/popup_card_elevation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/DsaHeaderText"
+                        android:text="@string/vasTitle_text"
+                        android:layout_marginTop="@dimen/popup_title_top_margin"
+                        android:layout_marginStart="@dimen/dsa_horizontal_margin"
+                        android:layout_marginEnd="@dimen/dsa_horizontal_margin"
+                        bind:layout_constraintTop_toTopOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/body"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/PopupText"
+                        android:text="@string/vasInstruction_text"
+                        android:layout_marginTop="@dimen/dsa_body_margin_top"
+                        android:layout_marginStart="@dimen/dsa_horizontal_margin"
+                        android:layout_marginEnd="@dimen/dsa_horizontal_margin"
+                        bind:layout_constraintTop_toBottomOf="@id/title"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_happy_green"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_happy_green"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.GOOD ? View.VISIBLE : View.INVISIBLE}"
+                        android:layout_marginStart="@dimen/dsa_icon_horizontal_margin"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.GOOD)}"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_ok_yellow"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_ok_yellow"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.POOR ? View.VISIBLE : View.INVISIBLE}"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.POOR)}"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toEndOf="@+id/smiley_happy_green"
+                        app:layout_constraintEnd_toStartOf="@+id/smiley_sad_red"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_sad_red"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_sad_red"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.BAD ? View.VISIBLE : View.INVISIBLE}"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.BAD)}"
+                        android:layout_marginEnd="@dimen/dsa_icon_horizontal_margin"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toEndOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_happy_gray"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_happy_gray"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.GOOD ? View.INVISIBLE : View.VISIBLE}"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.GOOD)}"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_happy_green"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_happy_green"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_ok_gray"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_ok_gray"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.POOR ? View.INVISIBLE : View.VISIBLE}"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.POOR)}"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+                    <ImageView
+                        android:id="@+id/smiley_sad_gray"
+                        android:layout_width="@dimen/dsa_icon_width"
+                        android:layout_height="@dimen/dsa_icon_height"
+                        android:src="@drawable/ic_smiley_sad_gray"
+                        android:visibility="@{viewmodel.userFeeling == UserFeeling.UNKNOWN || viewmodel.userFeeling == UserFeeling.BAD ? View.INVISIBLE : View.VISIBLE}"
+                        android:layout_marginTop="@dimen/dsa_icon_margin_top"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.BAD)}"
+                        app:layout_constraintTop_toBottomOf="@+id/body"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_sad_red"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_sad_red"/>
+
+                    <RadioButton
+                        android:id="@+id/happy_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dsa_radio_margin_top"
+                        android:paddingTop="0dp"
+                        android:paddingStart="0dp"
+                        android:checked="@{viewmodel.userFeeling == UserFeeling.GOOD}"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.GOOD)}"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_happy_green"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_happy_green"
+                        app:layout_constraintTop_toBottomOf="@+id/smiley_happy_green"/>
+
+                    <RadioButton
+                        android:id="@+id/ok_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dsa_radio_margin_top"
+                        android:paddingTop="0dp"
+                        android:paddingStart="0dp"
+                        android:checked="@{viewmodel.userFeeling == UserFeeling.POOR}"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.POOR)}"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_ok_yellow"
+                        app:layout_constraintTop_toBottomOf="@+id/smiley_ok_yellow"/>
+
+                    <RadioButton
+                        android:id="@+id/sad_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dsa_radio_margin_top"
+                        android:paddingTop="0dp"
+                        android:paddingStart="0dp"
+                        android:checked="@{viewmodel.userFeeling == UserFeeling.BAD}"
+                        android:onClick="@{() -> viewmodel.onDsa(UserFeeling.BAD)}"
+                        app:layout_constraintStart_toStartOf="@+id/smiley_sad_red"
+                        app:layout_constraintEnd_toEndOf="@+id/smiley_sad_red"
+                        app:layout_constraintTop_toBottomOf="@+id/smiley_sad_red"/>
+
+                    <com.teva.respiratoryapp.activity.controls.CtaButton
+                        android:id="@+id/button"
+                        style="@style/cta_button"
+                        android:onClick="@{() -> viewmodel.onButton()}"
+                        android:text="@string/ok_text"
+                        android:enabled="@{viewmodel.userFeeling != UserFeeling.UNKNOWN}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/popup_button_bottom_margin"
+                        android:layout_gravity="center"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    app:isUp="true"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintBottom_toTopOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.DSA}"
+                    tools:visibility="visible"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

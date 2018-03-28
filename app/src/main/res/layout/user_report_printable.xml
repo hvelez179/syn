@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- user_report_printable.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.ReportViewModel" />
+    </data>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="@dimen/user_report_printable_document_width"
+    android:layout_height="@dimen/user_report_printable_document_height">
+
+    <include android:id="@+id/user_report_printable_description"
+        layout="@layout/user_report_printable_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/user_report_printable_document_width"
+        android:layout_height="@dimen/user_report_printable_header_height"
+        app:viewmodel="@{viewmodel}"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <include android:id="@+id/user_report_printable_daily_summary"
+        layout="@layout/user_report_printable_daily_summary"
+        android:layout_width="@dimen/user_report_printable_document_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_report_printable_daily_component_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_report_printable_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:viewmodel="@{viewmodel}"/>
+
+    <include android:id="@+id/user_report_printable_weekly_summary"
+        layout="@layout/user_report_printable_weekly_summary"
+        android:layout_width="@dimen/user_report_printable_document_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_report_printable_weekly_component_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_report_printable_daily_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:viewmodel="@{viewmodel}"/>
+
+    <include android:id="@+id/user_report_printable_dsa"
+        layout="@layout/user_report_printable_dsa"
+        android:layout_width="@dimen/user_report_printable_document_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_report_printable_dsa_component_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_report_printable_weekly_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:viewmodel="@{viewmodel}"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

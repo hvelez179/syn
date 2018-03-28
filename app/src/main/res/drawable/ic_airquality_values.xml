@@ -1,0 +1,20 @@
+<!--
+  ~
+  ~  ic_airquality_values.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="8.0"
+    android:viewportWidth="330.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00aa8f" android:pathData="M4,4m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path android:fillColor="#00aa8f" android:pathData="M4,0h51v8h-51z"/>
+    <path android:fillColor="#f8bb11" android:pathData="M55,0h55v8h-55z"/>
+    <path android:fillColor="#f88e11" android:pathData="M110,0h55v8h-55z"/>
+    <path android:fillColor="#f54961" android:pathData="M165,0h55v8h-55z"/>
+    <path android:fillColor="#7f2573" android:pathData="M220,0h55v8h-55z"/>
+    <path android:fillColor="#990109" android:pathData="M275,0h51v8h-51z"/>
+    <path android:fillColor="#990109" android:pathData="M326,4m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+</vector>

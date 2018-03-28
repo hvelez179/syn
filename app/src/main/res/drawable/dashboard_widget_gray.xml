@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:width="@dimen/dashboard_widget_diameter"
+                android:height="@dimen/dashboard_widget_diameter"/>
+            <solid android:color="@color/dashboard_widget_background"/>
+        </shape>
+    </item>
+
+    <item android:left="@dimen/dashboard_widget_ring_margin"
+        android:right="@dimen/dashboard_widget_ring_margin"
+        android:top="@dimen/dashboard_widget_ring_margin"
+        android:bottom="@dimen/dashboard_widget_ring_margin">
+        <shape android:shape="oval">
+            <stroke android:color="@color/dashboard_widget_ring_gray"
+                android:width="@dimen/dashboard_widget_ring_stroke"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,190 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.ScanViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorBackground">
+
+        <include
+            android:id="@+id/dashboard_toolbar"
+            layout="@layout/dashboard_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <com.teva.respiratoryapp.activity.controls.BarcodeScanner
+            android:id="@+id/scanner"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/scan_preview_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_toolbar"></com.teva.respiratoryapp.activity.controls.BarcodeScanner>
+
+        <View
+            android:id="@+id/scan_reticle"
+            android:layout_width="@dimen/scan_reticle_width"
+            android:layout_height="@dimen/scan_reticle_height"
+            android:layout_marginStart="@dimen/scan_reticle_start_margin"
+            android:layout_marginTop="@dimen/scan_reticle_top_margin"
+            android:background="@drawable/ic_img_scan_focus"
+            app:layout_constraintStart_toStartOf="@+id/scanner"
+            app:layout_constraintTop_toTopOf="@+id/scanner" />
+
+        <TextView
+            android:id="@+id/scan_instruction_text"
+            style="@style/ScanInstructionsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scan_instructions_text_top_margin"
+            android:layout_marginStart="@dimen/scan_instructions_text_start_margin"
+            android:text="@string/addDeviceScan_text"
+            android:background="@android:color/transparent"
+            android:visibility="@{!viewmodel.isGotItVisible}"
+            app:layout_constraintStart_toStartOf="@id/scanner"
+            app:layout_constraintTop_toTopOf="@id/scanner" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="@{!viewmodel.isGotItVisible}"
+            app:layout_constraintBottom_toTopOf="@+id/hyperlink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanner">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/instruction1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/scan_intruction_text1"
+                    style="@style/ScanInstructionTextStyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/scan_instruction_1_text_start_margin"
+                    android:layout_marginTop="@dimen/scan_instruction_1_text_top_margin"
+                    android:text="@string/addDeviceScanInhalerHoldInhaler_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/scan_instruction_1_image_width"
+                    android:layout_height="@dimen/scan_instruction_1_image_height"
+                    android:layout_marginStart="@dimen/scan_instruction_1_image_start_margin"
+                    android:layout_marginTop="@dimen/scan_instruction_1_image_top_margin"
+                    android:src="@drawable/ic_img_scan_instructions_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scan_intruction_text1"
+                    android:scaleType="fitXY"/>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/instruction2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/scan_intruction_text2"
+                    style="@style/ScanInstructionTextStyle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/scan_instruction_2_text_start_margin"
+                    android:layout_marginTop="@dimen/scan_instruction_2_text_top_margin"
+                    android:text="@string/addDeviceScanInhalerAlignInhaler_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/scan_instruction_2_image_width"
+                    android:layout_height="@dimen/scan_instruction_2_image_height"
+                    android:layout_marginStart="@dimen/scan_instruction_2_image_start_margin"
+                    android:layout_marginTop="@dimen/scan_instruction_2_image_top_margin"
+                    android:src="@drawable/scan_instruction_img_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scan_intruction_text2"
+                    android:scaleType="fitXY"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/got_it_image"
+            android:layout_width="@dimen/scan_got_it_image_width"
+            android:layout_height="@dimen/scan_got_it_image_height"
+            android:layout_marginStart="@dimen/scan_got_it_image_start_margin"
+            android:layout_marginTop="@dimen/scan_got_it_image_top_margin"
+            android:src="@drawable/ic_scan_success"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanner"
+            android:scaleType="fitXY"
+            android:visibility="@{viewmodel.isGotItVisible}"/>
+        <TextView
+            android:id="@+id/got_it"
+            style="@style/ScanGotItTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addDeviceScanCompleted_text"
+            android:visibility="@{viewmodel.isGotItVisible}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/got_it_image"
+            android:layout_marginTop="@dimen/scan_got_it_top_margin"
+            android:layout_marginStart="@dimen/scan_got_it_start_margin"/>
+
+        <TextView
+            android:id="@+id/please_wait"
+            style="@style/ScanPleaseWaitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addDeviceScanWait_text"
+            android:visibility="@{viewmodel.isGotItVisible}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/got_it"
+            android:layout_marginTop="@dimen/scan_please_wait_top_margin"
+            android:layout_marginStart="@dimen/scan_please_wait_start_margin"/>
+
+        <TextView
+            android:id="@+id/hyperlink"
+            style="@style/TroubleScanningTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/trouble_scanning_bottom_margin"
+            android:onClick="@{() -> viewmodel.onContactSupportClicked()}"
+            android:text="@string/contact_teva_support"
+            android:visibility="@{!viewmodel.isGotItVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:underlined="@{true}" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

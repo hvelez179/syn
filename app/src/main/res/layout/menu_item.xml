@@ -1,0 +1,31 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.MenuItem" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        android:layout_marginBottom="@dimen/menu_item_spacing"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/MenuItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/menu_item_start_padding"
+            android:layout_marginEnd="@dimen/menu_item_end_padding"
+            android:text="@{viewmodel.name}"
+            android:layout_gravity="start|center_vertical"
+            tools:text="Menu Item"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,88 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.AlertViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteDialogBackground"
+        android:fitsSystemWindows="true"
+        tools:context="com.teva.respiratoryapp.activity.view.Alert">
+
+        <ImageButton
+            style="@style/borderless_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/alert_close_button_margin"
+            android:onClick="@{() -> viewmodel.onClose()}"
+            android:src="@drawable/ic_nav_close_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_appearance_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alert_content_margin"
+            android:layout_marginStart="@dimen/alert_content_margin"
+            android:text="@{viewmodel.title}"
+            app:layout_constraintBottom_toTopOf="@+id/message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Too Young"/>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/text_appearance_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alert_content_margin"
+            android:layout_marginStart="@dimen/alert_content_margin"
+            android:layout_marginTop="@dimen/alert_message_top_margin"
+            android:text="@{viewmodel.message}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="We’re sorry, but you’re too young to use the ProAir Digihaler App.\n\nIf you have questions, have your parent or guardian contact Teva Support."/>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/primaryButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/alert_primary_bottom_margin"
+            android:onClick="@{() -> viewmodel.onPrimaryAction()}"
+            android:text="@{viewmodel.primaryAction}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="OK"/>
+
+        <TextView
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alert_secondary_top_margin"
+            app:hyperlink="@{viewmodel.secondaryAction}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryButton"
+            app:linkClicked="@{() -> viewmodel.onSecondaryAction()}"
+            tools:text="Secondary"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

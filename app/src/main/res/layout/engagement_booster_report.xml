@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.NotificationPopupViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_width="328dp"
+        tools:layout_height="200dp">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/engagement_booster_report_image_width"
+            android:layout_height="@dimen/engagement_booster_report_image_height"
+            android:src="@drawable/ic_engagement_booster_report"
+            android:layout_marginTop="@dimen/engagement_booster_report_image_top_margin"
+            android:layout_marginStart="@dimen/popup_horizontal_margin"
+            bind:layout_constraintTop_toTopOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/PopupText"
+            android:text="@string/engagementBoosterCreateUserReport_text"
+            android:layout_marginTop="@dimen/popup_body_gone_top_margin"
+            android:layout_marginStart="@dimen/popup_horizontal_margin"
+            android:layout_marginEnd="@dimen/popup_horizontal_margin"
+            bind:layout_constraintTop_toBottomOf="@id/image"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

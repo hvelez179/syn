@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  tracker_header.xml
+  app
+
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.TrackerHeaderViewModel"/>
+    </data>
+
+    <TextView
+        style="@style/tracker_year_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tracker_header_height"
+        android:background="@color/colorLightGray"
+        android:paddingEnd="0dp"
+        android:paddingStart="@dimen/tracker_header_date_margin"
+        android:gravity="center_vertical"
+        android:text="@{Integer.toString(viewmodel.year)}"
+        tools:text="2017"/>
+</layout>
+

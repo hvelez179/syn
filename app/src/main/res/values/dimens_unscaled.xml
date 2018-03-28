@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  dimens_unscaled.xml
+  app
+
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<resources>
+    <dimen name="status_bar_height">23dp</dimen>
+</resources>

@@ -1,0 +1,99 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.teva.respiratoryapp.activity.view.NotificationSettingsFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.notificationsettings.NotificationSettingsViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/notification_settings_toolbar_shadow">
+
+        <include layout="@layout/dashboard_toolbar"
+            android:id="@+id/notification_settings_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+        <TextView
+            android:id="@+id/notification_settings_self_assessment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/notification_settings_self_assessment_top_margin"
+            android:layout_marginStart="@dimen/notification_settings_self_assessment_start_margin"
+            android:text="@string/notification_settings_self_assessment_time_text"/>
+        <TextView
+            android:id="@+id/notification_settings_self_assessment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_self_assessment_time"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/notification_settings_self_assessment_start_margin"
+            android:text="@string/remindersUserFeelingSetting_text"/>
+        <Switch
+            android:layout_height="@dimen/notification_settings_self_assessment_button_height"
+            android:layout_width="wrap_content"
+            android:id="@+id/notification_settings_self_assessment_button"
+            android:theme="@style/SwitchTheme"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/notification_settings_self_assessment_button_top_margin"
+            android:layout_marginEnd="@dimen/notification_settings_self_assessment_button_end_margin"
+            android:checked="@={viewmodel.selfAssessmentNotificationEnabled}"/>
+        <ImageView
+            android:id="@+id/notification_settings_separator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_self_assessment_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/notification_settings_separator_start_margin"
+            android:layout_marginEnd="@dimen/notification_settings_separator_end_margin"
+            android:layout_marginTop="@dimen/notification_settings_separator_top_margin"
+            android:src="@drawable/separator"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/notification_settings_environment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_separator"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/notification_settings_environment_top_margin"
+            android:layout_marginStart="@dimen/notification_settings_environment_start_margin"
+            android:text="@string/notification_settings_environment_time_text"/>
+        <TextView
+            android:id="@+id/notification_settings_environment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_environment_time"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/notification_settings_environment_start_margin"
+            android:text="@string/remindersDailyEnvironmentalNotificationSetting_text"/>
+        <Switch
+            android:layout_height="@dimen/notification_settings_environment_button_height"
+            android:layout_width="wrap_content"
+            android:id="@+id/notification_settings_environment_button"
+            android:theme="@style/SwitchTheme"
+            app:layout_constraintTop_toBottomOf="@+id/notification_settings_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/notification_settings_environment_button_top_margin"
+            android:layout_marginEnd="@dimen/notification_settings_environment_button_end_margin"
+            android:checked="@={viewmodel.environmentNotificationEnabled}"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

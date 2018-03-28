@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="@dimen/blocked_vent_icon_width"
+                android:width="@dimen/blocked_vent_icon_width"/>
+            <solid android:color="#ffffff"/>
+            <stroke android:color="@color/alertRed" android:width="@dimen/blocked_vent_icon_stroke"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/inhaler_vent"
+        android:right="@dimen/blocked_vent_image_right"
+        android:left="@dimen/blocked_vent_image_left"
+        android:top="@dimen/blocked_vent_image_top"
+        android:bottom="@dimen/blocked_vent_image_bottom" />
+</layer-list>

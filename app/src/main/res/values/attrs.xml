@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Widget">
+        <attr name="critical" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputField">
+        <attr name="inError" format="boolean"/>
+        <attr name="canClear" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShadeBar">
+        <attr name="open" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomClipDrawableView">
+        <attr name="src" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BlurImage">
+        <attr name="blurSrc" format="reference"/>
+        <attr name="blur" format="float"/>
+        <attr name="blurOffset" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CtaButton">
+        <attr name="animator" format="string"/>
+        <attr name="outline" format="string"/>
+    </declare-styleable>
+
+    <attr name="printable" format="boolean"/>
+
+    <declare-styleable name="SummaryGraphView">
+        <attr name="printable"/>
+        <attr name="boldLineColor" format="color"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="redLineColor" format="color"/>
+        <attr name="tickLineColor" format="color"/>
+        <attr name="columnWidth" format="dimension"/>
+        <attr name="labelTextAppearance" format="reference"/>
+        <attr name="overflowTextAppearance" format="reference"/>
+        <attr name="yLabelPadding" format="dimension"/>
+        <attr name="yLabelMargin" format="dimension"/>
+        <attr name="xLabelPadding" format="dimension"/>
+        <attr name="xLabelMargin" format="dimension"/>
+        <attr name="graphRightPadding" format="dimension"/>
+        <attr name="dotDiameter" format="dimension"/>
+        <attr name="goodDsaColor" format="color"/>
+        <attr name="poorDsaColor" format="color"/>
+        <attr name="badDsaColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeeklyInhalationSummaryGraphView">
+        <attr name="printable"/>
+    </declare-styleable>
+
+    <declare-styleable name="DSASummaryChartView">
+        <attr name="printable"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="ctaButtonStyle" format="reference"/>
+        <attr name="inputFieldStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MarkerArrow">
+        <attr name="isUp" format="boolean"/>
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+</resources>

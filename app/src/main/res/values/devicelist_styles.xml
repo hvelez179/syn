@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="devicelist_item_height">110dp</dimen>
+    <dimen name="devicelist_icon_width">80dp</dimen>
+    <dimen name="devicelist_icon_height">80dp</dimen>
+    <dimen name="devicelist_item_icon_top_margin">2dp</dimen>
+    <dimen name="devicelist_icon_margin_start">6dp</dimen>
+
+    <dimen name="devicelist_nickname_margin_top">6dp</dimen>
+    <dimen name="devicelist_item_text_start_margin">6dp</dimen>
+
+    <dimen name="devicelist_serialnumber_top_margin">0dp</dimen>
+    <dimen name="devicelist_serial_number_margin_start">2dp</dimen>
+
+    <dimen name="devicelist_message_width">215dp</dimen>
+    <dimen name="devicelist_message_top_margin">4dp</dimen>
+
+    <dimen name="devicelist_empty_message_top_margin">4dp</dimen>
+
+    <dimen name="devicelist_chevron_width">10dp</dimen>
+    <dimen name="devicelist_chevron_height">18dp</dimen>
+    <dimen name="devicelist_chevron_top_margin">46dp</dimen>
+    <dimen name="devicelist_chevron_end_margin">25dp</dimen>
+
+    <dimen name="devicelist_supported_inhalers_message_width">328dp</dimen>
+    <dimen name="devicelist_supported_inhalers_message_height">64dp</dimen>
+    <dimen name="devicelist_supported_inhalers_message_start_margin">16dp</dimen>
+    <dimen name="devicelist_supported_inhalers_message_top_margin">17dp</dimen>
+
+    <dimen name="devicelist_add_inhaler_button_width">328dp</dimen>
+    <dimen name="devicelist_add_inhaler_button_height">40dp</dimen>
+    <dimen name="devicelist_add_inhaler_button_start_margin">16dp</dimen>
+    <dimen name="devicelist_add_inhaler_button_bottom_margin">36dp</dimen>
+    <dimen name="device_list_min_height">330dp</dimen>
+
+
+    <dimen name="devicelist_item_divider_margin">0dp</dimen>
+    <dimen name="devicelist_item_vertical_margin">10dp</dimen>
+
+    <dimen name="device_list_list_margin_top">15dp</dimen>
+    <dimen name="device_list_separator_width">1dp</dimen>
+    <dimen name="device_list_bottom_padding">16dp</dimen>
+    <dimen name="device_list_supported_inhalers_letter_spacing">-0.24</dimen>
+
+    <dimen name="devicelist_no_devices_image_width">100dp</dimen>
+    <dimen name="devicelist_no_devices_image_height">100dp</dimen>
+    <dimen name="devicelist_no_devices_image_top_margin">112dp</dimen>
+    <dimen name="devicelist_no_devices_image_start_margin">130dp</dimen>
+
+    <dimen name="devicelist_no_devices_text_top_margin">27dp</dimen>
+    <dimen name="devicelist_no_devices_text_start_margin">16dp</dimen>
+    <dimen name="devicelist_no_devices_text_bottom_margin">87dp</dimen>
+
+    <!--<dimen name="devicelist_item_start_margin">30dp</dimen>
+
+
+
+
+    <dimen name="devicelist_padding_bottom">6dp</dimen>
+
+
+    <dimen name="devicelist_message_margin">2dp</dimen>
+
+    <dimen name="devicelist_nickname_text_size">24dp</dimen>
+    <dimen name="devicelist_text_size">18dp</dimen>
+
+    <dimen name="devicelist_delete_button_width">23dp</dimen>
+    <dimen name="devicelist_delete_button_height">23dp</dimen>
+
+    <dimen name="devicelist_delete_button_margin_end">20dp</dimen>
+    <dimen name="devicelist_delete_button_margin_bottom">10dp</dimen>
+
+    <dimen name="devicelist_add_button_drawable_padding">5dp</dimen>
+    <dimen name="devicelist_add_button_padding">4dp</dimen>
+    <dimen name="devicelist_add_button_margin_end">20dp</dimen>
+    <dimen name="devicelist_add_button_margin_top">30dp</dimen>
+    <dimen name="device_list_add_button_icon_width">10dp</dimen>
+    <dimen name="device_list_add_button_icon_height">10dp</dimen>
+    <dimen name="device_list_add_button_icon_top_margin">8dp</dimen>
+    <dimen name="device_list_add_button_icon_end_margin">3dp</dimen>
+    <dimen name="device_list_add_button_text_start_offset">15dp</dimen>
+    <dimen name="device_list_add_button_text_top_offset">-10dp</dimen>
+
+-->
+    <!--<style name="DeviceListAddButton">
+        <item name="android:textSize">@dimen/devicelist_text_size</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+-->
+    <style name="devicelist_nickname_text" parent="text_appearance_demi_large">
+    </style>
+
+    <style name="devicelist_light_message_text" parent="text_appearance_label">
+    </style>
+
+    <style name="devicelist_message_text" parent="text_appearance_label">
+        <item name="android:textSize">@dimen/hyperlink_text_size</item>
+    </style>
+
+    <style name="devicelist_empty_message_text" parent="text_appearance_small">
+        <item name="android:textColor">#f54961</item>
+    </style>
+
+    <!--<style name="devicelist_bold_message_text" parent="RegularText">
+        <item name="android:textSize">@dimen/devicelist_text_size</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>-->
+
+    <style name="devicelist_supported_inhalers_text" parent="text_appearance_label">
+        <item name="android:letterSpacing">@dimen/device_list_supported_inhalers_letter_spacing</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorMessageShade">#009be2</color>
+    <color name="colorMessageShadeText">#ffffff</color>
+
+    <dimen name="messageShadeHeight">46dp</dimen>
+    <dimen name="messageShadeElevation">20dp</dimen>
+    <dimen name="messageShadeShadowHeight">4dp</dimen>
+
+    <style name="message_shade_text">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColor">@color/colorMessageShadeText</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+</resources>

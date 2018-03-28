@@ -1,0 +1,9 @@
+{
+  "Default": "WARN",
+  "ConsentViewModel": "VERBOSE",
+  "DashboardActivity": "DEBUG",
+  "LoginViewModel": "VERBOSE",
+  "CareProgramsFragment": "VERBOSE",
+  "DHPManagerImpl": "VERBOSE",
+  "RestClientImpl": "VERBOSE"
+}

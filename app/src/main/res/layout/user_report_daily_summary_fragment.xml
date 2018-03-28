@@ -1,0 +1,277 @@
+<!-- --><!-- user_report_daily_summary_fragment.xml --><!-- app --><!-- --><!-- Copyright (c) 2017 Teva. All rights reserved. --><!-- -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.ReportViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/user_report_daily_report_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.teva.respiratoryapp.activity.view.tracker.UserReportDailySummaryFragment">
+
+        <TextView
+            android:id="@+id/user_report_daily_summary_report_title"
+            style="@style/user_report_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/daily_summary_graph_y_label_width"
+            android:layout_marginTop="@dimen/user_report_daily_report_title_top_margin"
+            android:text="@string/dailyInhalationsGraphTitle_text"
+            app:layout_constraintStart_toStartOf="@+id/user_report_daily_report_chart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_report_daily_summary_report_date"
+            style="@style/user_report_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_report_daily_report_title_top_margin"
+            android:text="@{viewmodel.dailySummaryDateRange}"
+            app:layout_constraintEnd_toEndOf="@+id/user_report_daily_report_chart"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oct 1, 2016 - Oct 30, 2016"/>
+
+
+        <com.teva.respiratoryapp.activity.controls.VerticalTextView
+            android:id="@+id/user_report_daily_summary_report_num_events"
+            style="@style/user_report_bold_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inhalationReportYAxisLabel_text"
+            app:layout_constraintEnd_toStartOf="@+id/user_report_daily_report_chart"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_report_daily_report_chart"
+            app:layout_constraintBottom_toBottomOf="@+id/user_report_daily_report_chart"/>
+
+        <com.teva.respiratoryapp.activity.view.tracker.DailySummaryGraphView
+            android:id="@+id/user_report_daily_report_chart"
+            currentDate="@{viewmodel.currentDate}"
+            dayWiseInhaleEvents="@{viewmodel.dayWiseInhaleEvents}"
+            app:printable="false"
+            app:boldLineColor="@color/colorBoldText"
+            app:lineColor="@color/user_report_line_color"
+            app:redLineColor="@color/user_report_red_line_color"
+            app:tickLineColor="@color/user_report_tick_color"
+            app:labelTextAppearance="@style/daily_report_label_text"
+            app:overflowTextAppearance="@style/daily_report_graph_overflow_text"
+            app:columnWidth="@dimen/daily_summary_graph_column_width"
+            app:xLabelPadding="@dimen/daily_summary_graph_x_label_height"
+            app:xLabelMargin="@dimen/daily_summary_graph_x_label_margin"
+            app:yLabelPadding="@dimen/daily_summary_graph_y_label_width"
+            app:yLabelMargin="@dimen/daily_summary_graph_y_label_margin"
+            android:layout_width="@dimen/user_report_daily_report_graph_width"
+            android:layout_height="@dimen/user_report_daily_report_graph_height"
+            android:layout_marginStart="@dimen/user_report_daily_report_graph_left_margin"
+            android:layout_marginTop="@dimen/user_report_daily_report_graph_top_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/user_report_daily_summary_report_num_events"
+            app:layout_constraintTop_toBottomOf="@id/user_report_daily_summary_report_title" />
+
+        <LinearLayout
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_report_summary_page_indicator_top_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_report_daily_report_chart">
+            <View style="@style/page_capsule_dim" />
+
+            <View style="@style/page_capsule" />
+
+            <View style="@style/page_capsule_dim" />
+
+            <View style="@style/page_capsule_dim" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_report_legend_good1_icon"
+            android:layout_width="@dimen/user_report_legend_icon_width"
+            android:layout_height="@dimen/user_report_legend_icon_height"
+            android:layout_marginTop="@dimen/user_report_legend_icon_top_margin"
+            android:src="@drawable/ic_user_report_good1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/good1_label"
+            app:layout_constraintTop_toTopOf="@id/page_indicator" />
+
+        <LinearLayout
+            android:id="@+id/good1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/user_report_legend_label_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_text_top_margin"
+            app:layout_constraintStart_toEndOf="@id/user_report_legend_good1_icon"
+            app:layout_constraintEnd_toStartOf="@id/user_report_legend_good2_icon"
+            app:layout_constraintTop_toTopOf="@id/page_indicator">
+            <TextView
+                android:id="@+id/user_report_legend_good1_icon_text"
+                style="@style/user_report_legend_icon_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportGoodInhalation_text"
+                />
+
+            <TextView
+                android:id="@+id/user_report_legend_good_inhalation1_info"
+                style="@style/user_report_legend_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportGoodInhalationDetails_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_report_legend_good2_icon"
+            android:layout_width="@dimen/user_report_legend_icon_width"
+            android:layout_height="@dimen/user_report_legend_icon_height"
+            android:layout_marginStart="@dimen/user_report_legend_good_2_icon_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_top_margin"
+            android:src="@drawable/ic_user_report_good2"
+            app:layout_constraintStart_toEndOf="@id/good1_label"
+            app:layout_constraintEnd_toStartOf="@id/good2_label"
+            app:layout_constraintTop_toTopOf="@id/page_indicator" />
+
+
+        <LinearLayout
+            android:id="@+id/good2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/user_report_legend_label_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_text_top_margin"
+            app:layout_constraintStart_toEndOf="@+id/user_report_legend_good2_icon"
+            app:layout_constraintEnd_toStartOf="@+id/user_report_legend_no_icon"
+            app:layout_constraintTop_toTopOf="@id/page_indicator">
+            <TextView
+                android:id="@+id/user_report_legend_good2_icon_text"
+                style="@style/user_report_legend_icon_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportGoodInhalation_text"/>
+
+            <TextView
+                android:id="@+id/user_report_legend_good_inhalation2_info"
+                style="@style/user_report_legend_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportSuboptimalGoodInhalationDetails_text" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/user_report_legend_no_icon"
+            android:layout_width="@dimen/user_report_legend_icon_width"
+            android:layout_height="@dimen/user_report_legend_icon_height"
+            android:layout_marginStart="@dimen/user_report_legend_no_icon_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_top_margin"
+            android:src="@drawable/ic_user_report_no"
+            app:layout_constraintStart_toEndOf="@+id/good2_label"
+            app:layout_constraintEnd_toStartOf="@+id/noinhalation_label"
+            app:layout_constraintTop_toTopOf="@id/page_indicator" />
+
+        <LinearLayout
+            android:id="@+id/noinhalation_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/user_report_legend_label_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_text_top_margin"
+            app:layout_constraintStart_toEndOf="@id/user_report_legend_no_icon"
+            app:layout_constraintEnd_toStartOf="@+id/user_report_legend_exhalation_icon"
+            app:layout_constraintTop_toTopOf="@id/page_indicator">
+            <TextView
+                android:id="@+id/user_report_legend_no_icon_text"
+                style="@style/user_report_legend_icon_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportNoInhalation_text" />
+
+            <TextView
+                android:id="@+id/user_report_legend_no_inhalation_info"
+                style="@style/user_report_legend_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportNoInhalationDetails_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_report_legend_exhalation_icon"
+            android:layout_width="@dimen/user_report_legend_icon_width"
+            android:layout_height="@dimen/user_report_legend_icon_height"
+            android:layout_marginTop="@dimen/user_report_legend_icon_top_margin"
+            android:layout_marginStart="@dimen/user_report_legend_exhalation_icon_left_margin"
+            android:src="@drawable/ic_user_report_exhalation"
+            app:layout_constraintStart_toEndOf="@id/noinhalation_label"
+            app:layout_constraintEnd_toStartOf="@+id/exhalation_label"
+            app:layout_constraintTop_toTopOf="@id/page_indicator" />
+
+        <LinearLayout
+            android:id="@+id/exhalation_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/user_report_legend_label_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_text_top_margin"
+            app:layout_constraintStart_toEndOf="@id/user_report_legend_exhalation_icon"
+            app:layout_constraintEnd_toStartOf="@+id/user_report_legend_possible_icon"
+            app:layout_constraintTop_toTopOf="@id/page_indicator">
+            <TextView
+                android:id="@+id/user_report_legend_exhalation_icon_text"
+                style="@style/user_report_legend_icon_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportExhalation_text"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_report_legend_possible_icon"
+            android:layout_width="@dimen/user_report_legend_icon_width"
+            android:layout_height="@dimen/user_report_legend_icon_height"
+            android:layout_marginStart="@dimen/user_report_legend_possible_icon_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_top_margin"
+            android:src="@drawable/ic_user_report_possible"
+            app:layout_constraintStart_toEndOf="@id/exhalation_label"
+            app:layout_constraintEnd_toStartOf="@+id/ventblock_label"
+            app:layout_constraintTop_toTopOf="@id/page_indicator" />
+
+        <LinearLayout
+            android:id="@+id/ventblock_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/user_report_legend_label_left_margin"
+            android:layout_marginTop="@dimen/user_report_legend_icon_text_top_margin"
+            app:layout_constraintStart_toEndOf="@id/user_report_legend_possible_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/page_indicator">
+            <TextView
+                android:id="@+id/user_report_legend_possible_icon_text"
+                style="@style/user_report_legend_icon_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inhalationReportInhalationError_text"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/user_report_legend_units_lpm"
+            style="@style/user_report_legend_info_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inhalationLegendLPMDefinition_text"
+            app:layout_constraintStart_toStartOf="@+id/user_report_legend_good1_icon"
+            app:layout_constraintBottom_toBottomOf="@id/noinhalation_label" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

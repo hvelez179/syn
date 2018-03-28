@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- about_app_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+
+    <dimen name="about_app_separator_height">1dp</dimen>
+    <dimen name="about_app_version_top_margin">32dp</dimen>
+    <dimen name="about_app_version_start_margin">16dp</dimen>
+    <dimen name="about_app_learn_more_top_margin">32dp</dimen>
+    <dimen name="about_app_learn_more_start_margin">16dp</dimen>
+    <dimen name="about_app_learn_more_link_top_margin">8dp</dimen>
+    <dimen name="about_app_learn_more_link_start_margin">16dp</dimen>
+    <dimen name="about_app_customer_support_text_height">80dp</dimen>
+    <dimen name="about_app_customer_support_text_width">328dp</dimen>
+    <dimen name="about_app_customer_support_top_margin">32dp</dimen>
+    <dimen name="about_app_customer_support_start_margin">16dp</dimen>
+    <dimen name="about_app_customer_support_link_top_margin">0dp</dimen>
+    <dimen name="about_app_customer_support_link_start_margin">16dp</dimen>
+    <dimen name="about_app_customer_support_website_separator_top_margin">32dp</dimen>
+    <dimen name="about_app_website_layout_top_margin">24dp</dimen>
+    <dimen name="about_app_website_start_margin">16dp</dimen>
+    <dimen name="about_app_website_chevron_end_margin">17dp</dimen>
+    <dimen name="about_app_website_chevron_top_margin">3dp</dimen>
+    <dimen name="about_app_chevron_width">10dp</dimen>
+    <dimen name="about_app_chevron_height">18dp</dimen>
+    <dimen name="about_app_bottom_margin">22dp</dimen>
+
+
+
+    <style name="about_app_version_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.9</item>
+    </style>
+    <style name="about_app_learn_more_text" parent="text_appearance_small">
+        <item name="android:textColor">#003766</item>
+    </style>
+    <style name="about_app_learn_more_link_text" parent="text_appearance_hyperlink">
+        <item name="android:textColor">#003766</item>
+    </style>
+    <style name="about_app_customer_support_text" parent="text_appearance_small">
+        <item name="android:textColor">#003766</item>
+    </style>
+    <style name="about_app_customer_support_link_text" parent="text_appearance_hyperlink">
+        <item name="android:textColor">#003766</item>
+    </style>
+    <style name="about_app_navigation_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+
+</resources>

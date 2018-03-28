@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- walkthrough_get_started.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:id="@+id/walkthrough_get_started_image"
+        android:layout_width="@dimen/walkthrough_get_started_image_width"
+        android:layout_height="@dimen/walkthrough_get_started_image_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginTop="@dimen/walkthrough_get_started_image_top_margin"
+        android:src="@drawable/ic_walkthrough_flag"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/walkthrough_get_started_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/walkthrough_get_started_message_top_margin"
+        app:layout_goneMarginStart="@dimen/walkthrough_horizontal_margin"
+        app:layout_goneMarginEnd="@dimen/walkthrough_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkthrough_get_started_image"
+        android:text="@string/walkthroughGetStarted_text"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginEnd="@dimen/walkthrough_horizontal_margin"
+        style="@style/text_appearance_large"
+        android:fontFamily="@font/avenir_next_medium"
+        android:lineSpacingExtra="@dimen/walkthrough_welcome_text_line_spacing_extra"
+        />
+
+</android.support.constraint.ConstraintLayout>

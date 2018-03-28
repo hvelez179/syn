@@ -1,0 +1,13 @@
+<!--
+  ~
+  ~  ic_pollen_moderate.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="16.0"
+    android:viewportWidth="16.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffb92f" android:pathData="M8,8m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+</vector>

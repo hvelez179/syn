@@ -1,0 +1,136 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="android.view.Gravity"/>
+        <import type="com.teva.userfeedback.enumerations.UserFeeling"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupDashboardButton"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupColor"/>
+        <import type="com.teva.respiratoryapp.activity.view.popup.DsaConfirmPopup"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.DsaConfirmPopupViewModel"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include android:id="@+id/popup_background"
+            layout="@layout/dashboard_popup_background"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_card_container_height"
+                android:layout_marginTop="@dimen/popup_card_arrow_top_margin"
+                android:layout_gravity="top">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cardBackground"
+                    android:layout_height="@dimen/dsa_card_height"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/standard_horizontal_margin"
+                    android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                    android:layout_marginTop="@dimen/popup_card_offset"
+                    android:background="#ffffff"
+                    android:elevation="@dimen/popup_card_elevation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/DsaHeaderText"
+                        android:text="@string/vasTitle_text"
+                        android:layout_marginTop="@dimen/dsa_confirm_title_top_margin"
+                        android:layout_marginStart="@dimen/dsa_horizontal_margin"
+                        android:layout_marginEnd="@dimen/dsa_horizontal_margin"
+                        bind:layout_constraintTop_toTopOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/second_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/DsaConfirmSecondTitleText"
+                        android:text="@string/dsaConfirmBody"
+                        android:layout_marginTop="@dimen/dsa_confirm_second_title_top_margin"
+                        android:layout_marginStart="@dimen/dsa_horizontal_margin"
+                        android:layout_marginEnd="@dimen/dsa_horizontal_margin"
+                        bind:layout_constraintTop_toBottomOf="@id/title"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/dsa_confirm_icon_width"
+                        android:layout_height="@dimen/dsa_confirm_icon_height"
+                        android:src="@{DsaConfirmPopup.DSAToImageId(viewmodel.dsa)}"
+                        android:layout_marginTop="@dimen/dsa_confirm_icon_top_margin"
+                        app:layout_constraintTop_toBottomOf="@+id/second_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        tools:src="@drawable/ic_smiley_happy_green_large"/>
+
+                    <TextView
+                        android:id="@+id/body"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/text_appearance_small"
+                        android:text="@string/vasInputAlreadySpecified_text"
+                        android:layout_marginTop="@dimen/dsa_confirm_body_top_margin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/dsa_horizontal_margin"
+                        android:layout_marginEnd="@dimen/dsa_horizontal_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image"/>
+
+                    <com.teva.respiratoryapp.activity.controls.CtaButton
+                        android:id="@+id/button"
+                        style="@style/cta_button"
+                        android:onClick="@{() -> viewmodel.onButton()}"
+                        android:text="@string/ok_text"
+                        android:enabled="@{viewmodel.dsa != UserFeeling.UNKNOWN}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        bind:layout_constraintEnd_toEndOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/popup_button_bottom_margin"
+                        android:layout_gravity="center"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    app:isUp="true"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintBottom_toTopOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.DSA}"
+                    tools:visibility="visible"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

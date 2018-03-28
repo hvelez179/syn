@@ -1,0 +1,554 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.teva.respiratoryapp.activity.view.EnvironmentFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.environment.EnvironmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/environment_toolbar"
+            layout="@layout/dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <include
+            android:id="@+id/message_shade"
+            layout="@layout/message_shade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/environment_weather_information_top_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider" />
+
+        <View android:id="@+id/topShadow"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/list_header_shadow_height"
+              android:background="@drawable/list_header_shadow"
+            />
+
+
+        <ScrollView
+            android:id="@+id/item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/environment_weather_information_top_separator">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/environment_weather_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/environment_weather_segment_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                    <TextView
+                        android:id="@+id/environment_weather_title"
+                        style="@style/environment_segment_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_weather_title_start_margin"
+                        android:layout_marginTop="@dimen/environment_weather_title_top_margin"
+                        android:text="@string/environmentWeatherCardTitle_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_location"
+                        style="@style/environment_location_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_location_start_margin"
+                        android:layout_marginTop="@dimen/environment_location_top_margin"
+                        android:text="@{viewmodel.location}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_weather_condition_icon"
+                        android:layout_width="@dimen/environment_weather_condition_icon_width"
+                        android:layout_height="@dimen/environment_weather_condition_icon_height"
+                        android:layout_marginStart="@dimen/environment_weather_condition_icon_start_margin"
+                        android:layout_marginTop="@dimen/environment_weather_condition_icon_top_margin"
+                        android:src="@{EnvironmentFragment.iconResourceForWeatherCondition(viewmodel.weatherCondition)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_temperature"
+                        style="@style/environment_temperature_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_temperature_start_margin"
+                        android:layout_marginTop="@dimen/environment_temperature_top_margin"
+                        android:text="@{viewmodel.temperature}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_weather_condition_description"
+                        style="@style/environment_weather_description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_weather_description_start_margin"
+                        android:layout_marginTop="@dimen/environment_weather_description_top_margin"
+                        android:text="@{EnvironmentFragment.descriptionForWeatherCondition(viewmodel.weatherConditionExtendedCode)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_humidity_label"
+                        style="@style/environment_weather_parameter_label_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_humidity_label_start_margin"
+                        android:layout_marginTop="@dimen/environment_humidity_label_top_margin"
+                        android:text="@string/environmentWeatherHumidity_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_precipitation_label"
+                        style="@style/environment_weather_parameter_label_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_precipitation_label_start_margin"
+                        android:layout_marginTop="@dimen/environment_precipitation_label_top_margin"
+                        android:text="@string/environmentWeatherPrecipitation_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_wind_label"
+                        style="@style/environment_weather_parameter_label_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_wind_label_start_margin"
+                        android:layout_marginTop="@dimen/environment_wind_label_top_margin"
+                        android:text="@{viewmodel.windLabel}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_humidity_value"
+                        style="@style/environment_weather_parameter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_humidity_value_start_margin"
+                        android:layout_marginTop="@dimen/environment_humidity_value_top_margin"
+                        android:text="@{viewmodel.humidity}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_precipitation_value"
+                        style="@style/environment_weather_parameter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_precipitation_value_start_margin"
+                        android:layout_marginTop="@dimen/environment_precipitation_value_top_margin"
+                        android:text="@{viewmodel.chanceOfPrecipitation}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_wind_value"
+                        style="@style/environment_weather_parameter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_wind_value_start_margin"
+                        android:layout_marginTop="@dimen/environment_wind_value_top_margin"
+                        android:text="@{viewmodel.windDetails}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/weather_airquality_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/environment_weather_information" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/environment_airquality_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/environment_airquality_segment_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weather_airquality_separator">
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_title"
+                        style="@style/environment_segment_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_title_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_title_top_margin"
+                        android:text="@string/airQualityCard_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_air_quality_icon"
+                        android:layout_width="@dimen/environment_air_quality_icon_width"
+                        android:layout_height="@dimen/environment_air_quality_icon_height"
+                        android:layout_marginStart="@dimen/environment_air_quality_icon_start_margin"
+                        android:layout_marginTop="@dimen/environment_air_quality_icon_top_margin"
+                        android:src="@{EnvironmentFragment.iconForAirQuality(viewmodel.airQuality)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_description"
+                        style="@style/environment_airquality_description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_description_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_description_top_margin"
+                        android:text="@{EnvironmentFragment.descriptionForAirQuality(viewmodel.airQuality)}"
+                        app:layout_constraintStart_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_legend_good"
+                        style="@style/environment_airquality_legend_label_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_good_label_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_good_label_top_margin"
+                        android:text="@string/airQualityGood_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_legend_hazardous"
+                        style="@style/environment_airquality_legend_label_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_hazardous_label_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_hazardous_label_top_margin"
+                        android:text="@string/airQualityHazardous_text"
+                        app:layout_constraintStart_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_air_quality_bar"
+                        android:layout_width="@dimen/environment_airquality_legend_bar_width"
+                        android:layout_height="@dimen/environment_airquality_legend_bar_height"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_bar_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_bar_top_margin"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_airquality_values"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_50_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_50_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_50_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_100_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_100_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_100_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_150_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_150_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_150_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_200_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_200_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_200_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_300_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_300_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_300_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_quality_500_text"
+                        style="@style/environment_airquality_legend_values_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_legend_value_500_top_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_legend_values_top_margin"
+                        android:gravity="center"
+                        android:text="@string/environment_air_quality_500_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_source_label"
+                        style="@style/environment_airquality_source_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_source_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_source_top_margin"
+                        android:text="@string/environment_air_quality_source"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_air_source_text"
+                        style="@style/environment_airquality_source_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_airquality_source_value_start_margin"
+                        android:layout_marginTop="@dimen/environment_airquality_source_top_margin"
+                        android:text="@{viewmodel.airQualitySource}"
+                        app:layout_constraintStart_toEndOf="@+id/environment_air_source_label"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/airquality_pollen_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/environment_airquality_information" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/environment_pollen_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/environment_pollen_segment_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/airquality_pollen_separator">
+
+                    <TextView
+                        android:id="@+id/environment_pollen_title"
+                        style="@style/environment_segment_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_pollen_title_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_title_top_margin"
+                        android:text="@string/pollenCard_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_type_tree_icon"
+                        android:layout_width="@dimen/environment_pollen_tree_image_width"
+                        android:layout_height="@dimen/environment_pollen_tree_image_height"
+                        android:layout_marginStart="@dimen/environment_pollen_tree_image_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_tree_image_top_margin"
+                        android:src="@drawable/ic_tree"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_type_tree_text"
+                        style="@style/environment_pollen_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_pollen_tree_text_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_tree_text_top_margin"
+                        android:text="@string/pollenContributorTree_text"
+                        app:layout_constraintStart_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_status_tree_icon"
+                        android:layout_width="@dimen/environment_pollen_status_image_width"
+                        android:layout_height="@dimen/environment_pollen_status_image_height"
+                        android:layout_marginEnd="@dimen/environment_pollen_tree_status_image_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_tree_status_image_top_margin"
+                        android:src="@{EnvironmentFragment.iconForPollenLevel(viewmodel.treePollenLevel)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_status_tree_text"
+                        style="@style/environment_pollen_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/environment_pollen_tree_status_text_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_tree_status_text_top_margin"
+                        android:text="@{EnvironmentFragment.descriptionForPollenLevel(viewmodel.treePollenLevel)}"
+                        app:layout_constraintEnd_toStartOf="@+id/environment_pollen_status_tree_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/pollen_tree_grass_separator"
+                        android:layout_width="@dimen/environment_pollen_separator_width"
+                        android:layout_height="@dimen/environment_pollen_separator_height"
+                        android:layout_marginStart="@dimen/environment_pollen_separator_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_tree_grass_separator_top_margin"
+                        android:background="@color/colorDivider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_type_grass_icon"
+                        android:layout_width="@dimen/environment_pollen_grass_image_width"
+                        android:layout_height="@dimen/environment_pollen_grass_image_height"
+                        android:layout_marginStart="@dimen/environment_pollen_grass_image_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_grass_image_top_margin"
+                        android:src="@drawable/ic_grass"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_type_grass_text"
+                        style="@style/environment_pollen_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_pollen_grass_text_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_grass_text_top_margin"
+                        android:text="@string/pollenContributorGrass_text"
+                        app:layout_constraintStart_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_status_grass_icon"
+                        android:layout_width="@dimen/environment_pollen_status_image_width"
+                        android:layout_height="@dimen/environment_pollen_status_image_height"
+                        android:layout_marginEnd="@dimen/environment_pollen_grass_status_image_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_grass_status_image_top_margin"
+                        android:src="@{EnvironmentFragment.iconForPollenLevel(viewmodel.grassPollenLevel)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_status_grass_text"
+                        style="@style/environment_pollen_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/environment_pollen_grass_status_text_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_grass_status_text_top_margin"
+                        android:text="@{EnvironmentFragment.descriptionForPollenLevel(viewmodel.grassPollenLevel)}"
+                        app:layout_constraintEnd_toStartOf="@+id/environment_pollen_status_grass_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/pollen_grass_weed_separator"
+                        android:layout_width="@dimen/environment_pollen_separator_width"
+                        android:layout_height="@dimen/environment_pollen_separator_height"
+                        android:layout_marginStart="@dimen/environment_pollen_separator_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_grass_weed_separator_top_margin"
+                        android:background="@color/colorDivider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_type_weed_icon"
+                        android:layout_width="@dimen/environment_pollen_weed_image_width"
+                        android:layout_height="@dimen/environment_pollen_weed_image_height"
+                        android:layout_marginStart="@dimen/environment_pollen_weed_image_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_weed_image_top_margin"
+                        android:src="@drawable/ic_weed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_type_weed_text"
+                        style="@style/environment_pollen_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/environment_pollen_weed_text_start_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_weed_text_top_margin"
+                        android:text="@string/pollenContributorWeed_text"
+                        app:layout_constraintStart_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/environment_pollen_status_weed_icon"
+                        android:layout_width="@dimen/environment_pollen_status_image_width"
+                        android:layout_height="@dimen/environment_pollen_status_image_height"
+                        android:layout_marginEnd="@dimen/environment_pollen_weed_status_image_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_weed_status_image_top_margin"
+                        android:src="@{EnvironmentFragment.iconForPollenLevel(viewmodel.weedPollenLevel)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/environment_pollen_status_weed_text"
+                        style="@style/environment_pollen_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/environment_pollen_weed_status_text_end_margin"
+                        android:layout_marginTop="@dimen/environment_pollen_weed_status_text_top_margin"
+                        android:text="@{EnvironmentFragment.descriptionForPollenLevel(viewmodel.weedPollenLevel)}"
+                        app:layout_constraintEnd_toStartOf="@+id/environment_pollen_status_weed_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</layout>

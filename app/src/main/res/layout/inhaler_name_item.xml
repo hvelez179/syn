@@ -1,0 +1,48 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.teva.respiratoryapp.activity.view.device.SelectInhalerNameFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.InhalerNameItem" />
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:background="@drawable/card_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inhaler_name_item_height"
+        android:stateListAnimator="@animator/card_animator"
+        android:elevation="@dimen/profile_item_elevation"
+        android:layout_marginTop="@dimen/inhaler_name_item_top_margin"
+        android:layout_marginBottom="@dimen/inhaler_name_item_bottom_margin"
+        android:layout_marginStart="@dimen/profile_list_horizontal_padding"
+        android:layout_marginEnd="@dimen/profile_list_horizontal_padding">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/inhaler_name_icon_width"
+            android:layout_height="@dimen/inhaler_name_icon_height"
+            android:layout_marginStart="@dimen/inhaler_name_icon_start_margin"
+            android:layout_marginTop="@dimen/inhaler_name_icon_top_margin"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            android:src="@{SelectInhalerNameFragment.InhalerNameTypeToDrawableId(viewmodel.type)}"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/InhalerNameTextStyle"
+            android:layout_marginStart="@dimen/inhaler_name_start_margin"
+            android:layout_marginTop="@dimen/inhaler_name_top_margin"
+            bind:layout_constraintStart_toEndOf="@+id/icon"
+            bind:layout_constraintTop_toTopOf="parent"
+            android:text="@{viewmodel.name}"
+            tools:text="Home"
+            tools:layout_editor_absoluteX="8dp"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

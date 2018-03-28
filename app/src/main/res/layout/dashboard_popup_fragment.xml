@@ -1,0 +1,231 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="android.view.Gravity"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupDashboardButton"/>
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupColor"/>
+        <import type="com.teva.respiratoryapp.activity.view.popup.DashboardPopupFragment"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.DashboardPopupViewModel"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include android:id="@+id/popup_background"
+                 layout="@layout/dashboard_popup_background"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_card_container_height"
+                android:layout_gravity="@{DashboardPopupFragment.arrowStateToGravity(viewmodel.arrowState)}"
+                app:cardMargin="@{viewmodel.arrowState}"
+                tools:layout_gravity="bottom">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cardBackground"
+                    android:layout_height="@dimen/popup_card_height"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/standard_horizontal_margin"
+                    android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                    android:layout_marginTop="@dimen/popup_card_offset"
+                    android:background="#ffffff"
+                    android:elevation="@dimen/popup_card_elevation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <View
+                        android:id="@+id/header"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/popup_header_height"
+                        android:background="@{DashboardPopupFragment.PopupColorToPopupHeaderDrawableId(viewmodel.popupColor)}"
+                        android:visibility="@{viewmodel.headerBarVisible}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <View android:id="@+id/close_button"
+                        style="@style/CloseButton"
+                        android:background="@drawable/popup_close_dark_selector"
+                        android:onClick="@{() -> viewmodel.onClose()}"
+                        android:visibility="@{viewmodel.closeButtonVisible}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:background="@drawable/popup_close_dark_selector" />
+
+                    <FrameLayout
+                        android:id="@+id/content_container"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clipChildren="false"
+                        android:layout_marginTop="-20dp"
+                        bind:layout_constraintBottom_toTopOf="@+id/button"
+                        bind:layout_constraintEnd_toEndOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintTop_toBottomOf="@+id/header">
+
+                    </FrameLayout>
+                    <ImageView
+                        android:id="@+id/back_image"
+                        android:layout_marginBottom="@dimen/popup_back_button_bottom_margin"
+                        android:layout_marginStart="@dimen/popup_back_button_start_margin"
+                        android:layout_width="@dimen/walkthrough_navigation_back_width"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitStart"
+                        android:layout_height="@dimen/popup_navigation_image_height"
+                        android:src="@drawable/ic_walkthrough_back_arrow"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="@{viewmodel.backButtonVisible}"
+                        android:onClick="@{() -> viewmodel.onBackButtonClicked()}"/>
+
+                    <TextView
+                        android:id="@+id/hyperlink"
+                        style="@style/text_appearance_hyperlink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/popup_hyperlink_bottom_margin"
+                        android:paddingBottom="0dp"
+                        app:hyperlink="@{viewmodel.hyperlinkText}"
+                        app:linkClicked="@{(id) -> viewmodel.onHyperlink()}"
+                        android:visibility="@{viewmodel.hyperlinkVisible}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        bind:layout_constraintEnd_toStartOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        bind:underlined="@{true}"
+                        tools:text="Instructions for use"/>
+
+                    <ImageView
+                        android:id="@+id/next_image"
+                        android:layout_marginBottom="@dimen/popup_next_button_bottom_margin"
+                        android:layout_marginEnd="@dimen/popup_next_button_end_margin"
+                        android:layout_width="@dimen/popup_navigation_image_width"
+                        android:layout_height="@dimen/popup_navigation_image_height"
+                        android:src="@drawable/ic_walkthrough_next_arrow"
+                        bind:layout_constraintEnd_toEndOf="parent"
+                        bind:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="@{viewmodel.nextButtonVisible}"
+                        android:onClick="@{() -> viewmodel.onNextButtonClicked()}"/>
+                    <TextView
+                        android:id="@+id/next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/popup_next_button_text_bottom_margin"
+                        android:layout_marginEnd="@dimen/popup_next_button_end_margin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:drawableEnd="@drawable/walkthrough_next_arrow"
+                        android:drawablePadding="@dimen/walkthrough_navigation_margin"
+                        app:hyperlink="@{@string/walkthroughNext_text}"
+                        app:linkClicked="@{(id) -> viewmodel.onNextButtonClicked()}"
+                        style="@style/text_appearance_hyperlink"
+                        android:visibility="@{viewmodel.nextButtonVisible}"
+                        tools:text="@string/walkthroughNext_text"/>
+
+                    <com.teva.respiratoryapp.activity.controls.CtaButton
+                        android:id="@+id/button"
+                        style="@style/cta_button"
+                        android:background="@{DashboardPopupFragment.PopupColorToButtonBackgroundDrawableId(viewmodel.popupColor)}"
+                        android:onClick="@{() -> viewmodel.onButton()}"
+                        android:text="@{viewmodel.buttonText}"
+                        android:visibility="@{viewmodel.buttonVisible}"
+                        app:layout_constraintBottom_toTopOf="@+id/hyperlink"
+                        bind:layout_constraintEnd_toEndOf="parent"
+                        bind:layout_constraintStart_toStartOf="parent"
+                        app:layout_goneMarginBottom="@dimen/popup_button_gone_bottom_margin"
+                        android:layout_marginBottom="@dimen/popup_button_bottom_margin"
+                        bind:textColorId="@{DashboardPopupFragment.PopupColorToButtonTextColorId(viewmodel.popupColor)}"
+                        tools:text="Open Environment"
+                        android:layout_gravity="center"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    android:layout_marginEnd="@dimen/dashboard_icon_arrow_top_edge_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    app:isUp="true"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.SUPPORT}"
+                    tools:visibility="visible"/>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    app:isUp="true"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintBottom_toTopOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.DSA}"
+                    tools:visibility="visible"/>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    app:isUp="true"
+                    app:layout_constraintHorizontal_bias="0.33"
+                    app:layout_constraintBottom_toTopOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.REPORT}"
+                    tools:visibility="visible"/>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    android:layout_marginStart="@dimen/dashboard_icon_arrow_bottom_edge_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.EVENTS}"
+                    tools:visibility="visible"/>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBackground"
+                    app:layout_constraintStart_toStartOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.ENVIRONMENT}"
+                    tools:visibility="visible"/>
+
+                <com.teva.respiratoryapp.activity.controls.MarkerArrow
+                    android:layout_width="@dimen/dashboard_icon_arrow_width"
+                    android:layout_height="@dimen/dashboard_icon_arrow_height"
+                    android:layout_marginEnd="@dimen/dashboard_icon_arrow_bottom_edge_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBackground"
+                    app:layout_constraintEnd_toEndOf="@+id/cardBackground"
+                    android:elevation="@dimen/popup_card_elevation"
+                    android:visibility="@{viewmodel.arrowState == PopupDashboardButton.DEVICES}"
+                    tools:visibility="visible"/>
+            </android.support.constraint.ConstraintLayout>
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

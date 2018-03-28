@@ -1,0 +1,15 @@
+<!--
+  ~
+  ~  ic_edit_device.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="19.0"
+    android:viewportWidth="19.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#3E5466" android:fillType="evenOdd"
+        android:pathData="M17.798,4.051L15.965,5.884L12.203,2.122L14.035,0.289C14.228,0.096 14.466,0 14.747,0C15.028,0 15.265,0.096 15.458,0.289L17.798,2.629C17.99,2.822 18.087,3.059 18.087,3.34C18.087,3.621 17.99,3.859 17.798,4.051ZM0,14.325L11.117,3.207L14.88,6.97L3.762,18.087L0,18.087L0,14.325Z"
+        android:strokeColor="#00000000" android:strokeWidth="1"/>
+</vector>

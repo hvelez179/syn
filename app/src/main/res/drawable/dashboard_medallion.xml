@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res/com.teva.respiratoryapp">-->
+    <!--<solid android:color="#00ff00"/>-->
+    <!--<padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp"/>-->
+<!--</shape>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res/com.teva.respiratoryapp">
+    <item>
+        <selector>
+            <item app:critical="true" android:drawable="@drawable/dashboard_widget_red"/>
+
+            <item app:critical="false" android:drawable="@drawable/dashboard_widget_gray"/>
+        </selector>
+    </item>
+
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/dashboard_widget_padding"
+                android:right="@dimen/dashboard_widget_padding"
+                android:top="@dimen/dashboard_widget_padding"
+                android:bottom="@dimen/dashboard_widget_padding"/>
+        </shape>
+    </item>
+
+</layer-list>

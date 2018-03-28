@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.setup.ProfileItemViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_item_height"
+        android:background="@drawable/card_background"
+        android:layout_marginTop="@dimen/profile_item_vertical_margin"
+        android:layout_marginBottom="@dimen/profile_item_vertical_margin"
+        android:layout_marginStart="@dimen/profile_list_horizontal_padding"
+        android:layout_marginEnd="@dimen/profile_list_horizontal_padding"
+        android:elevation="@dimen/profile_item_elevation"
+        android:stateListAnimator="@animator/card_animator">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/text_appearance_demi_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.name}"
+            android:layout_marginStart="@dimen/profile_item_horizontal_padding"
+            android:layout_marginEnd="@dimen/profile_item_horizontal_padding"
+            tools:text = "Jane Smith"
+            android:textColor="@color/card_text_color"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/dob"/>
+
+        <TextView
+            android:id="@+id/dob"
+            style="@style/text_appearance_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.dob}"
+            android:layout_marginTop="@dimen/profile_item_dob_top_margin"
+            android:layout_marginStart="@dimen/profile_item_horizontal_padding"
+            android:layout_marginEnd="@dimen/profile_item_horizontal_padding"
+            tools:text="04/27/1973"
+            android:textColor="@color/card_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

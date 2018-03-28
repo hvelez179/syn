@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="1dp"/>
+            <solid android:color="@color/error_text_color"/>
+            <padding android:bottom="@dimen/edit_text_bottom_line_padding"/>
+        </shape>
+    </item>
+</layer-list>

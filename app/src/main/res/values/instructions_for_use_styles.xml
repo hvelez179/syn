@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- instructions_for_use_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <dimen name="ifu_page_indicator_top_margin">5dp</dimen>
+    <dimen name="ifu_page_indicator_bottom_margin">10dp</dimen>
+    <dimen name="ifu_page_indicator_left_margin">296dp</dimen>
+    <dimen name="ifu_page_indicator_width">7dp</dimen>
+    <dimen name="ifu_page_indicator_height">7dp</dimen>
+    <dimen name="ifu_page_indicator_space">10dp</dimen>
+    <dimen name="ifu_page_content_top_margin">6dp</dimen>
+    <dimen name="ifu_page_content_bottom_margin">5dp</dimen>
+    <dimen name="ifu_page_content_start_margin">10dp</dimen>
+    <dimen name="ifu_page_content_end_margin">10dp</dimen>
+    <dimen name="ifu_page_width">312dp</dimen>
+    <dimen name="ifu_page_height">464dp</dimen>
+    <dimen name="ifu_page_start_margin">24dp</dimen>
+    <dimen name="ifu_page_end_margin">24dp</dimen>
+    <dimen name="ifu_page_top_margin">6dp</dimen>
+
+    <dimen name="ifu_full_view_horz_padding">5dp</dimen>
+    <dimen name="ifu_full_view_vert_padding">10dp</dimen>
+
+    <color name="ifu_page_background_color">#ffffff</color>
+</resources>

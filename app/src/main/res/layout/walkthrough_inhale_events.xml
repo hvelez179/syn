@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- walkthrough_inhale_events.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView android:id="@+id/walkthrough_inhale_events_message1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginEnd="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginTop="@dimen/walkthrough_inhale_events1_message_top_margin"
+        android:text="@string/walkthroughTrackerCounterReset_text"
+        style="@style/text_appearance"/>
+</android.support.constraint.ConstraintLayout>

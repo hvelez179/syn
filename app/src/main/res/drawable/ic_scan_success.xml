@@ -1,0 +1,20 @@
+<!--
+  ~
+  ~  ic_scan_success.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="63.0"
+    android:viewportWidth="62.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M43.65,22.67l-18.93,17.67l-6.31,-6.31"
+        android:strokeColor="#0D426E" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="3"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M60.06,31.5C60.06,47.54 47.06,60.54 31.03,60.54C14.99,60.54 2,47.54 2,31.5C2,15.47 14.99,2.47 31.03,2.47C47.06,2.47 60.06,15.47 60.06,31.5L60.06,31.5Z"
+        android:strokeColor="#0D426E" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="3"/>
+</vector>

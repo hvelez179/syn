@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dsa_card_height">336dp</dimen>
+    <dimen name="dsa_body_margin_top">8dp</dimen>
+    <dimen name="dsa_horizontal_margin">16dp</dimen>
+    <dimen name="dsa_icon_margin_top">16dp</dimen>
+    <dimen name="dsa_icon_width">86dp</dimen>
+    <dimen name="dsa_icon_height">86dp</dimen>
+    <dimen name="dsa_icon_horizontal_margin">9dp</dimen>
+    <dimen name="dsa_radio_margin_top">16dp</dimen>
+
+    <dimen name="dsa_confirm_icon_width">120dp</dimen>
+    <dimen name="dsa_confirm_icon_height">120dp</dimen>
+    <dimen name="dsa_confirm_title_top_margin">16dp</dimen>
+    <dimen name="dsa_confirm_second_title_top_margin">0dp</dimen>
+    <dimen name="dsa_confirm_icon_top_margin">8dp</dimen>
+    <dimen name="dsa_confirm_body_top_margin">8dp</dimen>
+
+    <style name="DsaHeaderText" parent="text_appearance_demi_large">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/popup_header_line_spacing_extra</item>
+        <item name="android:textColor">@color/colorBoldText</item>
+    </style>
+
+    <style name="DsaConfirmSecondTitleText" parent="text_appearance_large">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/popup_header_line_spacing_extra</item>
+        <item name="android:textColor">@color/colorBoldText</item>
+    </style>
+
+</resources>

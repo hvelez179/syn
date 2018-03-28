@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorInhaleEventCount">#B9BBBD</color>
+
+    <color name="dashboard_widget_background">#ffffff</color>
+    <color name="dashboard_widget_ring_gray">#b2c3d1</color>
+    <color name="dashboard_widget_ring_red">#f54961</color>
+
+    <integer name="widget_anim_time">50</integer>
+
+    <dimen name="dashboard_card_corner_radius">2dp</dimen>
+    <dimen name="dashboard_card_width">328dp</dimen>
+    <dimen name="dashboard_card_height">279dp</dimen>
+    <dimen name="dashboard_card_elevation">15dp</dimen>
+    <dimen name="dashboard_card_shadow_padding">22dp</dimen>
+
+    <dimen name="popup_card_elevation">5dp</dimen>
+    <dimen name="popup_card_no_arrow_margin">0dp</dimen>
+    <dimen name="popup_card_arrow_top_margin">46dp</dimen>
+    <dimen name="popup_card_arrow_bottom_margin">145dp</dimen>
+
+    <dimen name="dashboard_widget_diameter">80dp</dimen>
+    <dimen name="dashboard_widget_ring_margin">4dp</dimen>
+    <dimen name="dashboard_widget_ring_stroke">1dp</dimen>
+    <dimen name="dashboard_widget_padding">20dp</dimen>
+
+    <dimen name="widget_elevation">7dp</dimen>
+    <dimen name="widget_disabled_translationz">-7dp</dimen>
+    <dimen name="widget_pressed_translationz">3dp</dimen>
+
+    <dimen name="dashboard_widget_vertical_margin">67dp</dimen>
+
+    <dimen name="dashboard_icon_margin">16dp</dimen>
+    <dimen name="dashboard_icon_width">28dp</dimen>
+    <dimen name="dashboard_icon_height">28dp</dimen>
+    <dimen name="dashboard_icon_top_margin">20dp</dimen>
+    <dimen name="dashboard_support_icon_right_padding">4dp</dimen>
+
+    <dimen name="dashboard_summary_image_bottom_margin">16dp</dimen>
+    <dimen name="dashboard_summary_image_start_margin">20dp</dimen>
+    <dimen name="dashboard_summary_text_horizontal_margin">20dp</dimen>
+    <dimen name="dashboard_summary_critical_text_horizontal_margin">11dp</dimen>
+    <dimen name="dashboard_summary_critical_text_line_spacing_extra">6dp</dimen>
+
+    <dimen name="dashboard_icon_arrow_width">24dp</dimen>
+    <dimen name="dashboard_icon_arrow_height">16dp</dimen>
+    <dimen name="dashboard_icon_arrow_top_edge_margin">5dp</dimen>
+    <dimen name="dashboard_icon_arrow_bottom_edge_margin">28dp</dimen>
+
+    <style name="Medallion">
+        <item name="android:layout_height">@dimen/dashboard_widget_diameter</item>
+        <item name="android:layout_width">@dimen/dashboard_widget_diameter</item>
+        <item name="android:layout_marginBottom">@dimen/dashboard_widget_vertical_margin</item>
+        <item name="android:background">@drawable/dashboard_medallion</item>
+        <item name="android:elevation">@dimen/widget_elevation</item>
+        <item name="android:stateListAnimator">@animator/widget_animator</item>
+    </style>
+
+    <style name="MedallionLabel" parent="text_appearance_small">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/dashboard_widget_label_margin</item>
+    </style>
+
+    <style name="DashboardIconButton">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_height">@dimen/dashboard_icon_height</item>
+        <item name="android:layout_width">@dimen/dashboard_icon_width</item>
+        <item name="android:layout_marginTop">@dimen/dashboard_icon_top_margin</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:stateListAnimator">@animator/icon_animator</item>
+    </style>
+
+    <!-- deprecated -->
+
+    <dimen name="dashboard_down_marker_margin">128dp</dimen>
+
+
+    <dimen name="dashboard_widget_environment_width">31dp</dimen>
+    <dimen name="dashboard_widget_environment_height">31dp</dimen>
+    <dimen name="dashboard_widget_inhaler_width">14dp</dimen>
+    <dimen name="dashboard_widget_inhaler_height">30dp</dimen>
+
+    <dimen name="dashboard_widget_events_text_size">28dp</dimen>
+
+    <dimen name="dashboard_widget_label_margin">12dp</dimen>
+    <dimen name="dashboard_widget_label_text_size">16dp</dimen>
+
+    <dimen name="dashboard_summary_text_critical_size">16dp</dimen>
+    <dimen name="dashboard_summary_text_size">18dp</dimen>
+    <dimen name="dashboard_message_shade_margin">7dp</dimen>
+
+    <dimen name="dashboard_icon_arrow_margin">60dp</dimen>
+
+    <dimen name="dashboard_icon_right_up_arrow_margin">60dp</dimen>
+    <dimen name="dashboard_icon_right_up_arrow_width">45dp</dimen>
+    <dimen name="dashboard_icon_right_up_arrow_height">21dp</dimen>
+
+    <dimen name="dashboard_weather_summary_top_margin">0dp</dimen>
+    <dimen name="dashboard_weather_summary_start_margin">0dp</dimen>
+
+    <dimen name="dashboard_summary_text_critical_bottom_padding">21dp</dimen>
+    <dimen name="dashboard_summary_text_critical_line_spacing">2.4dp</dimen>
+    <dimen name="dashboard_summary_text_line_spacing">2.4dp</dimen>
+    <dimen name="dashboard_summary_text_bottom_padding">15dp</dimen>
+    <dimen name="dashboard_menu_drawer_width">304dp</dimen>
+
+    <dimen name="dashboard_menu_top_margin">16dp</dimen>
+    <dimen name="menu_item_height">48dp</dimen>
+    <dimen name="menu_item_spacing">16dp</dimen>
+    <dimen name="menu_item_start_padding">16dp</dimen>
+    <dimen name="menu_item_end_padding">5dp</dimen>
+    <dimen name="menu_log_out_bottom_margin">60dp</dimen>
+
+    <style name="MenuItemText" parent="text_appearance_medium">
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="MenuHyperlinkText" parent="text_appearance_medium">
+        <item name="android:textSize">@dimen/hyperlink_text_size</item>
+    </style>
+
+</resources>

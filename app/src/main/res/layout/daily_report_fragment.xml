@@ -1,0 +1,144 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.DailyReportViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/background">
+
+        <include layout="@layout/dashboard_toolbar"
+            android:id="@+id/dashboard_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/daily_report_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/daily_report_start_margin"
+            android:layout_marginTop="@dimen/daily_report_title_margin_top"
+            android:text="@string/trackerTitle_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar"/>
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/daily_report_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/daily_report_date_margin"
+            app:layout_constraintStart_toEndOf="@+id/title"
+            app:layout_constraintBaseline_toBaselineOf="@id/title"
+            android:text="@{viewmodel.formattedDate}"
+            tools:text="Feb 4, 2017"/>
+
+        <TextView
+            android:id="@+id/event_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/daily_report_info_text"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/daily_report_start_margin"
+            android:layout_marginTop="@dimen/daily_report_event_count_top_margin"
+            android:text="@{viewmodel.eventsToday}"
+            tools:text="1 inhalation event"/>
+
+        <TextView
+            android:id="@+id/inhaler_count"
+            style="@style/daily_report_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.connectedInhalers}"
+            android:layout_marginStart="@dimen/daily_report_start_margin"
+            android:layout_marginTop="@dimen/daily_report_inhaler_count_top_margin"
+            app:layout_constraintTop_toBottomOf="@+id/event_count"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1 inhaler connected" />
+
+        <TextView
+            android:id="@+id/time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/daily_report_header_text"
+            android:layout_marginTop="@dimen/daily_report_header_margin_top"
+            android:layout_marginStart="@dimen/daily_report_start_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inhaler_count"
+            android:text="@string/trackerTimeLabel_text"/>
+
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/daily_report_header_text"
+            android:layout_marginStart="@dimen/daily_report_status_label_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/time_label"
+            android:text="@string/trackerStatusLabel_text"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/colorDivider"
+            app:layout_constraintBottom_toTopOf="@+id/item_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_list"
+            android:background="#ffffff"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/daily_report_list_margin_top"
+            app:layout_constraintBottom_toTopOf="@+id/footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_label"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/daily_report_event"/>
+
+        <View android:id="@+id/topShadow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_header_shadow_height"
+            android:background="@drawable/list_header_shadow"
+            app:layout_constraintTop_toTopOf="@+id/item_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tracker_footer_height"
+            style="@style/text_appearance_xsmall"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:paddingStart="@dimen/tracker_footer_padding"
+            android:paddingEnd="@dimen/tracker_footer_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@{viewmodel.footerText}"
+            tools:text="Patient: Jane Smith (04/08/1987)"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

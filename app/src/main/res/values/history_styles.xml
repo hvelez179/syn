@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="history_item_column_1_width">80dp</dimen>
+    <dimen name="history_item_column_2_width">250dp</dimen>
+
+    <style name="history_item_large_text">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="history_item_small_text">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="history_item_label_text">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="history_item_small_label_text">
+        <item name="android:textSize">9sp</item>
+    </style>
+</resources>

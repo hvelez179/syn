@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><!-- --><!-- user_report_printable_description.xml --><!-- app --><!-- --><!-- Copyright (c) 2017 Teva. All rights reserved. --><!-- -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.ReportViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="@dimen/user_report_printable_document_width"
+        android:layout_height="@dimen/user_report_printable_header_height"
+        android:background="@color/user_report_printable_header_bg">
+
+        <TextView
+            android:id="@+id/user_report_printable_description_trade_name"
+            style="@style/user_report_printable_description_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/user_report_printable_header_margin"
+            android:text="@{viewmodel.printableReportTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Proair Digihaler\nUser Report" />
+
+        <TextView
+            android:id="@+id/user_report_printable_purpose_line"
+            style="@style/user_report_printable_description_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hcpReportDisclaimerAlternate_text"
+            app:layout_constraintStart_toEndOf="@+id/user_report_printable_description_trade_name"
+            app:layout_constraintEnd_toStartOf="@+id/patient_info"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@string/hcpReportDisclaimerAlternate_text" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/patient_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/user_report_printable_header_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/description_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/description_birthdate_label"
+                app:layout_constraintVertical_chainStyle="packed"
+                style="@style/user_report_printable_description_text_style"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/patient_label"/>
+
+            <TextView
+                android:id="@+id/description_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/description_name_label"
+                app:layout_constraintBaseline_toBaselineOf="@+id/description_name_label"
+                android:layout_marginStart="@dimen/user_report_printable_header_label_margin"
+                style="@style/user_report_printable_description_text_style"
+                android:text="@{viewmodel.name}"
+                tools:text="Richard Buttersworth"/>
+
+
+            <TextView
+                android:id="@+id/description_birthdate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/user_report_printable_header_label_margin"
+                style="@style/user_report_printable_description_text_style"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description_name_label"
+                app:layout_constraintBottom_toTopOf="@+id/description_date"
+                android:text="@string/birthdate_label"/>
+
+            <TextView
+                android:id="@+id/description_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/user_report_printable_header_margin"
+                app:layout_constraintStart_toEndOf="@+id/description_birthdate_label"
+                app:layout_constraintBaseline_toBaselineOf="@+id/description_birthdate_label"
+                style="@style/user_report_printable_description_text_style"
+                android:text="@{viewmodel.name}"
+                tools:text="11/11/2002"/>
+
+            <TextView
+                android:id="@+id/description_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/user_report_printable_description_text_style"
+                android:text="@{viewmodel.currentDisplayDate}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description_birthdate_label"
+                app:layout_constraintBottom_toTopOf="@+id/description_time"
+                tools:text="Oct 30, 2016"/>
+
+            <TextView
+                android:id="@+id/description_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/user_report_printable_description_text_style"
+                android:text="@{viewmodel.currentDisplayTime}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description_date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="4:03 PM"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

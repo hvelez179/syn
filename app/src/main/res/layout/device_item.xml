@@ -1,0 +1,99 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.teva.respiratoryapp.activity.view.device.DeviceListFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.DeviceItemViewModel" />
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/devicelist_item_height">
+
+        <com.teva.respiratoryapp.activity.controls.BottomClipDrawableView
+            android:id="@+id/icon"
+              android:layout_width="@dimen/devicelist_icon_width"
+              android:layout_height="@dimen/devicelist_icon_height"
+              android:background="@{DeviceListFragment.DeviceItemStateToDrawableId(viewmodel.state)}"
+              tools:background="@drawable/ic_wid_my_inhalers"
+              android:layout_marginTop="@dimen/devicelist_item_icon_top_margin"
+              android:layout_marginStart="@dimen/devicelist_icon_margin_start"
+              bind:layout_constraintStart_toStartOf="parent"
+              bind:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/devicelist_nickname_text"
+            android:layout_marginTop="@dimen/devicelist_nickname_margin_top"
+            android:layout_marginStart="@dimen/devicelist_item_text_start_margin"
+            bind:layout_constraintStart_toEndOf="@+id/icon"
+            bind:layout_constraintTop_toTopOf="parent"
+            android:text="@{viewmodel.nickname}"
+            tools:text="Home"/>
+
+        <TextView
+            android:id="@+id/id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/devicelist_light_message_text"
+            android:layout_marginTop="@dimen/devicelist_serialnumber_top_margin"
+            android:layout_marginStart="@dimen/devicelist_item_text_start_margin"
+            bind:layout_constraintStart_toEndOf="@+id/icon"
+            bind:layout_constraintTop_toBottomOf="@+id/nickname"
+            android:text="@string/identifierAppend_text"/>
+
+        <TextView
+            android:id="@+id/serial_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/devicelist_light_message_text"
+            bind:layout_constraintStart_toEndOf="@+id/id_label"
+            bind:layout_constraintBaseline_toBaselineOf="@+id/id_label"
+            android:layout_marginStart="@dimen/devicelist_serial_number_margin_start"
+            android:text="@{viewmodel.serialNumber}"
+            tools:text="245234542637"/>
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="@dimen/devicelist_message_width"
+            android:layout_height="wrap_content"
+            style="@style/devicelist_message_text"
+            android:layout_marginTop="@dimen/devicelist_message_top_margin"
+            bind:layout_constraintStart_toStartOf="@+id/nickname"
+            bind:layout_constraintTop_toBottomOf="@+id/id_label"
+            android:text="@{viewmodel.statusMessage}"
+            tools:text="Connected"/>
+
+        <TextView
+            android:id="@+id/near_empty_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/devicelist_empty_message_text"
+            android:visibility="@{viewmodel.nearEmpty}"
+            tools:visibility="gone"
+            bind:layout_constraintStart_toStartOf="@+id/message"
+            bind:layout_constraintTop_toBottomOf="@+id/message"
+            android:layout_marginTop="@dimen/devicelist_empty_message_top_margin"
+            android:text="@string/deviceStateCheckCounter_text"/>
+
+
+
+        <ImageView
+            android:layout_width="@dimen/devicelist_chevron_width"
+            android:layout_height="@dimen/devicelist_chevron_height"
+            android:src="@drawable/ic_chevron"
+            android:layout_marginEnd="@dimen/devicelist_chevron_end_margin"
+            android:layout_marginTop="@dimen/devicelist_chevron_top_margin"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{() -> viewmodel.onShowInfo()}"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

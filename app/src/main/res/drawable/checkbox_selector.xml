@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/transparent"/>
+    <item android:width="@dimen/checkbox_width" android:height="@dimen/checkbox_height">
+        <selector>
+            <item android:state_checked="false" android:drawable="@drawable/ic_checkmark"/>
+            <item android:state_checked="true" android:drawable="@drawable/ic_checkmark_checked" />
+        </selector>
+    </item>
+</layer-list>

@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.MessageShadeViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/messageShadeElevation"
+        android:orientation="vertical">
+        <com.teva.respiratoryapp.activity.controls.ShadeBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:open="@{viewmodel.open}"
+            android:outlineProvider="none"
+            android:background="@color/colorMessageShade"
+            android:onClick="@{() -> viewmodel.onTapped()}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/messageShadeHeight"
+                android:gravity="center"
+                style="@style/message_shade_text"
+                android:text="@{viewmodel.message}"
+                tools:text="Turn On Bluetooth to connect inhalers"/>
+
+        </com.teva.respiratoryapp.activity.controls.ShadeBar>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="@dimen/messageShadeShadowHeight"
+            android:background="@drawable/list_top_shadow"
+            android:visibility="@{viewmodel.open}"/>
+
+    </LinearLayout>
+</layout>

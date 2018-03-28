@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="custom_name_label_top_margin">30dp</dimen>
+    <dimen name="custom_name_edittext_top_margin">8dp</dimen>
+    <dimen name="custom_name_instructions_top_margin">6dp</dimen>
+
+    <dimen name="custom_name_error_top_margin">3dp</dimen>
+
+</resources>

@@ -1,0 +1,150 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.teva.respiratoryapp.activity.view.popup.DashboardPopupFragment" />
+        <import type="com.teva.respiratoryapp.activity.viewmodel.popup.PopupDashboardButton"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.popup.DashboardPopupViewModel" />
+
+        <variable
+            name="dashboardState"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.DashboardStateViewModel"/>
+    </data>
+    <merge >
+        <ImageView
+            android:id="@+id/menu"
+            style="@style/DashboardIconButton"
+            android:layout_marginStart="@dimen/dashboard_icon_margin"
+            android:src="@drawable/ic_menu_dark"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.MENU) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.MENU) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintEnd_toStartOf="@+id/report"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/report"
+            style="@style/DashboardIconButton"
+            android:src="@drawable/ic_data_dark"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.REPORT) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.REPORT) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            app:layout_constraintEnd_toStartOf="@+id/dsa"
+            app:layout_constraintStart_toEndOf="@+id/menu"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/dsa"
+            style="@style/DashboardIconButton"
+            android:src="@drawable/ic_good_inhalation"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DSA) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DSA) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            app:layout_constraintEnd_toStartOf="@+id/teva_support"
+            app:layout_constraintStart_toEndOf="@+id/report"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/teva_support"
+            style="@style/DashboardIconButton"
+            android:layout_marginEnd="@dimen/dashboard_icon_margin"
+            android:src="@drawable/ic_help"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.SUPPORT) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.SUPPORT) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/dashboard_support_icon_right_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dsa"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.teva.respiratoryapp.activity.controls.Widget
+            android:id="@+id/events"
+            style="@style/Medallion"
+            app:critical="@{dashboardState.eventsCritical}"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.EVENTS) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.EVENTS) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(dashboardState.inhalesToday)}"
+                android:textColor="@{dashboardState.eventsCritical ? @color/colorCritical : @color/colorInhaleEventCount}"
+                android:fontFamily="@font/avenir_next_medium"
+                android:textSize="@dimen/dashboard_widget_events_text_size"
+                android:layout_gravity="center"
+                tools:text="3"/>
+        </com.teva.respiratoryapp.activity.controls.Widget>
+
+        <TextView
+            android:id="@+id/events_label"
+            style="@style/MedallionLabel"
+            android:text="@string/rescueTrackerWidget_text"
+            android:gravity="center"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.EVENTS) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.EVENTS) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            bind:layout_constraintEnd_toEndOf="@id/events"
+            bind:layout_constraintStart_toStartOf="@id/events"
+            bind:layout_constraintTop_toBottomOf="@id/events" />
+
+        <com.teva.respiratoryapp.activity.controls.Widget
+            android:id="@+id/environment"
+            style="@style/Medallion"
+            app:critical="@{dashboardState.environmentCritical}"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.ENVIRONMENT) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.ENVIRONMENT) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent">
+            <ImageView
+                android:layout_width="@dimen/dashboard_widget_environment_width"
+                android:layout_height="@dimen/dashboard_widget_environment_height"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_widget_environment"/>
+        </com.teva.respiratoryapp.activity.controls.Widget>
+
+        <TextView
+            android:id="@+id/environment_label"
+            style="@style/MedallionLabel"
+            android:text="@string/environmentWidget_text"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.ENVIRONMENT) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.ENVIRONMENT) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            bind:layout_constraintEnd_toEndOf="@id/environment"
+            bind:layout_constraintStart_toStartOf="@id/environment"
+            bind:layout_constraintTop_toBottomOf="@id/environment" />
+
+        <com.teva.respiratoryapp.activity.controls.Widget
+            android:id="@+id/devices"
+            style="@style/Medallion"
+            app:critical="@{dashboardState.devicesCritical}"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DEVICES) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DEVICES) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:layout_width="@dimen/dashboard_widget_inhaler_width"
+                android:layout_height="@dimen/dashboard_widget_inhaler_height"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_widget_inhaler"/>
+        </com.teva.respiratoryapp.activity.controls.Widget>
+
+        <TextView
+            android:id="@+id/devices_label"
+            style="@style/MedallionLabel"
+            android:text="@string/inhaler_text"
+            android:visibility="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DEVICES) >= 0 ? View.VISIBLE : View.INVISIBLE}"
+            android:alpha="@{viewmodel.buttonState.compareTo(PopupDashboardButton.DEVICES) == 0 || !viewmodel.buttonsDimmed ? 1f : 0.3f}"
+            bind:layout_constraintEnd_toEndOf="@id/devices"
+            bind:layout_constraintStart_toStartOf="@id/devices"
+            bind:layout_constraintTop_toBottomOf="@id/devices" />
+    </merge>
+</layout>

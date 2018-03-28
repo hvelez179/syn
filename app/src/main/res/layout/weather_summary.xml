@@ -1,0 +1,125 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.teva.respiratoryapp.activity.view.EnvironmentFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.environment.EnvironmentViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/dashboard_weather_location"
+            style="@style/environment_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_location_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_location_top_margin"
+            android:text="@{viewmodel.location}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dashboard_weather_condition_icon"
+            android:layout_width="@dimen/dashboard_weather_condition_icon_width"
+            android:layout_height="@dimen/dashboard_weather_condition_icon_height"
+            android:layout_marginStart="@dimen/dashboard_weather_condition_icon_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_condition_icon_top_margin"
+            android:src="@{EnvironmentFragment.iconResourceForWeatherCondition(viewmodel.weatherCondition)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_temperature"
+            style="@style/environment_temperature_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_temperature_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_temperature_top_margin"
+            android:text="@{viewmodel.temperature}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_condition_description"
+            style="@style/environment_weather_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_description_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_description_top_margin"
+            android:text="@{EnvironmentFragment.descriptionForWeatherCondition(viewmodel.weatherConditionExtendedCode)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_humidity_label"
+            style="@style/environment_weather_parameter_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_humidity_label_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_humidity_label_top_margin"
+            android:text="@string/environmentWeatherHumidity_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weathert_precipitation_label"
+            style="@style/environment_weather_parameter_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_precipitation_label_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_precipitation_label_top_margin"
+            android:text="@string/environmentWeatherPrecipitation_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_wind_label"
+            style="@style/environment_weather_parameter_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_wind_label_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_wind_label_top_margin"
+            android:text="@{viewmodel.windLabel}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_humidity_value"
+            style="@style/dashboard_weather_parameter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_humidity_value_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_humidity_value_top_margin"
+            android:text="@{viewmodel.humidity}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_precipitation_value"
+            style="@style/dashboard_weather_parameter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_precipitation_value_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_precipitation_value_top_margin"
+            android:text="@{viewmodel.chanceOfPrecipitation}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_weather_wind_value"
+            style="@style/dashboard_weather_parameter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dashboard_weather_wind_value_start_margin"
+            android:layout_marginTop="@dimen/dashboard_weather_wind_value_top_margin"
+            android:text="@{viewmodel.windDetails}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

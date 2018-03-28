@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- environment_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <dimen name="environment_weather_segment_height">339dp</dimen>
+
+    <dimen name="environment_weather_title_top_margin">32dp</dimen>
+    <dimen name="environment_weather_title_start_margin">16dp</dimen>
+
+    <dimen name="environment_weather_condition_icon_width">80dp</dimen>
+    <dimen name="environment_weather_condition_icon_height">80dp</dimen>
+    <dimen name="environment_weather_condition_icon_top_margin">32dp</dimen>
+    <dimen name="environment_weather_condition_icon_start_margin">256dp</dimen>
+
+    <dimen name="environment_weather_description_top_margin">198dp</dimen>
+    <dimen name="environment_weather_description_start_margin">21dp</dimen>
+
+    <dimen name="environment_location_top_margin">76dp</dimen>
+    <dimen name="environment_location_start_margin">21dp</dimen>
+
+    <dimen name="environment_temperature_start_margin">16dp</dimen>
+    <dimen name="environment_temperature_top_margin">93dp</dimen>
+
+    <dimen name="environment_humidity_label_start_margin">21dp</dimen>
+    <dimen name="environment_humidity_label_top_margin">258dp</dimen>
+
+    <dimen name="environment_precipitation_label_start_margin">119dp</dimen>
+    <dimen name="environment_precipitation_label_top_margin">258dp</dimen>
+
+    <dimen name="environment_wind_label_start_margin">242dp</dimen>
+    <dimen name="environment_wind_label_top_margin">258dp</dimen>
+
+    <dimen name="environment_humidity_value_start_margin">21dp</dimen>
+    <dimen name="environment_humidity_value_top_margin">279dp</dimen>
+
+    <dimen name="environment_precipitation_value_start_margin">119dp</dimen>
+    <dimen name="environment_precipitation_value_top_margin">279dp</dimen>
+
+    <dimen name="environment_wind_value_start_margin">242dp</dimen>
+    <dimen name="environment_wind_value_top_margin">279dp</dimen>
+
+    <dimen name="environment_airquality_segment_height">239dp</dimen>
+
+    <dimen name="environment_airquality_title_top_margin">33dp</dimen>
+    <dimen name="environment_airquality_title_start_margin">16dp</dimen>
+
+    <dimen name="environment_air_quality_icon_width">16dp</dimen>
+    <dimen name="environment_air_quality_icon_height">16dp</dimen>
+    <dimen name="environment_air_quality_icon_top_margin">81dp</dimen>
+    <dimen name="environment_air_quality_icon_start_margin">17dp</dimen>
+
+    <dimen name="environment_airquality_description_top_margin">77dp</dimen>
+    <dimen name="environment_airquality_description_start_margin">49dp</dimen>
+
+    <dimen name="environment_airquality_good_label_top_margin">126dp</dimen>
+    <dimen name="environment_airquality_good_label_start_margin">17dp</dimen>
+    <dimen name="environment_airquality_hazardous_label_top_margin">126dp</dimen>
+    <dimen name="environment_airquality_hazardous_label_start_margin">275dp</dimen>
+
+    <dimen name="environment_airquality_legend_bar_width">327dp</dimen>
+    <dimen name="environment_airquality_legend_bar_height">8dp</dimen>
+    <dimen name="environment_airquality_legend_bar_top_margin">148dp</dimen>
+    <dimen name="environment_airquality_legend_bar_start_margin">17dp</dimen>
+
+    <dimen name="environment_airquality_legend_values_top_margin">160dp</dimen>
+    <dimen name="environment_airquality_legend_value_50_top_margin">36dp</dimen>
+    <dimen name="environment_airquality_legend_value_100_top_margin">86dp</dimen>
+    <dimen name="environment_airquality_legend_value_150_top_margin">140dp</dimen>
+    <dimen name="environment_airquality_legend_value_200_top_margin">195dp</dimen>
+    <dimen name="environment_airquality_legend_value_300_top_margin">249dp</dimen>
+    <dimen name="environment_airquality_legend_value_500_top_margin">304dp</dimen>
+
+    <dimen name="environment_airquality_source_top_margin">192dp</dimen>
+    <dimen name="environment_airquality_source_start_margin">16dp</dimen>
+    <dimen name="environment_airquality_source_value_start_margin">3dp</dimen>
+
+    <dimen name="environment_pollen_segment_height">280dp</dimen>
+
+    <dimen name="environment_pollen_title_top_margin">32dp</dimen>
+    <dimen name="environment_pollen_title_start_margin">16dp</dimen>
+
+    <dimen name="environment_pollen_tree_image_top_margin">84dp</dimen>
+    <dimen name="environment_pollen_tree_image_start_margin">16dp</dimen>
+    <dimen name="environment_pollen_tree_image_width">32dp</dimen>
+    <dimen name="environment_pollen_tree_image_height">32dp</dimen>
+
+    <dimen name="environment_pollen_tree_text_top_margin">88dp</dimen>
+    <dimen name="environment_pollen_tree_text_start_margin">56dp</dimen>
+
+    <dimen name="environment_pollen_grass_image_top_margin">150dp</dimen>
+    <dimen name="environment_pollen_grass_image_start_margin">16dp</dimen>
+    <dimen name="environment_pollen_grass_image_width">33dp</dimen>
+    <dimen name="environment_pollen_grass_image_height">32dp</dimen>
+
+    <dimen name="environment_pollen_grass_text_top_margin">154dp</dimen>
+    <dimen name="environment_pollen_grass_text_start_margin">57dp</dimen>
+
+    <dimen name="environment_pollen_weed_image_top_margin">216dp</dimen>
+    <dimen name="environment_pollen_weed_image_start_margin">16dp</dimen>
+    <dimen name="environment_pollen_weed_image_width">32dp</dimen>
+    <dimen name="environment_pollen_weed_image_height">32dp</dimen>
+
+    <dimen name="environment_pollen_weed_text_top_margin">220dp</dimen>
+    <dimen name="environment_pollen_weed_text_start_margin">56dp</dimen>
+
+    <dimen name="environment_pollen_status_image_width">16dp</dimen>
+    <dimen name="environment_pollen_status_image_height">16dp</dimen>
+
+    <dimen name="environment_pollen_tree_status_image_top_margin">92dp</dimen>
+    <dimen name="environment_pollen_tree_status_image_end_margin">16dp</dimen>
+    <dimen name="environment_pollen_tree_status_text_top_margin">92dp</dimen>
+    <dimen name="environment_pollen_tree_status_text_end_margin">8dp</dimen>
+
+    <dimen name="environment_pollen_grass_status_image_top_margin">158dp</dimen>
+    <dimen name="environment_pollen_grass_status_image_end_margin">16dp</dimen>
+    <dimen name="environment_pollen_grass_status_text_top_margin">158dp</dimen>
+    <dimen name="environment_pollen_grass_status_text_end_margin">8dp</dimen>
+
+    <dimen name="environment_pollen_weed_status_image_top_margin">224dp</dimen>
+    <dimen name="environment_pollen_weed_status_image_end_margin">16dp</dimen>
+    <dimen name="environment_pollen_weed_status_text_top_margin">224dp</dimen>
+    <dimen name="environment_pollen_weed_status_text_end_margin">7dp</dimen>
+
+    <dimen name="environment_pollen_separator_width">328dp</dimen>
+    <dimen name="environment_pollen_separator_height">2dp</dimen>
+    <dimen name="environment_pollen_separator_start_margin">16dp</dimen>
+    <dimen name="environment_pollen_tree_grass_separator_top_margin">132dp</dimen>
+    <dimen name="environment_pollen_grass_weed_separator_top_margin">198dp</dimen>
+
+    <dimen name="dashboard_weather_segment_height">279dp</dimen>
+
+    <dimen name="dashboard_weather_condition_icon_width">80dp</dimen>
+    <dimen name="dashboard_weather_condition_icon_height">80dp</dimen>
+    <dimen name="dashboard_weather_condition_icon_top_margin">24dp</dimen>
+    <dimen name="dashboard_weather_condition_icon_start_margin">232dp</dimen>
+
+    <dimen name="dashboard_weather_description_top_margin">146dp</dimen>
+    <dimen name="dashboard_weather_description_start_margin">16dp</dimen>
+
+    <dimen name="dashboard_weather_location_top_margin">24dp</dimen>
+    <dimen name="dashboard_weather_location_start_margin">16dp</dimen>
+
+    <dimen name="dashboard_weather_temperature_start_margin">11dp</dimen>
+    <dimen name="dashboard_weather_temperature_top_margin">41dp</dimen>
+
+    <dimen name="dashboard_weather_humidity_label_start_margin">16dp</dimen>
+    <dimen name="dashboard_weather_humidity_label_top_margin">206dp</dimen>
+
+    <dimen name="dashboard_weather_precipitation_label_start_margin">110dp</dimen>
+    <dimen name="dashboard_weather_precipitation_label_top_margin">206dp</dimen>
+
+    <dimen name="dashboard_weather_wind_label_start_margin">218dp</dimen>
+    <dimen name="dashboard_weather_wind_label_top_margin">206dp</dimen>
+
+    <dimen name="dashboard_weather_humidity_value_start_margin">16dp</dimen>
+    <dimen name="dashboard_weather_humidity_value_top_margin">227dp</dimen>
+
+    <dimen name="dashboard_weather_precipitation_value_start_margin">110dp</dimen>
+    <dimen name="dashboard_weather_precipitation_value_top_margin">227dp</dimen>
+
+    <dimen name="dashboard_weather_wind_value_start_margin">218dp</dimen>
+    <dimen name="dashboard_weather_wind_value_top_margin">227dp</dimen>
+
+
+    <style name="environment_temperature_text" parent="text_appearance_xxlarge">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_segment_title_text" parent="text_appearance_large">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_location_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_weather_description_text" parent="text_appearance_demi_large">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_weather_parameter_label_text" parent="text_appearance_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_weather_parameter_text" parent="text_appearance_large">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="dashboard_weather_parameter_text" parent="text_appearance_large">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+    </style>
+    <style name="environment_airquality_description_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_airquality_legend_label_text" parent="text_appearance_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+    </style>
+    <style name="environment_airquality_legend_values_text" parent="text_appearance_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_airquality_source_text" parent="text_appearance_small_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_airquality_source_value_text" parent="text_appearance_small_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+        <item name="android:fontFamily">@font/avenir_next_italic</item>
+    </style>
+    <style name="environment_pollen_type_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+    <style name="environment_pollen_status_text" parent="text_appearance_label">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:canClear="true"
+        android:width="@dimen/clear_text_field_size"
+        android:height="@dimen/clear_text_field_size"
+        android:drawable="@drawable/ic_clear_text_field"/>
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="@dimen/clear_text_field_size"
+                android:height="@dimen/clear_text_field_size"/>
+        </shape>
+    </item>
+</selector>

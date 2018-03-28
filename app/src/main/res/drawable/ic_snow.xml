@@ -1,0 +1,28 @@
+<!--
+  ~
+  ~  ic_snow.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="80.0"
+    android:viewportWidth="80.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FFF" android:fillType="evenOdd" android:pathData="M39.5,68.5v-56,56z"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M39.5,12.5v56M44.45,17.55l-4.95,4.95 -4.95,-4.95M34.55,63.45l4.95,-4.95 4.95,4.95"
+        android:strokeColor="#B2C3D1" android:strokeLineCap="round" android:strokeWidth="3"/>
+    <path android:fillColor="#FFF" android:fillType="evenOdd" android:pathData="M19.7,20.7L59.3,60.3"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M19.7,20.7L59.3,60.3M27.65,21.65v7h-7M51.35,59.35v-7h7"
+        android:strokeColor="#B2C3D1" android:strokeLineCap="round" android:strokeWidth="3"/>
+    <path android:fillColor="#FFF" android:fillType="evenOdd" android:pathData="M11.5,40.5h56,-56z"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M11.5,40.5h56M16.55,35.55l4.95,4.95 -4.95,4.95M62.45,45.45l-4.95,-4.95 4.95,-4.95"
+        android:strokeColor="#B2C3D1" android:strokeLineCap="round" android:strokeWidth="3"/>
+    <path android:fillColor="#FFF" android:fillType="evenOdd" android:pathData="M19.7,60.3L59.3,20.7"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M19.7,60.3L59.3,20.7M20.65,52.35h7v7M58.35,28.65h-7v-7"
+        android:strokeColor="#B2C3D1" android:strokeLineCap="round" android:strokeWidth="3"/>
+</vector>

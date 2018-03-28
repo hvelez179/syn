@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- support_fragment.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.teva.respiratoryapp.activity.view.NotificationSettingsFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.dashboard.SupportViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorBackground">
+
+        <include layout="@layout/dashboard_toolbar"
+            android:id="@+id/support_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+        <TextView
+            android:id="@+id/support_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/support_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/support_description_top_margin"
+            android:gravity="center"
+            android:text="@{viewmodel.description}"
+            style="@style/SupportDescriptionText"/>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/support_contact_button"
+            android:layout_width="@dimen/support_button_width"
+            android:layout_height="@dimen/support_button_height"
+            app:layout_constraintTop_toBottomOf="@+id/support_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/support_button_top_margin"
+            android:text="@string/contact_teva_support"
+            style="@style/cta_button"
+            android:onClick="@{() -> viewmodel.onContactSupport()}"
+            android:textAllCaps="false"/>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

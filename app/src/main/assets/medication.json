@@ -1,0 +1,14 @@
+[
+  {
+    "drugUID": "745750",
+    "brandName": "ProAir Digihaler",
+    "genericName": "Albuterol Sulfate",
+    "overdoseInhalationCount": 13,
+    "minimumDoseInterval": 30,
+    "minimumScheduleInterval": 0,
+    "dosesPerDay": 0,
+    "inhalesPerDose": 0,
+    "isController": false,
+    "isReliever": true
+  }
+]

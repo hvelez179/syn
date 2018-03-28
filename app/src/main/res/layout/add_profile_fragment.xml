@@ -1,0 +1,167 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable name="isKeyboardVisible" type="Boolean"/>
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.setup.AddProfileViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:foregroundGravity="center_vertical"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/backgroundGradientStart"
+                android:theme="@style/ToolBarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextAppearance="@style/ToolBarTitleTextStyle" />
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/profile_input_scroll_vertical_margin"
+            android:layout_marginTop="@dimen/profile_input_scroll_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/firstNameLabel"
+                style="@style/text_appearance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/profile_top_input_field_spacing"
+                android:text="@string/dependents_first_name"/>
+
+            <com.teva.respiratoryapp.activity.controls.InputField
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/input_field_style"
+                android:text="@={viewmodel.firstName}"
+                android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/input_field_label_margin"
+                android:hint="@string/dependents_first_name_hint"
+                android:inputType="textPersonName|textCapWords"/>
+
+            <TextView
+                android:id="@+id/lastNameLabel"
+                style="@style/text_appearance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/profile_input_field_spacing"
+                android:text="@string/dependents_last_name"/>
+
+            <com.teva.respiratoryapp.activity.controls.InputField
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/input_field_style"
+                android:text="@={viewmodel.lastName}"
+                android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/input_field_label_margin"
+                android:hint="@string/dependents_last_name_hint"
+                android:inputType="textPersonName|textCapWords"/>
+
+            <TextView
+                android:id="@+id/dobLabel"
+                style="@style/text_appearance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/profile_input_field_spacing"
+                android:text="@string/dependents_birth_date" />
+
+            <com.teva.respiratoryapp.activity.controls.InputField
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/input_field_style"
+                android:layout_marginEnd="@dimen/standard_horizontal_margin"
+                android:layout_marginStart="@dimen/standard_horizontal_margin"
+                android:layout_marginTop="@dimen/input_field_label_margin"
+                android:imeOptions="actionNext"
+                app:date="@={viewmodel.date}"
+                app:onStateChanged="@{(state) -> viewmodel.onValidationStateChanged(state)}" />
+
+                <TextView
+                    android:id="@+id/warning"
+                    style="@style/text_field_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/consent_start_margin"
+                    android:layout_marginTop="@dimen/consent_warning_top_margin"
+                    android:text="@string/consent_dob_invalid_text"
+                    android:visibility="@{viewmodel.warningVisible ? View.VISIBLE : View.INVISIBLE}"
+                    tools:visibility="visible"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/nextButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/profile_hyperlink_top_margin"
+            android:onClick="@{() -> viewmodel.onNext()}"
+            android:text="@string/next_text"
+            android:enabled="@{viewmodel.nextEnabled}"
+            app:layout_constraintBottom_toTopOf="@+id/hyperlink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/hyperlink"
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_hyperlink_bottom_margin"
+            app:hyperlink="@{@string/contact_teva_support}"
+            android:visibility="@{!isKeyboardVisible}"
+            app:layout_goneMarginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:linkClicked="@{() -> viewmodel.onContactSupport()}"
+            tools:text="Contact Teva Support" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

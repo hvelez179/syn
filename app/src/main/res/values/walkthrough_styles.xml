@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- walkthrough_styles.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<resources>
+    <dimen name="walkthrough_horizontal_margin">24dp</dimen>
+    <dimen name="walkthrough_navigation_margin">12dp</dimen>
+    <dimen name="walkthrough_navigation_back_width">60dp</dimen>
+
+    <dimen name="walkthrough_welcome_text_top_margin">64dp</dimen>
+    <dimen name="walkthrough_welcome_text_line_spacing_extra">-4dp</dimen>
+    <dimen name="walkthrough_welcome_text2_top_margin">25dp</dimen>
+
+    <dimen name="walkthrough_inhaler_ready_image_top_margin">56dp</dimen>
+    <dimen name="walkthrough_inhaler_ready_message1_top_margin">25dp</dimen>
+    <dimen name="walkthrough_inhaler_ready_image_width">59dp</dimen>
+    <dimen name="walkthrough_inhaler_ready_image_height">59dp</dimen>
+
+    <dimen name="walkthrough_inhale_events1_message_top_margin">64dp</dimen>
+
+    <dimen name="walkthrough_environment_image_top_margin">80dp</dimen>
+    <dimen name="walkthrough_environment_message_top_margin">17dp</dimen>
+    <dimen name="walkthrough_environment_image_width">80dp</dimen>
+    <dimen name="walkthrough_environment_image_height">80dp</dimen>
+
+    <dimen name="walkthrough_devices1_image_top_margin">99dp</dimen>
+    <dimen name="walkthrough_devices_message_top_margin">29dp</dimen>
+    <dimen name="walkthrough_devices1_image_width">30dp</dimen>
+    <dimen name="walkthrough_devices1_image_height">58dp</dimen>
+
+    <dimen name="walkthrough_devices2_image_top_margin">32dp</dimen>
+    <dimen name="walkthrough_devices_2_message_top_margin">25dp</dimen>
+    <dimen name="walkthrough_devices2_image_width">133dp</dimen>
+    <dimen name="walkthrough_devices2_image_height">77dp</dimen>
+
+    <dimen name="walkthrough_support_message_top_margin">20dp</dimen>
+    <dimen name="walkthrough_support_image_top_margin">82dp</dimen>
+    <dimen name="walkthrough_support_image_width">58dp</dimen>
+    <dimen name="walkthrough_support_image_height">54dp</dimen>
+
+    <dimen name="walkthrough_notifications_message_top_margin">18dp</dimen>
+    <dimen name="walkthrough_notification_image_top_margin">60dp</dimen>
+    <dimen name="walkthrough_notification_image_width">113dp</dimen>
+    <dimen name="walkthrough_notification_image_height">97dp</dimen>
+
+    <dimen name="walkthrough_dsa_message_top_margin">25dp</dimen>
+    <dimen name="walkthrough_dsa_image_top_margin">80dp</dimen>
+    <dimen name="walkthrough_dsa_image_width">60dp</dimen>
+    <dimen name="walkthrough_dsa_image_height">60dp</dimen>
+
+    <dimen name="walkthrough_report_message_top_margin">25dp</dimen>
+    <dimen name="walkthrough_report_image_top_margin">98dp</dimen>
+    <dimen name="walkthrough_report_image_width">80dp</dimen>
+    <dimen name="walkthrough_report_image_height">54dp</dimen>
+
+    <dimen name="walkthrough_security_message_top_margin">25dp</dimen>
+    <dimen name="walkthrough_security_image_top_margin">88dp</dimen>
+    <dimen name="walkthrough_security_image_start_margin">22dp</dimen>
+    <dimen name="walkthrough_security_image_width">40dp</dimen>
+    <dimen name="walkthrough_security_image_height">58dp</dimen>
+
+    <dimen name="walkthrough_get_started_message_top_margin">25dp</dimen>
+    <dimen name="walkthrough_get_started_image_top_margin">84dp</dimen>
+    <dimen name="walkthrough_get_started_image_width">50dp</dimen>
+    <dimen name="walkthrough_get_started_image_height">58dp</dimen>
+
+</resources>

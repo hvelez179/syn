@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="sweep_fade_width">100dp</dimen>
+
+    <dimen name="loading_top_margin">8dp</dimen>
+
+    <dimen name="loading_animation_width">234dp</dimen>
+    <dimen name="loading_animation_height">78dp</dimen>
+</resources>

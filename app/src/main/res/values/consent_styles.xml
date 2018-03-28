@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="consent_start_margin">24dp</dimen>
+    <dimen name="consent_welcome_top_margin">5dp</dimen>
+    <dimen name="consent_message_top_margin">8dp</dimen>
+    <dimen name="consent_dob_label_top_margin">11dp</dimen>
+    <dimen name="consent_warning_top_margin">8dp</dimen>
+    <dimen name="consent_dob_top_margin">2dp</dimen>
+    <dimen name="consent_terms_top_margin">8dp</dimen>
+    <dimen name="consent_next_top_margin">15dp</dimen>
+
+    <style name="consent_terms_checkbox_style" parent="checkbox_style">
+        <item name="android:textAppearance">@style/text_appearance_small</item>
+    </style>
+
+</resources>

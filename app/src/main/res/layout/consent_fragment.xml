@@ -1,0 +1,111 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.setup.ConsentViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true"
+        android:foregroundGravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome_text"
+            style="@style/text_appearance_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/consent_start_margin"
+            android:layout_marginTop="@dimen/consent_welcome_top_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/consentWelcomeText_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" tools:layout_editor_absoluteX="27dp"/>
+
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/consent_message_top_margin"
+            android:text="@{viewmodel.messageText}"
+            app:layout_constraintStart_toStartOf="@id/welcome_text"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+            tools:layout_editor_absoluteX="27dp" tools:text="@string/consentMessage_text"/>
+
+        <TextView
+            android:id="@+id/dob_label"
+            style="@style/text_appearance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/consent_dob_label_top_margin"
+            android:layout_marginStart="@dimen/consent_start_margin"
+            android:text="@string/dob_text"
+            app:layout_constraintTop_toBottomOf="@id/message_text"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.teva.respiratoryapp.activity.controls.InputField
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/consent_start_margin"
+            android:layout_marginStart="@dimen/consent_start_margin"
+            android:layout_marginTop="@dimen/consent_dob_top_margin"
+            app:date="@={viewmodel.date}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dob_label"
+            app:onStateChanged="@{(state) -> viewmodel.onValidationStateChanged(state)}"/>
+
+        <TextView
+            android:id="@+id/warning"
+            style="@style/text_field_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/consent_start_margin"
+            android:layout_marginTop="@dimen/consent_warning_top_margin"
+            android:text="@string/consent_dob_invalid_text"
+            android:visibility="@{viewmodel.warningVisible ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            style="@style/consent_terms_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/consent_start_margin"
+            android:layout_marginTop="@dimen/consent_terms_top_margin"
+            android:checked="@={viewmodel.termsAndPrivacyConditionsAccepted}"
+            app:hyperlink='@{@string/consentTerms_text}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/warning"
+            app:linkClicked="@{(id) -> viewmodel.onLinkClicked(id)}"
+            tools:text="I have read and accept the Terms of Use\nand PrivacyNotice."/>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/confirm_button"
+            style="@style/cta_button"
+            android:layout_width="@dimen/cta_width"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginTop="@dimen/consent_next_top_margin"
+            android:enabled="@{viewmodel.nextEnabled}"
+            android:imeOptions="actionNext"
+            android:onClick="@{() -> viewmodel.onConfirm()}"
+            android:text="@string/consentConfirm_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms_checkbox"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

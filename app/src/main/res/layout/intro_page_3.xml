@@ -1,0 +1,62 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.teva.respiratoryapp.activity.view.FontNames"/>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/intro_page_3" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/intro_title_text"
+                android:text="@string/intro_page_3_title"
+                android:layout_marginStart="@dimen/intro_page2_title_margin_start"
+                android:layout_marginTop="@dimen/intro_title_margin_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/desc"
+                style="@style/intro_content_text"
+                android:layout_width="@dimen/intro_content_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/intro_page2_content_margin_start"
+                android:layout_marginTop="@dimen/intro_content_margin_top"
+                android:text="@string/intro_page_3_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/page_indicator"
+                android:layout_width="@dimen/slider_dots_width"
+                android:layout_height="@dimen/slider_dots_height"
+                android:layout_marginStart="@dimen/slider_dots_start_margin"
+                android:layout_marginTop="@dimen/slider_dots_top_margin"
+                android:src="@drawable/ic_intro_page3_slider_dots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitXY"/>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</layout>

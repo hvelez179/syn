@@ -1,0 +1,95 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.setup.ProfileSetupViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true"
+        android:foregroundGravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/text_appearance_demi_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_list_message_horizontal_margin"
+            android:layout_marginEnd="@dimen/profile_list_message_horizontal_margin"
+            android:layout_marginTop="@dimen/profile_message_top_margin"
+            android:text="@string/profile_selection_header_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="27dp"/>
+
+        <TextView
+            android:id="@+id/submessage"
+            style="@style/text_appearance_xsmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_list_message_horizontal_margin"
+            android:layout_marginEnd="@dimen/profile_list_message_horizontal_margin"
+            android:layout_marginTop="@dimen/profile_submessage_top_margin"
+            android:text="@string/profile_selection_only_one_person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message"
+            tools:layout_editor_absoluteX="27dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/profile_list_margin_top"
+            android:layout_marginBottom="@dimen/profile_list_margin_top"
+            android:layout_marginStart="@dimen/profile_list_horizontal_margin"
+            android:layout_marginEnd="@dimen/profile_list_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/submessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/profile_item" />
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/nextButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/profile_cta_bottom_margin"
+            android:enabled="@{viewmodel.nextEnabled}"
+            android:onClick="@{() -> viewmodel.onNext()}"
+            android:text="@string/next_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            style="@style/text_appearance_hyperlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_hyperlink_top_margin"
+            app:hyperlink="@{@string/contact_teva_support}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextButton"
+            app:linkClicked="@{() -> viewmodel.onContactSupport()}"
+            tools:text="Contact Teva Support"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

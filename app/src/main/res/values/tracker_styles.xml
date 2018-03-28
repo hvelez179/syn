@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  tracker_styles.xml
+  app
+
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<resources>
+    <dimen name="tracker_row_height">72dp</dimen>
+    <dimen name="tracker_date_margin">24dp</dimen>
+    <dimen name="tracker_header_date_margin">16dp</dimen>
+    <dimen name="tracker_message_margin">24dp</dimen>
+
+    <dimen name="tracker_toolbar_divider_height">2dp</dimen>
+
+    <dimen name="tracker_add_button_bottom_margin">36dp</dimen>
+
+    <dimen name="tracker_single_digit_margin">10dp</dimen>
+    <dimen name="tracker_multi_digit_margin">0dp</dimen>
+    <dimen name="tracker_list_top_margin">72dp</dimen>
+    <dimen name="tracker_header_height">48dp</dimen>
+    <dimen name="tracker_help_text_size">14dp</dimen>
+    <dimen name="tracker_message_text_size">18dp</dimen>
+    <dimen name="tracker_message_top_margin">180dp</dimen>
+    <dimen name="tracker_connected_inhalers_header_margin">18dp</dimen>
+
+    <dimen name="tracker_footer_height">33dp</dimen>
+    <dimen name="tracker_footer_padding">15.4dp</dimen>
+
+    <dimen name="tracker_chevron_width">10dp</dimen>
+    <dimen name="tracker_chevron_height">18dp</dimen>
+    <dimen name="tracker_chevron_margin">20dp</dimen>
+    
+    <dimen name="tracker_help_text_container_width">288dp</dimen>
+    <dimen name="tracker_help_text_container_height">56dp</dimen>
+
+    <item name="tracker_connected_inhalers_column_position" format="float" type="dimen">0.392</item>
+    <item name="tracker_column_inhalation_events_position" format="float" type="dimen">0.666</item>
+
+    <style name="tracker_message_text" parent="text_appearance">
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="tracker_day_text" parent="text_appearance_demi_large">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+
+    <style name="tracker_date_text" parent="text_appearance">
+        <item name="android:lineSpacingMultiplier">0.85</item>
+    </style>
+
+    <style name="tracker_header_text" parent="text_appearance_small">
+        <item name="android:textColor">@color/colorLightText</item>
+        <!--<item name="android:lineSpacingMultiplier">0.85</item>-->
+    </style>
+
+    <style name="tracker_item_text" parent="text_appearance_large">
+        <!--<item name="android:lineSpacingMultiplier">1.025</item>-->
+    </style>
+
+    <style name="tracker_year_text" parent="text_appearance_demi_large">
+        <item name="android:textColor">@color/colorLightText</item>
+        <!--<item name="android:textSize">18dp</item>-->
+    </style>
+</resources>

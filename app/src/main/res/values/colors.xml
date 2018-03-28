@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorToolbar">#e4e4e4</color>
+    <color name="colorBlueText">#003766</color>
+
+    <color name="colorStatusBar">#60000000</color>
+    <color name="colorNavigationBar">#ff000000</color>
+
+    <color name="colorDashboardStatusBar">#00000000</color>
+    <color name="colorDashboardNavigationBar">#ff2ab4cf</color>
+
+    <color name="colorPopupStatusBar">#00000000</color>
+    <color name="colorPopupNavigationBar">#ff0f3840</color>
+
+    <color name="colorDivider">#20000000</color>
+
+    <color name="colorBoldText">#003766</color>
+    <color name="colorNormalText">#0d426e</color>
+    <color name="colorLightText">#3e5466</color>
+
+    <color name="colorHyperText">#404040</color>
+    <color name="colorHyperTextPressed">#0000ff</color>
+
+    <color name="colorCritical">#ee6060</color>
+
+    <color name="colorLightGray">#f5f7fa</color>
+    <color name="colorOddRow">#05092756</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="blue">#ff003766</color>
+    <color name="blue30">#b2c3d1</color>
+    <color name="blue10">#f5f7fa</color>
+    <color name="red">#f54961</color>
+    <color name="alertRed">#f54961</color>
+
+    <color name="cardBackground">#ffffff</color>
+    <color name="cardActivated">#0d426e</color>
+
+    <color name="ctaBlue">#28436d</color>
+
+    <color name="tevaGreen">#25b798</color>
+
+    <color name="backgroundGradientStart">#e4ecee</color>
+    <color name="backgroundGradientEnd">#f8f8f8</color>
+
+    <color name="shadowStart">#50000000</color>
+    <color name="shadowCenter">#40000000</color>
+    <color name="shadowEnd">#00000000</color>
+
+    <color name="listHeaderShadowStart">#30000000</color>
+    <color name="listHeaderShadowCenter">#20000000</color>
+    <color name="listHeaderShadowEnd">#00000000</color>
+
+    <color name="colorBlueDialogBackground">#d8092756</color>
+    <color name="colorWhiteDialogBackground">#d8ffffff</color>
+
+    <color name="colorScreenBackground">#ffffff</color>
+</resources>

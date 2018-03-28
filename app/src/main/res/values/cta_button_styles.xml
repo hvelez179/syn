@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <integer name="cta_anim_time">50</integer>
+
+    <dimen name="cta_width">0dp</dimen>
+    <dimen name="cta_height">40dp</dimen>
+    <dimen name="cta_shadow_padding">35dp</dimen>
+    <dimen name="cta_elevation">9dp</dimen>
+    <dimen name="cta_disabled_translationz">-12dp</dimen>
+    <dimen name="cta_pressed_translationz">3dp</dimen>
+    <dimen name="borderless_button_padding">5dp</dimen>
+
+    <dimen name="cta_button_scroll_top_margin">16dp</dimen>
+
+    <dimen name="cta_text_size">14dp</dimen>
+
+    <dimen name="cta_horizontal_margin">16dp</dimen>
+
+    <color name="cta_blue_text_color">@color/white</color>
+    <color name="cta_blue_pressed_text_color">@color/white</color>
+    <color name="cta_white_text_color">@color/blue</color>
+    <color name="cta_white_pressed_text_color">@color/blue30</color>
+
+    <style name="cta_button" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">@dimen/cta_width</item>
+        <item name="android:layout_height">@dimen/cta_height</item>
+        <item name="android:layout_marginStart">@dimen/cta_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/cta_horizontal_margin</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/cta_text_size</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:fontFamily">@font/avenir_next_demibold</item>
+        <item name="android:textColor">@color/cta_blue_text_color</item>
+        <item name="android:elevation">@dimen/cta_elevation</item>
+        <item name="android:background">@drawable/cta_button_blue</item>
+        <item name="animator">blue</item>
+        <item name="outline">capsule</item>
+    </style>
+
+    <style name="cta_button_white" parent="@style/cta_button">
+        <item name="android:background">@drawable/cta_button_white</item>
+        <item name="android:textColor">@color/cta_white_text_color</item>
+        <item name="animator">white</item>
+    </style>
+
+    <style name="borderless_button">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">@dimen/borderless_button_padding</item>
+    </style>
+
+</resources>

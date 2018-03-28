@@ -1,0 +1,174 @@
+<!--
+  tracker_fragment.xml
+  app
+
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.TrackerViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorBackground">
+
+        <include layout="@layout/dashboard_toolbar"
+                 android:id="@+id/dashboard_toolbar"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 tools:layout_editor_absoluteX="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/tracker_header_date_margin"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_connected_inhalers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/tracker_connected_inhalers_column_position" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_inhalation_events"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/tracker_column_inhalation_events_position" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tracker_toolbar_divider_height"
+            android:background="@color/colorLightGray"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+            android:id="@+id/message_shade"
+            layout="@layout/message_shade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_toolbar"
+            tools:layout_editor_absoluteX="-4dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tracker_header_text"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@+id/message_shade"
+            app:layout_constraintBottom_toTopOf="@+id/item_list"
+            app:layout_constraintStart_toEndOf="@id/column_date"
+            android:visibility="@{viewmodel.trackerStarted}"
+            android:text="@string/date_text"/>
+
+        <android.support.v4.widget.Space
+            android:id="@+id/header_spacer"
+            android:layout_width="@dimen/tracker_connected_inhalers_header_margin"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toStartOf="@id/column_connected_inhalers" />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tracker_header_text"
+            android:gravity="left"
+            app:layout_constraintTop_toBottomOf="@+id/message_shade"
+            app:layout_constraintBottom_toTopOf="@+id/item_list"
+            app:layout_constraintStart_toStartOf="@id/header_spacer"
+            android:visibility="@{viewmodel.trackerStarted}"
+            android:text="@string/trackerConnectedInhalersLabel_text"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tracker_header_text"
+            android:gravity="left"
+            app:layout_constraintTop_toBottomOf="@+id/message_shade"
+            app:layout_constraintBottom_toTopOf="@+id/item_list"
+            app:layout_constraintStart_toStartOf="@id/column_inhalation_events"
+            android:visibility="@{viewmodel.trackerStarted}"
+            android:text="@string/trackerInhalationsDetectedLabel_text"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/tracker_list_top_margin"
+            bind:layout_constraintTop_toBottomOf="@+id/message_shade"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintBottom_toTopOf="@+id/footer"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical"
+            android:visibility="@{viewmodel.trackerStarted}"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/tracker_item"
+            tools:layout_editor_absoluteX="0dp"/>
+
+        <TextView
+            android:id="@+id/not_started_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/tracker_message_text"
+            android:layout_marginTop="@dimen/tracker_message_top_margin"
+            android:layout_marginStart="@dimen/tracker_message_margin"
+            android:layout_marginEnd="@dimen/tracker_message_margin"
+            app:layout_constraintTop_toBottomOf="@+id/message_shade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{!viewmodel.trackerStarted}"
+            android:text="@string/trackerWelcome_text"/>
+
+        <com.teva.respiratoryapp.activity.controls.CtaButton
+            android:id="@+id/primaryButton"
+            style="@style/cta_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/tracker_add_button_bottom_margin"
+            android:onClick="@{() -> viewmodel.onAddInhaler()}"
+            android:text="@string/tracker_add_inhaler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="@{!viewmodel.trackerStarted}"/>
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tracker_footer_height"
+            style="@style/text_appearance_xsmall"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:paddingStart="@dimen/tracker_footer_padding"
+            android:paddingEnd="@dimen/tracker_footer_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@{viewmodel.footerText}"
+            android:visibility="@{viewmodel.trackerStarted}"
+            tools:text="Patient: Jane Smith (04/08/1987)"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

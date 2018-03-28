@@ -1,0 +1,21 @@
+<!--
+  ~
+  ~  ic_inhalation_large_grey.xml
+  ~  app
+  ~
+  ~  Copyright © 2018 Teva. All rights reserved.
+  ~
+  -->
+
+<vector android:height="24dp" android:viewportHeight="102.0"
+    android:viewportWidth="102.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd"
+        android:pathData="M51,51m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"
+        android:strokeColor="#B2C3D1" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M61.27,57.54L52.74,78.58L69.12,78.67C69.53,78.67 69.9,78.43 70.06,78.05L73.58,69.44C73.74,69.03 73.62,68.56 73.28,68.28L69.55,65.28C69.36,65.12 69.23,64.89 69.19,64.64L69.12,64.12C69.09,63.92 69,63.73 68.86,63.57L62.92,57.23C62.55,56.83 61.91,56.81 61.51,57.18C61.4,57.28 61.32,57.4 61.27,57.54Z"
+        android:strokeColor="#B2C3D1" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M32.08,25.85C35.97,24.63 38.96,23.84 41.05,23.47C43.11,23.12 45.95,22.89 49.57,22.8L49.57,22.8C50.07,22.79 50.5,23.15 50.58,23.64C53.77,43.22 55.68,53.58 56.28,54.74C56.9,55.91 57.68,56.65 58.63,56.93L50.11,78.3L40.82,78.45C40.33,78.46 39.9,78.1 39.82,77.62L31.39,26.97C31.31,26.48 31.6,26 32.08,25.85Z"
+        android:strokeColor="#B2C3D1" android:strokeWidth="2"/>
+</vector>

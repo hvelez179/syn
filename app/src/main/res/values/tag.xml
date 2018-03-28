@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="binding" type="id"/>
+    <item name="fragment_container" type="id"/>
+    <item name="item_list" type="id"/>
+    <item name="toolbar" type="id"/>
+    <item name="drag_handle" type="id"/>
+    <item name="permission_snackbar" type="id"/>
+    <item name="coordinator_layout" type="id"/>
+
+    <item name="date_validator_tag" type="id"/>
+    <item name="date_listener_tag" type="id"/>
+</resources>

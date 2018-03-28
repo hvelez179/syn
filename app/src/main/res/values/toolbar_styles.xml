@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_title_threshold">50dp</dimen>
+    <dimen name="toolbar_elevation">8dp</dimen>
+
+    <integer name="title_elevation_duration">300</integer>
+
+    <integer name="title_in_duration">300</integer>
+    <integer name="title_out_duration">300</integer>
+
+    <style name="ToolBarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/colorNormalText</item>
+    </style>
+
+    <style name="ToolBarTitleTextStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:lineSpacingExtra">@dimen/default_text_extra</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="ToolBarMenuTextStyle" parent="@android:style/TextAppearance.Widget.TextView.PopupMenu">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/dashboard_toolbar_menu_text_size</item>
+        <item name="android:letterSpacing">@dimen/dashboard_toolbar_menu_letter_spacing</item>
+        <item name="android:fontFamily">Roboto-Light</item>
+    </style>
+
+</resources>

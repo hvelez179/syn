@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<!-- walkthrough_introduction.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright (c) 2017 Teva. All rights reserved. -->
+<!-- -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/walkthrough_introduction_message1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/walkthroughWelcome_text"
+        android:layout_marginTop="@dimen/walkthrough_welcome_text_top_margin"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginEnd="@dimen/walkthrough_horizontal_margin"
+        style="@style/text_appearance_large"
+        android:fontFamily="@font/avenir_next_medium"
+        android:lineSpacingExtra="@dimen/walkthrough_welcome_text_line_spacing_extra"
+        tools:layout_editor_absoluteX="8dp" />
+    <TextView
+        android:id="@+id/walkthrough_introduction_message2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/walkthrough_welcome_text2_top_margin"
+        android:layout_marginStart="@dimen/walkthrough_horizontal_margin"
+        android:layout_marginEnd="@dimen/walkthrough_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkthrough_introduction_message1"
+        android:text="@string/walkthroughWelcome_part2_text"
+        style="@style/text_appearance"
+        tools:layout_editor_absoluteX="8dp" />
+</android.support.constraint.ConstraintLayout>

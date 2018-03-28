@@ -1,0 +1,101 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.device.CustomDeviceNameViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorBackground">
+
+        <include layout="@layout/dashboard_toolbar"
+                 android:id="@+id/dashboard_toolbar"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_appearance_label"
+            android:text="@string/inhaler_name"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/custom_name_label_top_margin" />
+
+        <com.teva.respiratoryapp.activity.controls.InputField
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/input_field_style"
+            android:text="@={viewmodel.nickname}"
+            android:textColor="@color/error_text_color"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/custom_name_edittext_top_margin"
+            app:inError="@{viewmodel.validationError != null}"
+            android:hint="@string/inhaler_name"
+            android:inputType="textCapSentences|textNoSuggestions"
+            android:imeOptions="actionNext"
+            app:layout_constraintTop_toBottomOf="@+id/label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/custom_name_instructions_top_margin"
+            style="@style/text_appearance"
+            android:text="@string/customName_instruction_text"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/error_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_text_field_error"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:layout_marginTop="@dimen/custom_name_error_top_margin"
+            android:visibility="@{viewmodel.validationError != null ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/error"
+            style="@style/text_field_error_without_drawable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_field_icon_padding"
+            android:layout_marginEnd="@dimen/standard_horizontal_margin"
+            android:visibility="@{viewmodel.validationError != null ? View.VISIBLE : View.INVISIBLE}"
+            android:text="@{viewmodel.validationError}"
+            app:layout_constraintStart_toEndOf="@+id/error_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/error_icon"
+            tools:visibility="visible"
+            tools:text="The name should only include letters and numbers" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

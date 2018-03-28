@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  popup_close_dark_selector.xml
+  app
+  
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+       android:inset="@dimen/close_button_inset">
+    <selector >
+        <item android:state_pressed="true">
+            <bitmap android:src="@drawable/ic_nav_close_dark"
+                    android:alpha="@integer/pressed_alpha"/>
+        </item>
+        <item >
+            <bitmap android:src="@drawable/ic_nav_close_dark"
+                    android:gravity="center"/>
+        </item>
+    </selector>
+</inset>

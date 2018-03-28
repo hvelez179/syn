@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="com.teva.respiratoryapp.activity.view.tracker.DailyReportFragment"/>
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.DailyReportItemViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/daily_report_item_height">
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/daily_report_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="@+id/icon"
+            app:layout_constraintBottom_toBottomOf="@+id/icon"
+            android:layout_marginEnd="@dimen/daily_report_icon_start_margin"
+            tools:layout_editor_absoluteX="10dp"
+            android:text="@{viewmodel.formattedTime}"
+            tools:text="12:00 PM"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/daily_report_inhaler_icon_width"
+            android:layout_height="@dimen/daily_report_inhaler_icon_height"
+            android:layout_marginTop="@dimen/daily_report_event_icon_top_margin"
+            android:layout_marginStart="@dimen/daily_report_event_icon_start_margin"
+            android:src="@{DailyReportFragment.inhalationEffortToImageId(viewmodel.inhalationEffort)}"
+            tools:src="@drawable/ic_inhalation_small_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/daily_report_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/daily_report_icon_end_margin"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="@+id/icon"
+            app:layout_constraintBottom_toBottomOf="@+id/icon"
+            android:text="@{viewmodel.status}"
+            tools:text="Good Inhalation"
+            tools:layout_editor_absoluteX="110dp"/>
+
+        <TextView
+            android:id="@+id/inhaler_name"
+            style="@style/daily_report_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/status"
+            app:layout_constraintTop_toBottomOf="@+id/status"
+            android:layout_marginTop="@dimen/daily_report_inhaler_name_top_margin"
+            android:text="@{viewmodel.inhalerName}"
+            tools:text="Home Inhaler"
+            tools:layout_editor_absoluteX="110dp"/>
+
+        <TextView
+            android:id="@+id/serial_number"
+            style="@style/daily_report_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/status"
+            app:layout_constraintTop_toBottomOf="@+id/inhaler_name"
+            android:layout_marginTop="@dimen/daily_report_id_top_margin"
+            android:text="@{viewmodel.serialNumber}"
+            tools:text="12345678901"
+            tools:layout_editor_absoluteX="110dp"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  tracker_item.xml
+  app
+
+  Copyright © 2017 Teva. All rights reserved
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.teva.respiratoryapp.activity.view.tracker.TrackerFragment" />
+
+        <import type="com.teva.respiratoryapp.R" />
+
+        <variable
+            name="viewmodel"
+            type="com.teva.respiratoryapp.activity.viewmodel.tracker.TrackerItemViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tracker_row_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/tracker_date_margin" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_connected_inhalers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/tracker_connected_inhalers_column_position" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/column_inhalation_events"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/tracker_column_inhalation_events_position" />
+
+        <TextView
+            android:id="@+id/DayName"
+            style="@style/tracker_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.dayName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/column_date"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/FormattedDate"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Today" />
+
+        <TextView
+            android:id="@+id/FormattedDate"
+            style="@style/tracker_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.formattedDate}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/column_date"
+            app:layout_constraintTop_toBottomOf="@+id/DayName"
+            tools:text="Feb 28" />
+
+        <TextView
+            style="@style/tracker_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{Integer.toString(viewmodel.connectedInhalers)}"
+            android:visibility="@{viewmodel.loaded}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/column_connected_inhalers"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2" />
+
+        <TextView
+            style="@style/tracker_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(viewmodel.inhalationCount)}"
+            android:visibility="@{viewmodel.inhalationCountValid}"
+            android:textColor="@{viewmodel.inhalationCountCritical ? @color/alertRed : @color/colorBoldText}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/column_inhalation_events"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textColor="@color/alertRed"
+            tools:text="13" />
+
+        <ImageView
+            android:layout_width="@dimen/tracker_chevron_width"
+            android:layout_height="@dimen/tracker_chevron_height"
+            android:src="@drawable/ic_chevron"
+            android:alpha="0.5"
+            android:layout_marginRight="@dimen/tracker_chevron_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

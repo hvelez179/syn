@@ -1,0 +1,25 @@
+<!-- -->
+<!-- ic_inhalation_small_red.xml -->
+<!-- app -->
+<!-- -->
+<!-- Copyright © 2018 Teva. All rights reserved -->
+<!-- -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="32dp"
+        android:height="32dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+    <path
+        android:pathData="M12,12m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillType="evenOdd"
+        android:strokeColor="#F54961"
+        android:fillColor="#FFF"
+        android:strokeWidth="1.5"/>
+    <path
+        android:strokeWidth="1"
+        android:pathData="M13.709,13.064a0.216,0.216 0,0 1,0.347 -0.077l1.308,1.21a0.216,0.216 0,0 1,0.066 0.122l0.015,0.082c0.01,0.057 0.042,0.108 0.09,0.14l0.793,0.55a0.216,0.216 0,0 1,0.078 0.259l-0.709,1.735a0.216,0.216 0,0 1,-0.191 0.134l-3.534,0.141 1.737,-4.296zM7.72,6.974c0.841,-0.284 1.487,-0.473 1.939,-0.566 0.447,-0.093 1.064,-0.166 1.85,-0.22a0.216,0.216 0,0 1,0.227 0.173c0.784,3.89 1.244,5.947 1.381,6.173 0.14,0.23 0.313,0.369 0.52,0.417l-1.756,4.377 -2.018,0.123a0.216,0.216 0,0 1,-0.225 -0.172L7.578,7.223a0.216,0.216 0,0 1,0.142 -0.249z"
+        android:fillType="evenOdd"
+        android:strokeColor="#F54961"
+        android:fillColor="#00000000"/>
+</vector>

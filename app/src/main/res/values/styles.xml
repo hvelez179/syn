@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_width">269dp</dimen>
+    <dimen name="button_height">47dp</dimen>
+    <dimen name="dashboard_toolbar_menu_text_size">16dp</dimen>
+    <item name="dashboard_toolbar_menu_letter_spacing" format="float" type="dimen">0.01</item>
+    <dimen name="dashboard_hyperlink_text_size">18dp</dimen>
+
+    <!-- deprecated -->
+    <style name="HyperLinkText" >
+        <item name="android:textSize">@dimen/dashboard_hyperlink_text_size</item>
+        <item name="android:textColor">@drawable/hyperlink_text_selector</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="CloseButton">
+        <item name="android:layout_width">@dimen/close_button_width</item>
+        <item name="android:layout_height">@dimen/close_button_height</item>
+        <item name="android:layout_marginEnd">@dimen/close_button_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/close_button_vertical_margin</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">17.5dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/popup_button_dark_text</item>
+        <item name="android:background">@drawable/cta_button_blue</item>
+    </style>
+
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#FFC107</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- Used for the background -->
+        <item name="android:background">#4CAF50</item>
+
+        <item name="android:windowTitleStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle">
+        <item name="android:textColor">#FFEB3B</item>
+        <item name="android:padding">?attr/dialogPreferredPadding</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">    #6495ED</item>
+    </style>
+</resources>

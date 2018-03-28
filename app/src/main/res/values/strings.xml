@@ -1,0 +1,1289 @@
+<!DOCTYPE resources [<!ENTITY nbsp "&#160;"><!-- non-breaking space, U+00A0 -->]>
+
+<resources>
+    <!-- Add or scan an inhaler for tracking -->
+    <string name="addDevice_text">Add a personal\ninhaler</string>
+    <!-- Text for add device instructions screen to hold the inhaler properly. -->
+    <string name="addDeviceInstructionHoldInhaler_index_text">1.</string>
+    <string name="addDeviceInstructionHoldInhaler_text">Hold the inhaler behind your mobile\ndevice, so you see the inhaler\'s QR\ncode on the mobile device screen.</string>
+    <!-- Text for add device instructions screen to align the QR code properly. -->
+    <string name="addDeviceInstructionAlignInhaler_index_text">2.</string>
+    <string name="addDeviceInstructionAlignInhaler_text">Align the inhaler\'s QR code with the yellow square on the screen.</string>
+    <!-- Text for add device instructions screen to QR Code. -->
+    <string name="addDeviceInstructionQRCodeInhaler_text">QR Code</string>
+    <!-- Text for add device scan inhaler screen to hold the inhaler properly. -->
+    <string name="addDeviceScanInhalerHoldInhaler_index_text">1.</string>
+    <string name="addDeviceScanInhalerHoldInhaler_text">Hold the inhaler behind your mobile\ndevice, so you see the inhaler\'s QR\ncode on the mobile device screen.</string>
+    <!-- Text for add device scan inhaler screen to align the QR code properly. -->
+    <string name="addDeviceScanInhalerAlignInhaler_index_text">2.</string>
+    <string name="addDeviceScanInhalerAlignInhaler_text">Align the inhaler\'s QR code with the\nyellow square on the screen.</string>
+
+    <!-- Text indicating an inhaler is already connected -->
+    <string name="addDeviceDeviceExists_text">This inhaler is already\nregistered</string>
+    <!-- Title for add device instructions screen. -->
+    <string name="addDeviceInstructionTitle_text">Scanning Instructions</string>
+    <!-- Title for add device scanning screen. -->
+    <string name="addDeviceScanInhalerTitle_text">Scan Inhaler</string>
+    <!-- Title for inhaler name screen. -->
+    <string name="deviceNameViewTitle_text">Name Your Inhaler</string>
+    <!-- Title for custom device nickname screen. -->
+    <string name="addDeviceCustomNicknameTitle_text">Create A New Name</string>
+    <!-- Access manual registration -->
+    <string name="addDeviceProblemScanning_text">Trouble scanning?</string>
+    <!-- Instruction for scanning the QR code on the inhaler -->
+    <string name="addDeviceScan_text">Align the QR code with the yellow square</string>
+    <!-- Button go to QR scanner -->
+    <string name="addDeviceScanButton_text">Scan your inhaler</string>
+    <!-- Text indicating successful scanning of the QR code -->
+    <string name="addDeviceScanCompleted_text">Got it!</string>
+    <!-- Instruction to wait for the next screen -->
+    <string name="addDeviceScanWait_text">Please wait…</string>
+    <!-- Edit device page status label header -->
+    <string name="editDeviceStatus_text">Status</string>
+    <!-- Edit device page inhaler type header text -->
+    <string name="editDeviceInhalerType_text">Inhaler Type</string>
+
+    <!-- Manual Device ID entry -->
+    <string name="addDeviceId_text">Enter the ID number printed above\nthe QR code on your inhaler
+    </string>
+    <!-- Manual Device Code entry -->
+    <string name="addDeviceCode_text">Enter the authentication code exactly as\nprinted below the
+        QR code on your inhaler
+    </string>
+    <string name="addDeviceCaseSensitive_text">Code is CASE SENSITIVE and\nincludes punctuations!</string>
+    <!-- Text for the navigation bar title on the manual entry screens of the scan inhaler. -->
+    <string name="addDeviceManualEntry_text">Trouble Scanning</string>
+    <!-- Invalid serial number entered -->
+    <string name="addDeviceInvalidSerialNumber_text"><b>Incorrect ID</b></string>
+    <string name="addDeviceInvalidSerialNumberShort_text">Incorrect ID Number</string>
+    <!-- Invalid custom nickname text -->
+    <string name="addDeviceInvalidCustomNicknameInvalidCharacters_text">The name should include only letters\nand numbers</string>
+    <!-- Invalid custom nickname text -->
+    <string name="addDeviceInvalidCustomNicknameExceedsMaxLength_text">The name should be 6 characters or less</string>
+    <!-- Existing custom nickname text -->
+    <string name="addDeviceInvalidCustomNicknameAlreadyExists_text">This name already exists</string>
+    <!-- Invalid authentication code entered -->
+    <string name="addDeviceInvalidAuthenticationCode_text"><b>Incorrect authentication code</b></string>
+    <string name="addDeviceInvalidAuthenticationCodeShort_text">Incorrect Authentication Code</string>
+    <!-- Incompatible device -->
+    <string name="addDeviceIncompatibleInhaler_text">This inhaler is not compatible with this app. Contact Teva Support for more info.\n\n1-888-603-0788"</string>
+    <!-- Max inhalers reached text -->
+    <string name="deviceListMaxInhalersLabel_text">The App supports up to 5 $TradeName$s at the same time. To add a new inhaler please remove an existing empty inhaler.</string>
+
+    <!-- Invalid QR Code scanned -->
+    <string name="addDeviceInvalidQRCode_text">Invalid QR Code</string>
+    <!-- Alert that appears when trying to add an inhale while 5 active inhalers are in the list. -->
+    <string name="systemErrorMaxInhalersReachedTitle_text">The App supports up to 5 $TradeName$ inhalers at the same time</string>
+    <!-- Description of the alert when an inhaler is added while having 5 active inhalers. -->
+    <string name="systemErrorMaxInhalersReachedContent_text">To add a new personal inhaler\nplease remove an existing\nempty inhaler</string>
+    <!-- Empty inhaler list label -->
+    <string name="emptyInhalerList_text">You don\'t have any connected inhalers.\nBegin by adding an inhaler.</string>
+    <!-- Allow camera consent alert title. -->
+    <string name="consentToAccessCameraTitle_text">$AppName$ requires access to the camera</string>
+    <!-- Allow camera consent alert content. -->
+    <string name="consentToAccessCameraContent_text">To scan an inhaler, allow the App to access the camera</string>
+    <string name="cancel_text">Cancel</string>
+
+    <!-- Expired app text -->
+    <string name="appIsExpired_text">The $AppName$ is no longer available. Please call Teva.</string>
+    <!-- Text for continue button -->
+    <string name="continue_text">Continue</string>
+    <!-- Text to indicate the date -->
+    <string name="date_text">Date</string>
+    <!-- Navigation is complete; the Done that corresponds to a Next -->
+    <string name="done_text">Done</string>
+    <!-- Text telling user to check counter on inhaler for the number of remaining doses. -->
+    <string name="deviceStateCheckCounter_text">Check the dose counter</string>
+    <!-- Text indicating inhaler connected -->
+    <string name="deviceStateConnected_text">Connected</string>
+    <!-- Text indicating inhaler disconnected -->
+    <string name="deviceStateDisconnected_text">Last connected $Days$ days ago</string>
+    <string name="deviceStateDisconnected_one_day_text">Last connected $Days$ day ago</string>
+    <!-- Text indicating inhaler is out of range of the app/phone -->
+    <string name="deviceStateOutOfRange_text">Out of range for the last 24 hours</string>
+    <!-- Text indicating the app is searching for the inhaler -->
+    <string name="deviceStateSearching_text">Searching…</string>
+    <!-- Text indicating that tracking will start once the first dose is taken. -->
+    <string name="deviceListStartTracking_text">Tracking will start once you\ntake the first dose</string>
+
+    <!-- Access training video on using the inhaler -->
+    <string name="improveYourTechnique_text"><u>Instructions for use</u></string>
+    <!-- Text for the inhaler module -->
+    <string name="inhaler_text">My Inhalers</string>
+    <!-- The word "Name" -->
+    <string name="name_text">Name</string>
+    <!-- Move to next screen -->
+    <string name="next_text">Next</string>
+    <!-- The word "No" -->
+    <string name="no_text">No</string>
+    <!-- The word "OK" -->
+    <string name="ok_text">OK</string>
+    <!-- The word for Settings -->
+    <string name="settings_text">Settings</string>
+    <!-- The text Try Again -->
+    <string name="tryAgain_text">TRY AGAIN</string>
+
+    <!-- Text verifying the user wants to remove the inhaler -->
+    <string name="removeDeviceConfirmation_text">Are you sure you want to\nremove your $TradeName$\n(\'"%s"\') inhaler?</string>
+    <!-- Access to remove the inhaler -->
+    <string name="removeThisDevice_text"><u>Remove</u></string>
+    <!-- Text for button to scan inhaler -->
+    <string name="scanDeviceNow_text">Scan Your Inhaler</string>
+    <!-- Text for button to scan device later -->
+    <string name="scanDeviceLater_text">Scan Your Inhaler Later</string>
+    <!-- Text description in the welcome screen of the tracker tab before an inhaler has been scanned -->
+    <string name="trackerWelcome_text">You don’t have any connected inhalers. Begin by adding an inhaler.</string>
+    <!-- The weather heading -->
+    <string name="weather_text">Environment</string>
+    <!-- Text allowing the user to agree -->
+    <string name="yes_text">Yes</string>
+    <!-- Text for prompting the user to type the input -->
+    <string name="typeHere_text">Type here</string>
+    <!-- Home inhaler -->
+    <string name="homeInhaler_text">Home</string>
+    <!-- Sports inhaler -->
+    <string name="sportsInhaler_text">Sports</string>
+    <!-- Travel inhaler -->
+    <string name="travelInhaler_text">Travel</string>
+    <!-- Work inhaler -->
+    <string name="workInhaler_text">Work</string>
+    <!-- Other inhaler -->
+    <string name="otherInhaler_text">Create your own name</string>
+    <!-- Instruction for selecting inhaler name type -->
+    <string name="inhalerNameInstruction_text">Select a name for your inhaler:</string>
+
+    <!-- Menu Item text for how to use the App -->
+    <string name="menuHowToUseAppItem_text">How to Use the App</string>
+    <!-- Menu Item text for Instructions for use screen -->
+    <string name="menuInstructionsForUseItem_text">Instructions for Use</string>
+    <!-- Menu Item text for video library -->
+    <string name="menuVideoLibraryItem_text">Video Library</string>
+    <!-- Menu Item text for the about tab -->
+    <string name="menuHealthcareProgram_text">Healthcare Program</string>
+    <!-- Menu Item text for the settings tab -->
+    <string name="menuSettingsItem_text">Notification Settings</string>
+    <!-- Menu Item text for the about tab -->
+    <string name="menuAboutItem_text">About</string>
+
+    <!-- Confirmation text displayed when going to web browser to show app web site -->
+    <string name="menuConfirmWebRedirect_text">You are about to leave ProAir\nDigihaler app and directed to\nexternal Video library in\nmyproairdigihaler.com</string>
+    <!-- Label for user feeling reminder setting enable/disable option -->
+    <string name="remindersUserFeelingSetting_text">Daily Morning Self Assessment</string>
+    <!-- Label for environment reminder setting enable/disable option -->
+    <string name="remindersDailyEnvironmentalNotificationSetting_text">Daily Environmental Notification</string>
+    <!-- Title for the Reminders tab-->
+    <string name="remindersTitle_text">Notification Settings</string>
+
+    <!-- Title on the navigation bar for Instructions for use screen -->
+    <string name="menuInstructionsForUseTitle_text">Instructions for Use</string>
+    <!-- Menu Item text for web link -->
+    <string name="menuWebLinkItem_text">ProAirDigihaler.com</string>
+    <!-- Menu Item text for service center -->
+    <string name="menuServiceCenterItem_text">Teva Support</string>
+    <!-- Text on the service center screen -->
+    <string name="menuServiceCenterDescription_text">Customer Support can help you get started and answer your questions about the use of $TradeName$.</string>
+    <!-- Title on the call button on the service center screen -->
+    <string name="menuServiceCenterCall_text">Customer Support</string>
+    <!-- Title on the navigation bar for about the app -->
+    <string name="menuAboutTitle_text">About</string>
+
+    <!-- Text for Welcome -->
+    <string name="walkthroughWelcome_text">Welcome to your\npersonal ProAir\nDigihaler App</string>
+    <string name="walkthroughWelcome_part2_text">This app can be used with your\nProAir Digihaler.</string>
+    <!-- Text for Maximum Inhaler Connection for Use -->
+    <string name="walkthroughMaxInhalerConnection_text">Only use this app for your personal inhaler(s).</string>
+    <!-- Text for Inhaler Ready for Use -->
+    <string name="walkthroughReadyForUse_text">Your ProAir Digihaler is always ready for immediate use.\n\nA connection to the app is not needed for you to take your medicine.</string>
+    <!-- Text for Tracker Counter Reset -->
+    <string name="walkthroughTrackerCounterReset_text">This widget shows the number of inhalation events today.\n\nYou will receive feedback\nshortly after you inhale and close the red cap.\n\nReports are available to track your ProAir Digihaler use. Use this widget to see your reports.</string>
+    <!-- Text for Inhaler near empty -->
+    <string name="walkthroughDeviceNearEmpty_text">A red widget circle will notify you to check the dose counter of your registered inhaler(s) for a possible refill.\n\nUse the widget to manage your registered inhalers.</string>
+    <!-- Text for Environment Monitoring -->
+    <string name="walkthroughEnvironmentMonitor_text">Real time Air Quality, Weather\nand Pollen information is\navailable for your location.</string>
+    <!-- Text for Daily Self Assessment -->
+    <string name="walkthroughDailyAssessment_text">Use this icon for your Daily Self Assessment.\n\nSelect an option based on how you feel.</string>
+    <!-- Text for Teva Support Services -->
+    <string name="walkthroughTevaSupportServices_text">Customer Support is only 1 click away to answer your questions or help you get started with your ProAir Digihaler and app.</string>
+    <!-- Text for Password Protection -->
+    <string name="walkthroughPasswordProtection_text">We recommend setting a password on your mobile device to protect your personal information stored in the app.</string>
+    <!-- Text for Notification description in the walkthrough -->
+    <string name="walkthroughUserReport_text">Use this icon to generate your User Report.</string>
+    <!-- Text for Getting Started -->
+    <string name="walkthroughGetStarted_text">Let\'s get started!</string>
+    <!-- Text for the Next button on the walkthrough screen -->
+    <string name="walkthroughNext_text">Next</string>
+
+    <!-- Text for rescue tracker -->
+    <string name="rescueTrackerWidget_text">Inhalation\nEvents</string>
+    <!-- Text for environment widget -->
+    <string name="environmentWidget_text">Environment</string>
+    <!-- Daily User Feeling Reminder text -->
+    <string name="dailyUserFeelingReminderNotificationCenter_text">Good Morning! How do you feel today?</string>
+
+    <!-- The text for the unit of wind speed -->
+    <string name="distancePerHourUnit_text">mph</string>
+    <!-- The title for the weather card -->
+    <string name="environmentWeatherCardTitle_text">Weather</string>
+    <!-- The text to indicate the precipitation in the weather card -->
+    <string name="environmentWeatherPrecipitation_text">Precipitation:</string>
+    <!-- The text to indicate humidity in the weather card -->
+    <string name="environmentWeatherHumidity_text">Humidity:</string>
+    <!-- The text to indicate wind speed in the weather card -->
+    <string name="environmentWeatherWind_text">Wind:</string>
+
+    <!-- The text to indicate data is not available, as a dash/hyphen -->
+    <string name="blankFieldDash_text">-</string>
+    <!-- The text representing percent sign -->
+    <string name="percentSign_text">%</string>
+    <!-- The text representing a separator, as a comma -->
+    <string name="separatorComma_text">,</string>
+
+    <!-- The title for the air quality card -->
+    <string name="airQualityCard_text">Air Quality</string>
+
+    <!-- Text indicating Good air quality -->
+    <string name="airQualityGood_text">Good</string>
+    <!-- Text indicating Moderate air quality -->
+    <string name="airQualityModerate_text">Moderate</string>
+    <!-- Text indicating air quality unhealthy for sensitive groups-->
+    <string name="airQualityPoor_text">Unhealthy for sensitive</string>
+    <!-- Text indicating unhealthy air quality -->
+    <string name="airQualityUnhealthy_text">Unhealthy</string>
+    <!-- Text indicating very unhealthy air quality -->
+    <string name="airQualityVeryUnhealthy_text">Very unhealthy</string>
+    <!-- Text indicating hazardous air quality -->
+    <string name="airQualityHazardous_text">Hazardous</string>
+    <!-- Text indicating air quality is unavailable-->
+    <string name="airQualityUnknown_text">Unavailable</string>
+
+    <!-- The title for the pollen card -->
+    <string name="pollenCard_text">Pollen Count</string>
+
+    <!-- Text for Tree pollen contributor -->
+    <string name="pollenContributorTree_text">TREE</string>
+    <!-- Text for Grass pollen contributor -->
+    <string name="pollenContributorGrass_text">GRASS</string>
+    <!-- Text for Weed pollen contributor -->
+    <string name="pollenContributorWeed_text">WEED</string>
+
+    <!-- Texts for Pollen Level -->
+    <string name="pollenNone_text">None</string>
+    <string name="pollenLow_text">Low</string>
+    <string name="pollenModerate_text">Moderate</string>
+    <string name="pollenHigh_text">High</string>
+    <string name="pollenVeryHigh_text">Very High</string>
+    <string name="pollenNoData_text">No Data</string>
+
+    <!-- Texts for weather conditions -->
+    <string name="extendedWeatherCondition0_text">Unavailable</string>
+    <string name="extendedWeatherCondition400_text">Thunderstorm</string>
+    <string name="extendedWeatherCondition401_text">Light Rain with Thunder</string>
+    <string name="extendedWeatherCondition402_text">Heavy Thunderstorm</string>
+    <string name="extendedWeatherCondition422_text">Tornado</string>
+    <string name="extendedWeatherCondition429_text">Funnel Cloud</string>
+    <string name="extendedWeatherCondition470_text">Thunderstorm / Wind / Fog</string>
+    <string name="extendedWeatherCondition471_text">Light Rain with Thunder</string>
+    <string name="extendedWeatherCondition472_text">Heavy Thunderstorm/Fog</string>
+    <string name="extendedWeatherCondition480_text">Thunderstorm/Fog</string>
+    <string name="extendedWeatherCondition481_text">Light Rain with Thunder</string>
+    <string name="extendedWeatherCondition482_text">Heavy Thunderstorm/Fog</string>
+    <string name="extendedWeatherCondition490_text">Thunderstorm/Windy</string>
+    <string name="extendedWeatherCondition491_text">Light Rain with Thunder</string>
+    <string name="extendedWeatherCondition492_text">Heavy Thunderstorm/Wind</string>
+    <string name="extendedWeatherCondition1700_text">Hail</string>
+    <string name="extendedWeatherCondition1730_text">Thunder and Hail/Windy</string>
+    <string name="extendedWeatherCondition1731_text">Thunder and Small Hail</string>
+    <string name="extendedWeatherCondition1740_text">Thunder and Hail</string>
+    <string name="extendedWeatherCondition1741_text">Thunder and Small Hail</string>
+    <string name="extendedWeatherCondition1750_text">Thunder and Hail/Windy/Fog</string>
+    <string name="extendedWeatherCondition1751_text">Thunder and Small Hail/Fog</string>
+    <string name="extendedWeatherCondition1760_text">Thunder and Hail/Fog</string>
+    <string name="extendedWeatherCondition1761_text">Thunder and Small Hail/Fog</string>
+    <string name="extendedWeatherCondition1770_text">Hail/Fog</string>
+    <string name="extendedWeatherCondition1780_text">Hail/Windy/Fog</string>
+    <string name="extendedWeatherCondition1790_text">Hail/Windy</string>
+    <string name="extendedWeatherCondition500_text">Rain and Snow</string>
+    <string name="extendedWeatherCondition570_text">Rain and Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition580_text">Rain and Snow/Fog</string>
+    <string name="extendedWeatherCondition590_text">Rain and Snow/Windy</string>
+    <string name="extendedWeatherCondition600_text">Rain and Sleet</string>
+    <string name="extendedWeatherCondition610_text">Sleet and Freezing Rain</string>
+    <string name="extendedWeatherCondition640_text">Sleet/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition650_text">Rain and Sleet/Windy/Fog</string>
+    <string name="extendedWeatherCondition660_text">Sleet/Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition670_text">Rain and Sleet/Fog</string>
+    <string name="extendedWeatherCondition680_text">Sleet/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition690_text">Rain and Sleet/Windy</string>
+    <string name="extendedWeatherCondition700_text">Snow and Sleet</string>
+    <string name="extendedWeatherCondition701_text">Light Snow and Sleet</string>
+    <string name="extendedWeatherCondition705_text">Snow and Sleet/Windy</string>
+    <string name="extendedWeatherCondition706_text">Light Snow and Sleet/Windy</string>
+    <string name="extendedWeatherCondition710_text">Snow/Freezing Rain</string>
+    <string name="extendedWeatherCondition711_text">Light Snow/Freezing Rain</string>
+    <string name="extendedWeatherCondition715_text">Snow/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition716_text">Light Snow/Freezing Rain</string>
+    <string name="extendedWeatherCondition720_text">Wintry Mix</string>
+    <string name="extendedWeatherCondition725_text">Wintry Mix/Windy</string>
+    <string name="extendedWeatherCondition730_text">Thunder/Wintry Mix</string>
+    <string name="extendedWeatherCondition735_text">Thunder/Wintry Mix/Windy</string>
+    <string name="extendedWeatherCondition750_text">Snow and Sleet Fog</string>
+    <string name="extendedWeatherCondition751_text">Light Snow and Sleet/Fog</string>
+    <string name="extendedWeatherCondition755_text">Snow and Sleet/Windy/Fog</string>
+    <string name="extendedWeatherCondition756_text">Light Snow and Sleet/Fog</string>
+    <string name="extendedWeatherCondition760_text">Snow/Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition761_text">Light Snow/Freezing Rain</string>
+    <string name="extendedWeatherCondition765_text">Snow/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition766_text">Light Snow/Freezing Rain</string>
+    <string name="extendedWeatherCondition770_text">Wintry Mix/Fog</string>
+    <string name="extendedWeatherCondition775_text">Wintry Mix/Windy/Fog</string>
+    <string name="extendedWeatherCondition780_text">Thunder/Wintry Mix/Fog</string>
+    <string name="extendedWeatherCondition785_text">Thunder/Wintry Mix/Windy</string>
+    <string name="extendedWeatherCondition800_text">Freezing Drizzle</string>
+    <string name="extendedWeatherCondition801_text">Light Freezing Drizzle</string>
+    <string name="extendedWeatherCondition802_text">Heavy Freezing Drizzle</string>
+    <string name="extendedWeatherCondition810_text">Drizzle/Freezing Drizzle</string>
+    <string name="extendedWeatherCondition815_text">Drizzle/Freezing Drizzle</string>
+    <string name="extendedWeatherCondition820_text">Drizzle/Freezing Drizzle</string>
+    <string name="extendedWeatherCondition825_text">Drizzle/Freezing Drizzle</string>
+    <string name="extendedWeatherCondition870_text">Freezing Drizzle/Fog</string>
+    <string name="extendedWeatherCondition871_text">Light Freezing Drizzle/Fog</string>
+    <string name="extendedWeatherCondition872_text">Heavy Freezing Drizzle/Fog</string>
+    <string name="extendedWeatherCondition880_text">Freezing Drizzle/Windy/Fog</string>
+    <string name="extendedWeatherCondition881_text">Light Freezing Drizzle/Fog</string>
+    <string name="extendedWeatherCondition882_text">Heavy Freezing Drizzle/Fog</string>
+    <string name="extendedWeatherCondition890_text">Freezing Drizzle/Windy</string>
+    <string name="extendedWeatherCondition891_text">Light Freezing Drizzle</string>
+    <string name="extendedWeatherCondition892_text">Heavy Freezing Drizzle</string>
+    <string name="extendedWeatherCondition900_text">Drizzle</string>
+    <string name="extendedWeatherCondition901_text">Light Drizzle</string>
+    <string name="extendedWeatherCondition902_text">Heavy Drizzle</string>
+    <string name="extendedWeatherCondition910_text">Drizzle and Fog</string>
+    <string name="extendedWeatherCondition980_text">Drizzle and Fog Windy</string>
+    <string name="extendedWeatherCondition990_text">Drizzle/Windy</string>
+    <string name="extendedWeatherCondition991_text">Light Drizzle/Windy</string>
+    <string name="extendedWeatherCondition992_text">Heavy Drizzle/Windy</string>
+    <string name="extendedWeatherCondition1000_text">Freezing Rain</string>
+    <string name="extendedWeatherCondition1001_text">Light Freezing Rain</string>
+    <string name="extendedWeatherCondition1002_text">Heavy Freezing Rain</string>
+    <string name="extendedWeatherCondition1010_text">Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1040_text">Rain/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1050_text">Rain/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1060_text">Rain/Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1070_text">Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1071_text">Light Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1072_text">Heavy Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1080_text">Freezing Rain/Windy/Fog</string>
+    <string name="extendedWeatherCondition1081_text">Light Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1082_text">Heavy Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1090_text">Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1091_text">Light Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1092_text">Heavy Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1210_text">Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1211_text">Light Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1212_text">Heavy Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1215_text">Freezing Rain/Sleet/Fog</string>
+    <string name="extendedWeatherCondition1216_text">Light Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1217_text">Heavy Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1220_text">Freezing Rain/Sleet/Windy</string>
+    <string name="extendedWeatherCondition1221_text">Light Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1222_text">Heavy Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1225_text">Freezing Rain/Sleet/Windy</string>
+    <string name="extendedWeatherCondition1226_text">Light Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1227_text">Heavy Freezing Rain/Sleet</string>
+    <string name="extendedWeatherCondition1230_text">Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1231_text">Light Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1232_text">Heavy Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1235_text">Rain/Freezing Rain/Fog</string>
+    <string name="extendedWeatherCondition1236_text">Light Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1237_text">Heavy Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1240_text">Rain/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1241_text">Light Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1242_text">Heavy Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1245_text">Rain/Freezing Rain/Windy</string>
+    <string name="extendedWeatherCondition1246_text">Light Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1247_text">Heavy Rain/Freezing Rain</string>
+    <string name="extendedWeatherCondition1100_text">Rain Shower</string>
+    <string name="extendedWeatherCondition1101_text">Light Rain Shower</string>
+    <string name="extendedWeatherCondition1170_text">Rain Shower/Windy/Fog</string>
+    <string name="extendedWeatherCondition1171_text">Light Rain Shower/Windy</string>
+    <string name="extendedWeatherCondition1180_text">Rain Shower/Fog</string>
+    <string name="extendedWeatherCondition1181_text">Light Rain Shower/Fog</string>
+    <string name="extendedWeatherCondition1190_text">Rain Shower/Windy</string>
+    <string name="extendedWeatherCondition1191_text">Light Rain Shower/Windy</string>
+    <string name="extendedWeatherCondition1201_text">Light Rain</string>
+    <string name="extendedWeatherCondition1271_text">Light Rain/Windy/Fog</string>
+    <string name="extendedWeatherCondition1281_text">Light Rain/Fog</string>
+    <string name="extendedWeatherCondition1291_text">Light Rain/Windy</string>
+    <string name="extendedWeatherCondition1200_text">Rain</string>
+    <string name="extendedWeatherCondition1270_text">Rain/Windy/Fog</string>
+    <string name="extendedWeatherCondition1280_text">Rain/Fog</string>
+    <string name="extendedWeatherCondition1290_text">Rain/Windy</string>
+    <string name="extendedWeatherCondition1310_text">Snow Grains</string>
+    <string name="extendedWeatherCondition1311_text">Light Snow Grains</string>
+    <string name="extendedWeatherCondition1370_text">Snow Grains/Windy/Fog</string>
+    <string name="extendedWeatherCondition1371_text">Light Snow Grains/Windy</string>
+    <string name="extendedWeatherCondition1380_text">Snow Grains/Fog</string>
+    <string name="extendedWeatherCondition1381_text">Light Snow Grains/Fog</string>
+    <string name="extendedWeatherCondition1390_text">Snow Grains/Windy</string>
+    <string name="extendedWeatherCondition1391_text">Light Snow Grains/Windy</string>
+    <string name="extendedWeatherCondition1401_text">Light Snow Shower</string>
+    <string name="extendedWeatherCondition1471_text">Light Snow Shower/Windy</string>
+    <string name="extendedWeatherCondition1481_text">Light Snow Shower/Fog</string>
+    <string name="extendedWeatherCondition1491_text">Light Snow Shower/Windy</string>
+    <string name="extendedWeatherCondition1312_text">Heavy Snow Grains</string>
+    <string name="extendedWeatherCondition1372_text">Heavy Snow Grains/Windy</string>
+    <string name="extendedWeatherCondition1382_text">Heavy Snow Grains/Fog</string>
+    <string name="extendedWeatherCondition1392_text">Heavy Snow Grains/Windy</string>
+    <string name="extendedWeatherCondition1400_text">Snow Shower</string>
+    <string name="extendedWeatherCondition1470_text">Snow Shower/Windy/Fog</string>
+    <string name="extendedWeatherCondition1480_text">Snow Shower/Fog</string>
+    <string name="extendedWeatherCondition1490_text">Snow Shower/Windy</string>
+    <string name="extendedWeatherCondition1601_text">Light Snow</string>
+    <string name="extendedWeatherCondition1631_text">Light Snow with Thunder</string>
+    <string name="extendedWeatherCondition1641_text">Light Snow with Thunder</string>
+    <string name="extendedWeatherCondition1651_text">Light Snow with Thunder</string>
+    <string name="extendedWeatherCondition1661_text">Light Snow with Thunder</string>
+    <string name="extendedWeatherCondition1671_text">Light Snow/Fog</string>
+    <string name="extendedWeatherCondition1681_text">Light Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition1691_text">Light Snow/Windy</string>
+    <string name="extendedWeatherCondition1500_text">Blowing Snow</string>
+    <string name="extendedWeatherCondition1501_text">Drifting Snow</string>
+    <string name="extendedWeatherCondition1509_text">Blowing Snow Nearby</string>
+    <string name="extendedWeatherCondition1570_text">Blowing Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition1571_text">Drifting Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition1579_text">Blowing Snow Nearby/Windy</string>
+    <string name="extendedWeatherCondition1580_text">Blowing Snow/Fog</string>
+    <string name="extendedWeatherCondition1581_text">Drifting Snow/Fog</string>
+    <string name="extendedWeatherCondition1589_text">Blowing Snow Nearby/Fog</string>
+    <string name="extendedWeatherCondition1590_text">Blowing Snow/Windy</string>
+    <string name="extendedWeatherCondition1591_text">Drifting Snow/Windy</string>
+    <string name="extendedWeatherCondition1599_text">Blowing Snow Nearby/Windy</string>
+    <string name="extendedWeatherCondition1402_text">Heavy Snow Shower</string>
+    <string name="extendedWeatherCondition1472_text">Heavy Snow Shower/Windy</string>
+    <string name="extendedWeatherCondition1482_text">Heavy Snow Shower/Fog</string>
+    <string name="extendedWeatherCondition1492_text">Heavy Snow Shower/Windy</string>
+    <string name="extendedWeatherCondition1600_text">Snow</string>
+    <string name="extendedWeatherCondition1630_text">Snow and Thunder/Windy/Fog</string>
+    <string name="extendedWeatherCondition1640_text">Snow and Thunder</string>
+    <string name="extendedWeatherCondition1650_text">Snow and Thunder/Windy</string>
+    <string name="extendedWeatherCondition1660_text">Snow and Thunder/Fog</string>
+    <string name="extendedWeatherCondition1670_text">Snow/Fog</string>
+    <string name="extendedWeatherCondition1680_text">Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition1690_text">Snow/Windy</string>
+    <string name="extendedWeatherCondition1701_text">Small Hail</string>
+    <string name="extendedWeatherCondition1771_text">Small Hail/Fog</string>
+    <string name="extendedWeatherCondition1781_text">Small Hail/Windy/Fog</string>
+    <string name="extendedWeatherCondition1791_text">Small Hail/Windy</string>
+    <string name="extendedWeatherCondition1800_text">Sleet</string>
+    <string name="extendedWeatherCondition1801_text">Light Sleet</string>
+    <string name="extendedWeatherCondition1802_text">Heavy Sleet</string>
+    <string name="extendedWeatherCondition1810_text">Snow Pellets</string>
+    <string name="extendedWeatherCondition1811_text">Thunder and Snow Pellets</string>
+    <string name="extendedWeatherCondition1816_text">Thunder and Snow Pellets</string>
+    <string name="extendedWeatherCondition1821_text">Thunder and Snow Pellets</string>
+    <string name="extendedWeatherCondition1826_text">Thunder and Snow Pellets</string>
+    <string name="extendedWeatherCondition1830_text">Sleet and Thunder/Fog</string>
+    <string name="extendedWeatherCondition1831_text">Light Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1832_text">Heavy Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1840_text">Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1841_text">Light Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1842_text">Heavy Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1850_text">Sleet/Fog</string>
+    <string name="extendedWeatherCondition1851_text">Light Sleet/Fog</string>
+    <string name="extendedWeatherCondition1852_text">Heavy Sleet/Fog</string>
+    <string name="extendedWeatherCondition1860_text">Snow Pellets/Fog</string>
+    <string name="extendedWeatherCondition1861_text">Snow Pellets/Windy/Fog</string>
+    <string name="extendedWeatherCondition1870_text">Snow Pellets/Windy</string>
+    <string name="extendedWeatherCondition1880_text">Sleet and Thunder/Windy</string>
+    <string name="extendedWeatherCondition1881_text">Light Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1882_text">Heavy Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1885_text">Sleet and Thunder/Windy</string>
+    <string name="extendedWeatherCondition1886_text">Light Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1887_text">Heavy Sleet and Thunder</string>
+    <string name="extendedWeatherCondition1890_text">Sleet/Windy</string>
+    <string name="extendedWeatherCondition1891_text">Light Sleet/Windy</string>
+    <string name="extendedWeatherCondition1892_text">Heavy Sleet/Windy</string>
+    <string name="extendedWeatherCondition1895_text">Sleet/Windy/Fog</string>
+    <string name="extendedWeatherCondition1896_text">Light Sleet/Windy/Fog</string>
+    <string name="extendedWeatherCondition1897_text">Heavy Sleet/Windy/Fog</string>
+    <string name="extendedWeatherCondition1900_text">Widespread Dust</string>
+    <string name="extendedWeatherCondition1901_text">Low Drifting Dust</string>
+    <string name="extendedWeatherCondition1902_text">Blowing Dust</string>
+    <string name="extendedWeatherCondition1910_text">Sand</string>
+    <string name="extendedWeatherCondition1911_text">Low Drifting Sand</string>
+    <string name="extendedWeatherCondition1912_text">Blowing Sand</string>
+    <string name="extendedWeatherCondition1920_text">Sandstorm</string>
+    <string name="extendedWeatherCondition1922_text">Heavy Sandstorm</string>
+    <string name="extendedWeatherCondition1929_text">Sandstorm in the Vicinity</string>
+    <string name="extendedWeatherCondition1930_text">Volcanic Ash</string>
+    <string name="extendedWeatherCondition1931_text">Duststorm</string>
+    <string name="extendedWeatherCondition1932_text">Heavy Duststorm</string>
+    <string name="extendedWeatherCondition1939_text">Duststorm in the Vicinity</string>
+    <string name="extendedWeatherCondition1960_text">Volcanic Ash/Windy</string>
+    <string name="extendedWeatherCondition1961_text">Duststorm/Windy</string>
+    <string name="extendedWeatherCondition1962_text">Heavy Duststorm/Windy</string>
+    <string name="extendedWeatherCondition1969_text">Duststorm in the Vicinity</string>
+    <string name="extendedWeatherCondition1970_text">Sandstorm/Windy</string>
+    <string name="extendedWeatherCondition1972_text">Heavy Sandstorm/Windy</string>
+    <string name="extendedWeatherCondition1979_text">Sandstorm in the Vicinity</string>
+    <string name="extendedWeatherCondition1980_text">Sand/Windy</string>
+    <string name="extendedWeatherCondition1981_text">Low Drifting Sand/Windy</string>
+    <string name="extendedWeatherCondition1982_text">Blowing Sand/Windy</string>
+    <string name="extendedWeatherCondition1990_text">Widespread Dust/Windy</string>
+    <string name="extendedWeatherCondition1991_text">Low Drifting Dust/Windy</string>
+    <string name="extendedWeatherCondition1992_text">Blowing Dust/Windy</string>
+    <string name="extendedWeatherCondition2000_text">Fog</string>
+    <string name="extendedWeatherCondition2001_text">Patches of Fog</string>
+    <string name="extendedWeatherCondition2002_text">Mist</string>
+    <string name="extendedWeatherCondition2021_text">Shallow Fog</string>
+    <string name="extendedWeatherCondition2022_text">Partial Fog</string>
+    <string name="extendedWeatherCondition2081_text">Shallow Fog/Windy</string>
+    <string name="extendedWeatherCondition2082_text">Partial Fog/Windy</string>
+    <string name="extendedWeatherCondition2090_text">Fog/Windy</string>
+    <string name="extendedWeatherCondition2091_text">Patches of Fog/Windy</string>
+    <string name="extendedWeatherCondition2092_text">Mist/Windy</string>
+    <string name="extendedWeatherCondition2100_text">Haze</string>
+    <string name="extendedWeatherCondition2190_text">Haze/Windy</string>
+    <string name="extendedWeatherCondition2200_text">Smoke</string>
+    <string name="extendedWeatherCondition2290_text">Smoke/Windy</string>
+    <string name="extendedWeatherCondition1919_text">Blowing Sand Nearby</string>
+    <string name="extendedWeatherCondition1989_text">Blowing Sand Nearby/Windy</string>
+    <string name="extendedWeatherCondition2410_text">Blowing Spray</string>
+    <string name="extendedWeatherCondition2420_text">Sand/Dust Whirlwinds</string>
+    <string name="extendedWeatherCondition2429_text">Sand/Dust Whirls Nearby</string>
+    <string name="extendedWeatherCondition2430_text">Squalls</string>
+    <string name="extendedWeatherCondition2450_text">Squalls/Windy/Fog</string>
+    <string name="extendedWeatherCondition2460_text">Squalls/Fog</string>
+    <string name="extendedWeatherCondition2470_text">Squalls/Windy</string>
+    <string name="extendedWeatherCondition2480_text">Sand/Dust Whirlwinds/Windy</string>
+    <string name="extendedWeatherCondition2489_text">Sand/Dust Whirls Nearby</string>
+    <string name="extendedWeatherCondition2490_text">Blowing Spray/Windy</string>
+    <string name="extendedWeatherCondition2510_text">Ice Crystals</string>
+    <string name="extendedWeatherCondition2570_text">Ice Crystals/Windy/Fog</string>
+    <string name="extendedWeatherCondition2580_text">Ice Crystals/Fog</string>
+    <string name="extendedWeatherCondition2590_text">Ice Crystals/Windy</string>
+    <string name="extendedWeatherCondition2600_text">Cloudy</string>
+    <string name="extendedWeatherCondition2680_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2681_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2685_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2686_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2690_text">Cloudy/Windy</string>
+    <string name="extendedWeatherCondition4400_text">Not Available</string>
+    <string name="extendedWeatherCondition4470_text">Not Available</string>
+    <string name="extendedWeatherCondition4480_text">Not Available</string>
+    <string name="extendedWeatherCondition4490_text">Not Available</string>
+    <string name="extendedWeatherCondition2700_text">Mostly Cloudy</string>
+    <string name="extendedWeatherCondition2780_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2781_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2785_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2786_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2790_text">Mostly Cloudy/Windy</string>
+    <string name="extendedWeatherCondition2800_text">Mostly Cloudy</string>
+    <string name="extendedWeatherCondition2880_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2881_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2885_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2886_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2890_text">Mostly Cloudy/Windy</string>
+    <string name="extendedWeatherCondition2900_text">Partly Cloudy</string>
+    <string name="extendedWeatherCondition2980_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2981_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2985_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2986_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition2990_text">Partly Cloudy/Windy</string>
+    <string name="extendedWeatherCondition3000_text">Partly Cloudy</string>
+    <string name="extendedWeatherCondition3080_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3081_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3085_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3086_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3090_text">Partly Cloudy/Windy</string>
+    <string name="extendedWeatherCondition3100_text">Clear</string>
+    <string name="extendedWeatherCondition3180_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3181_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3185_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3186_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3190_text">Clear/Windy</string>
+    <string name="extendedWeatherCondition3200_text">Sunny</string>
+    <string name="extendedWeatherCondition3280_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3281_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3285_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3286_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3290_text">Sunny/Windy</string>
+    <string name="extendedWeatherCondition3300_text">Fair</string>
+    <string name="extendedWeatherCondition3380_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3381_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3385_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3386_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3390_text">Fair/Windy</string>
+    <string name="extendedWeatherCondition3400_text">Fair</string>
+    <string name="extendedWeatherCondition3480_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3481_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3485_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3486_text">Showers in the Vicinity</string>
+    <string name="extendedWeatherCondition3490_text">Fair/Windy</string>
+    <string name="extendedWeatherCondition3840_text">Thunder</string>
+    <string name="extendedWeatherCondition3849_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3870_text">Thunder/Windy/Fog</string>
+    <string name="extendedWeatherCondition3879_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3880_text">Thunder/Fog</string>
+    <string name="extendedWeatherCondition3889_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3890_text">Thunder/Windy</string>
+    <string name="extendedWeatherCondition3899_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition1102_text">Heavy Rain Shower</string>
+    <string name="extendedWeatherCondition1172_text">Heavy Rain Shower/Windy</string>
+    <string name="extendedWeatherCondition1182_text">Heavy Rain Shower/Fog</string>
+    <string name="extendedWeatherCondition1192_text">Heavy Rain Shower/Windy</string>
+    <string name="extendedWeatherCondition1202_text">Heavy Rain</string>
+    <string name="extendedWeatherCondition1272_text">Heavy Rain/Windy/Fog</string>
+    <string name="extendedWeatherCondition1282_text">Heavy Rain/Fog</string>
+    <string name="extendedWeatherCondition1292_text">Heavy Rain/Windy</string>
+    <string name="extendedWeatherCondition1602_text">Heavy Snow</string>
+    <string name="extendedWeatherCondition1632_text">Heavy Snow with Thunder</string>
+    <string name="extendedWeatherCondition1642_text">Heavy Snow with Thunder</string>
+    <string name="extendedWeatherCondition1652_text">Heavy Snow with Thunder</string>
+    <string name="extendedWeatherCondition1662_text">Heavy Snow with Thunder</string>
+    <string name="extendedWeatherCondition1672_text">Heavy Snow/Fog</string>
+    <string name="extendedWeatherCondition1682_text">Heavy Snow/Windy/Fog</string>
+    <string name="extendedWeatherCondition1692_text">Heavy Snow/Windy</string>
+    <string name="extendedWeatherCondition3540_text">Thunder</string>
+    <string name="extendedWeatherCondition3549_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3570_text">Thunder/Windy/Fog</string>
+    <string name="extendedWeatherCondition3579_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3580_text">Thunder/Fog</string>
+    <string name="extendedWeatherCondition3589_text">Thunder in the Vicinity</string>
+    <string name="extendedWeatherCondition3590_text">Thunder/Windy</string>
+    <string name="extendedWeatherCondition3599_text">Thunder in the Vicinity</string>
+
+    <!-- Wind Direction Cardinal texts -->
+    <string name="windDirectionCardinalNorth_text">N</string>
+    <string name="windDirectionCardinalNorthNorthEast_text">NNE</string>
+    <string name="windDirectionCardinalNorthEast_text">NE</string>
+    <string name="windDirectionCardinalEastNorthEast_text">ENE</string>
+    <string name="windDirectionCardinalEast_text">E</string>
+    <string name="windDirectionCardinalEastSouthEast_text">ESE</string>
+    <string name="windDirectionCardinalSouthEast_text">SE</string>
+    <string name="windDirectionCardinalSouthSouthEast_text">SSE</string>
+    <string name="windDirectionCardinalSouth_text">S</string>
+    <string name="windDirectionCardinalSouthSouthWest_text">SSW</string>
+    <string name="windDirectionCardinalSouthWest_text">SW</string>
+    <string name="windDirectionCardinalWestSouthWest_text">WSW</string>
+    <string name="windDirectionCardinalWest_text">W</string>
+    <string name="windDirectionCardinalWestNorthWest_text">WNW</string>
+    <string name="windDirectionCardinalNorthWest_text">NW</string>
+    <string name="windDirectionCardinalNorthNorthWest_text">NNW</string>
+    <string name="windDirectionCardinalCalm_text">CALM</string>
+
+    <!-- Pollutant texts -->
+    <string name="pollutantUnknown_text">Unavailable</string>
+    <string name="pollutantOzone_text">OZONE</string>
+    <string name="pollutantParticulateMatterLessThan2pt5Microns_text">PM2.5</string>
+    <string name="pollutantParticulateMatterLessThan10Microns_text">PM10</string>
+    <string name="pollutantCarbonMonoxide_text">CO</string>
+    <string name="pollutantNitrogenDioxide_text">NO2</string>
+    <string name="pollutantSulfurDioxide_text">SO2</string>
+
+    <!-- Text on the dashboard indicating that more medication is taken than recommended -->
+    <string name="dashboardOveruse_text">It appears that you have tried to use your $TradeName$ a lot today.\n\nContact your healthcare professional if you are still having symptoms or Customer Support if you have other questions\n\nTip: Take another inhalation if you need it.</string>
+    <!-- Text on the dashboard indicating that there are no inhalers scanned -->
+    <string name="dashboardNoInhalers_text">Scan your $TradeName$ to get started</string>
+    <!-- Text on the dashboard indicating that an inhaler is empty. -->
+    <string name="dashboardEmptyInhaler_text">Check the dose counter on your $TradeName$. A refill might be needed.</string>
+    <!-- Text on the dashboard conveying a neutral message. -->
+    <string name="dashboardNeutralMessage_text">Make sure to bring your inhaler(s) within range of your mobile device on a regular basis to capture your inhalation events in the app.</string>
+
+    <!-- Text on the dashboard, device list and tracker when bluetooth is disabled -->
+    <string name="enableBluetooth_text">Turn on Bluetooth to Connect Inhalers</string>
+    <!-- Text on the dashboard, device list and tracker when Location Services are disabled -->
+    <string name="enableLocationServices_text">Turn on Location Services</string>
+    <!-- Text on the dashboard, device list and tracker when device time setting is incorrect -->
+    <string name="fixDeviceTimeSetting_text">Your Phone\'s Clock Is Not Synced</string>
+    <!-- Title for alert displayed when the user disables Bluetooth while in the app -->
+    <string name="turnOnBluetoothAlertTitle_text">Please turn on Bluetooth so $AppName$ can track inhaler(s)</string>
+    <!-- Body for alert displayed when the user disables Bluetooth while in the app -->
+    <string name="turnOnBluetoothAlertBody_text">Go to your device Settings and turn on Bluetooth</string>
+
+    <!-- Text for title on the ProAir tracker view -->
+    <string name="trackerRescueTitle_text">$TradeName$ Tracker</string>
+    <!-- Text for the reporting inhalers column header on the ProAir tracker view. Please limit to 10 characters per line and 2 lines at most. -->
+    <string name="trackerConnectedInhalersLabel_text">Connected\nInhalers</string>
+    <!-- Text for the inhalations detected column header on the ProAir tracker view. Please limit to 10 characters per line and 2 lines at most. -->
+    <string name="trackerInhalationsDetectedLabel_text">Inhalation\nEvents</string>
+    <!-- Text for the coach mark -->
+    <string name="trackerCoachMark_text">Tap on any day to view the Daily Report</string>
+
+    <!-- Text for the daily dose popup -->
+    <string name="trackerTitle_text">Daily Report</string>
+    <!-- Text for the time column header on the dose information popup. Please limit to 10 characters at most -->
+    <string name="trackerTimeLabel_text">Time</string>
+    <!-- Text for the inhalation status column header on the dose information popup. Please limit to 10 characters at most -->
+    <string name="trackerStatusLabel_text">Status</string>
+
+    <!-- Text for appending to the identifier for the daily tracker screen -->
+    <string name="identifierAppend_text">ID:</string>
+    <!-- Text for appending the word "Inhaler" after the nickname in the Tracker Daily Report -->
+    <string name="inhalerAppend_text">Inhaler</string>
+    <!-- Text for good inhalation on the status column of the dose information popup. Please limit to 10 characters at most -->
+    <string name="trackerDoseStatusOk_text">Good Inhalation</string>
+    <!-- Text for no inhalation detected on the status column of the dose information popup. -->
+    <string name="trackerDoseStatusNoInhalation_text">No Inhalation</string>
+    <!-- Text for exhalation detected on the status column of the dose information popup. -->
+    <string name="trackerDoseStatusExhalation_text">Exalation</string>
+    <!-- Text for high flow error detected on the status column of the dose information popup. -->
+    <string name="trackerDoseStatusVentBlocked_text">Possible Air Vent Block</string>
+    <!-- Text for system error detected on the status column of the daily report popup -->
+    <string name="trackerDoseStatusError_text">System Error $ErrorCodes$</string>
+    <!-- Text for the activity column for a user feeling row on the dose information popup. -->
+    <string name="trackerUserFeelingActivityName_text">Self Assessment</string>
+    <!-- Text displayed at the bottom of the daily report that indicates the number of inhalations today. -->
+    <string name="trackerInhaleEventsToday_zero_text">0 inhalation events</string>
+    <string name="trackerInhaleEventsToday_one_text">1 inhalation event</string>
+    <string name="trackerInhaleEventsToday_text">$embeddedValue$ inhalation events</string>
+    <!-- Text displayed at the bottom of the daily report that indicates the number of inhalers that connected today. -->
+    <string name="trackerConnectedInhalersToday_zero_text">0 inhalers connected</string>
+    <string name="trackerConnectedInhalersToday_one_text">1 inhaler connected</string>
+    <string name="trackerConnectedInhalersToday_text">$embeddedValue$ inhalers connected</string>
+
+    <string name="dsaConfirmBody">Today you feel:</string>
+    <!-- Text for title of VAS Notification -->
+    <string name="vasTitle_text">Daily Self Assessment</string>
+    <!-- Text for instructions for the DSA notification -->
+    <string name="vasInstruction_text">Select the option that best describes how you feel today:</string>
+    <!-- Text for good symptom score. -->
+    <string name="vasGoodTitle_text">Green zone</string>
+    <!-- Text for good symptom score symptom list -->
+    <string name="vasGoodDescription_text">No more cough, wheeze, chest\ntightness or shortness of breath\nduring the day or
+        night
+    </string>
+    <string name="vasGoodDescription_part2_text">Can do usual activities</string>
+    <!-- Text for moderate symptom score -->
+    <string name="vasModerateTitle_text">Yellow zone</string>
+    <!-- Text for moderate symptom score symptom list -->
+    <string name="vasModerateDescription_text">More cough, wheeze, chest tightness\nor</string>
+    <string name="vasModerateDescription_part2_text">Increased shortness of breath or</string>
+    <string name="vasModerateDescription_part3_text">More waking at night due to respiratory symptoms or</string>
+    <string name="vasModerateDescription_part4_text">Can do some but not all usual activities</string>
+    <!-- Text for moderate symptom score -->
+    <string name="vasBadTitle_text">Red zone</string>
+    <!-- Text for good symptom score symptom list -->
+    <string name="vasBadDescription_text">Very short of breath or</string>
+    <string name="vasBadDescription_part2_text">Quick relief medicines have not helped\nor</string>
+    <string name="vasBadDescription_part3_text">Cannot do usual activities or</string>
+    <string name="vasBadDescription_part4_text">Symptoms are same or worse after\n24 hours in Yellow Zone</string>
+    <!-- Text for confirming that asthma symptom is stable -->
+    <string name="symptomFeelingGoodSet_text">You are in the green zone</string>
+    <!-- Text for confirming that asthma symptom is moderate -->
+    <string name="symptomFeelingModerateSet_text">You are in the yellow zone\nYou may want to talk to\nyour healthcare
+        professional
+    </string>
+    <!-- Text for confirming that asthma symptom is bad -->
+    <string name="symptomFeelingBadSet_text">You are in the red zone\nYou should talk to\nyour healthcare\nprofessional
+        immediately
+    </string>
+    <!-- Text for the alert indicating the VAS is already set. -->
+    <string name="vasInputAlreadySpecified_text">Daily Self-Assessment can only be used once a day. Come back tomorrow!</string>
+    <!-- Title for the alert indicating the VAS is already set. -->
+    <string name="vasInputAlreadySpecifiedTitle_text">The Daily Self Assessment\ncan be used once a day</string>
+    <!-- Text on the redo button of the VAS Input confirmation -->
+    <string name="vasRedoInput_text">Change my selection</string>
+
+    <!-- Text for title for displayed Call Center messages -->
+    <string name="callCenter_text">Teva Support</string>
+    <!-- Text to initiate the phone call on the Call Center confirmation popup -->
+    <string name="call_text">Call</string>
+
+    <!-- Title for the HCP report -->
+    <string name="hcpReportTitle_text">$TradeName$ User Report</string>
+    <!-- Text for the disclaimer on the report header -->
+    <string name="hcpReportDisclaimer_text"><b>The User Report is not intended for self diagnosing purposes,</b> but can be used to support a ProAir Digihaler usage review between patient and healthcare professionals.</string>
+
+    <string name="hcpReportDisclaimerAlternate_text">This User Report is not intended for self diagnosing\npurposes, but can be used to support ProAir Digihaler\nusage review between patient and HCP.</string>
+    <!-- Title for the daily summary of inhalation events -->
+    <string name="dailyInhalationsGraphTitle_text">Daily summary of inhalation events:</string>
+    <!-- Title for the weekly summary of inhalation events -->
+    <string name="weeklyInhalationsGraphTitle_text">Weekly summary of inhalation events:</string>
+    <!-- Label for the inhalation error legend of weekly/daily inhalation events graph -->
+    <string name="inhalationReportInhalationError_text">Possible air\nvent block</string>
+    <!-- Label for the exhalation legend of weekly/daily inhalation events graph -->
+    <string name="inhalationReportExhalation_text">Exhalation</string>
+    <!-- Label for the no inhalation legend of weekly/daily inhalation events graph -->
+    <string name="inhalationReportNoInhalation_text">No Inhalation</string>
+    <!-- Label for no inhalation details in the legend of the weekly/daily report -->
+    <string name="inhalationReportNoInhalationDetails_text">&lt;30 LPM or cap\nopen/close\nwithout inhalation</string>
+    <!-- Label for the good inhalation legend of weekly/daily inhalation events graph -->
+    <string name="inhalationReportGoodInhalation_text">Good Inhalation</string>
+    <!-- Details for good inhalation legend in the events graph -->
+    <string name="inhalationReportGoodInhalationDetails_text">&gt;45 LPM</string>
+    <!-- Details for suboptimal successful inhalation (low) -->
+    <string name="inhalationReportSuboptimalGoodInhalationDetails_text">&gt;=30 &lt;=45</string>
+    <!-- Label for y-axis of weekly/daily inhalation events graph -->
+    <string name="inhalationReportYAxisLabel_text">Number of Events</string>
+    <!-- Title for the self assessment graph  -->
+    <string name="selfAssessmentGraphTitle_text">Daily self assessment:</string>
+    <!-- Label for the green zone legend of the self assessment graph - text within <b> are displayed in bold-->
+    <string name="selfAssessmentReportGreenZone_text"><b>Green Zone:</b> Usual cough, wheeze, chest tightness or shortness of breath during\nthe day or night; Can do usual activities</string>
+    <!-- Label for the yellow zone legend of the self assessment graph - text within <b> are displayed in bold-->
+    <string name="selfAssessmentReportYellowZone_text"><b>Yellow Zone:</b> More cough, wheeze, chest tightness or increased shortness of\nbreath or more waking at night due to respiratory symptoms or can do some but\nnot all usual activities</string>
+    <!-- Label for the red zone legend of the self assessment graph - text within <b> are displayed in bold-->
+    <string name="selfAssessmentReportRedZone_text"><b>Red Zone:</b> Very short of breath or Quick Relief medicines have not helped or\ncannot do usual activities or symptoms are same or worse after 24 hours in Yellow</string>
+
+    <!-- Dialog Message displayed when the user report contains no data -->
+    <string name="userReportNoData_text">You don’t have any connected inhalers. Begin by adding an inhaler.</string>
+    <!-- Title for the userReportNoData dialog message -->
+    <string name="userReportNoDataTitle_text">User Report</string>
+
+    <!-- Label used in the daily and weekly inhalation legend. -->
+    <string name="inhalationLegendLPMDefinition_text">LPM = liters per minute</string>
+
+    <!-- Notification after each inhale when device is near empty. -->
+    <string name="deviceNearEmpty_text">
+        Check the dose counter on your $TradeName$. A refill might be needed
+    </string>
+    <!-- Notification after each inhale when user exceeds maximum number of inhales per day. -->
+    <string name="medicationOveruse_header_text">
+        It appears that you have tried to use your $TradeName$ a lot today
+    </string>
+    <string name="medicationOveruse_body_text">
+        Contact your healthcare professional if you are still having symptoms or Customer Support if you have other questions.
+    </string>
+    <!-- Notification after 7 days of non-use to tell user to create own User Report. -->
+    <string name="engagementBoosterCreateUserReport_text">
+        Create your own User Report and bring it to your next doctor visit.
+    </string>
+    <!-- Notification after 7 days of non-use to tell user to do daily self assessment. -->
+    <string name="engagementBoosterDailySelfAssessmentTool_text">
+        You can use the Daily Self Assessment tool to help you track your respiratory symptoms over time.
+    </string>
+    <!-- Notification after 7 days of non-use to tell user that environment data is available. -->
+    <string name="engagementBoosterEnvironment_text">
+        Real time Air Quality, Weather\nand Pollen information is\navailable for your location.
+    </string>
+    <!-- Notification after 7 days of non-use to tell user to bring inhaler withing range. -->
+    <string name="engagementBoosterTracking_text">
+        Enable Bluetooth and make sure to bring your inhaler(s) within range of your mobile device on a regular basis
+        to capture your inhalation events in the App.
+    </string>
+
+    <!-- Notification appears after first dose is taken and cap is closed -->
+    <string name="connectivityNowConnected_text">
+        $TradeName$ $Name$ is now connected\n\nYour inhalation events will be captured in the App any time
+        your $TradeName$ is connected.\n\nMake sure to bring your inhaler(s) within range of your mobile device on a
+        regular basis and enable Bluetooth.
+    </string>
+    <!-- System Alert appears after connections are made. -->
+    <string name="connectivityConnectedAgain_text">$TradeName$ (\'$Name$\') is connected.</string>
+    <!-- Notification appears when inhaler has not been in connection with the App for 7 days or more -->
+    <string name="connectivityDisconnected7DaysOrMore_text">
+        Your inhalation events will be captured in the app any time your ProAir Digihaler is connected.\n\n
+        Make sure to bring your inhaler(s) within range of your mobile device on a regular basis and enable Bluetooth.\n\n
+        Check the connection status in the My Inhaler Widget.
+    </string>
+
+    <!-- Notification that appears following an inhalation where flow rate > 45 LPM -->
+    <string name="inhalationsFeedbackGoodInhalation_text">Good Inhalation Detected</string>
+    <!-- Notification that appears following an inhalation where flow rate >30 LPM and  >= 45 LPM -->
+    <string name="inhalationsFeedbackLowInhalation_text">Tip: Always breathe in as quickly and deeply as possible.</string>
+    <!-- Notification that appears following opening and closing the cap without inhalation or when inhalation flow rate < 30 LPM -->
+    <string name="inhalationsFeedbackNoInhalation_text">No Inhalation Detected</string>
+    <string name="inhalationsFeedbackNoInhalation_part2_text">Remember to breathe in quickly and deeply. Review the instructions for
+        use.\n\nTip: Take another inhalation if you need it.
+    </string>
+    <!-- Notification that appears following an inhalation where flow rate > 200 LPM -->
+    <string name="inhalationsFeedbackHighInhalation_text">
+        Make sure to not cover the air vent when you inhale.\n\nTip: Take another
+        inhalation if you need it.
+    </string>
+    <string name="inhalationsFeedbackHighInhalation_part1_text">
+        Make sure to not cover the air vent when you inhale.</string>
+    <string name="inhalationsFeedbackHighInhalation_part2_text">
+        Tip: Take another inhalation if you need it.
+    </string>
+    <!-- Notification appears following an exhalation into the inhaler -->
+    <string name="inhalationsFeedbackExhalation_text">Exhalation Detected</string>
+    <string name="inhalationsFeedbackExhalation_part2_text">Be careful not to breathe into the inhaler. Review the instructions for
+        use.\n\nTip: Take another inhalation if you need it.
+    </string>
+    <!-- Notification appears following an error, most likely caused by blocking the air vent during an inhalation. -->
+    <string name="inhalationsFeedbackSuboptimalInhalations_text">
+        It seems you have some difficulties using $TradeName$
+    </string>
+    <string name="inhalationsFeedbackSuboptimalInhalations_part2_text">
+        Contact your healthcare professional or Customer Support for advice, and review the Instructions For Use.
+    </string>
+
+    <!-- Notification that appears following an inhalation with Bad Data -->
+    <string name="systemErrorDetected_text">
+        System Error Detected (Code $SystemErrorCode$)
+    </string>
+    <string name="systemErrorDetected_part2_text">
+        No data available. Contact Customer Support for advice.
+    </string>
+
+    <!-- Notification appears following inhaler registration to remind the user to close the red cap after each inhalation. -->
+    <string name="inhalerRegistered_text">Always close the <font color="red">red</font> cap after\neach inhalation so your inhaler\nwill be ready for you to take\nyour next inhalation and\ntrack your information</string>
+    <!-- Confirmation alert is displayed after inhaler is registered. -->
+    <string name="inhalerRegistrationConfirmation_text">Your $TradeName$ (\'%s\') inhaler is now registered</string>
+    <!-- Notification appears periodically to remind the user to check environment conditions in the app. -->
+    <string name="dailyEnvironmentalNotification_text">
+        Good Morning, Real time Air Quality, Weather and Pollen information is available for your location.
+    </string>
+    <string name="dailyEnvironmentalNotificationBody_text">
+        Good Morning, Real time Air Quality, Weather and Pollen information is available for your location.
+    </string>
+    <!-- Engagement Booster link text for creating own user report. -->
+    <string name="openUserReport_text">Open User Report</string>
+    <!-- Check box text in notification that appears following 10 consecutive inhalations with flow rate > 45LPM. -->
+    <string name="inhalationsFeedbackTurnOffGoodInhalationNotification_text">Turn off good inhalation notifications</string>
+    <!-- Button to open environment. -->
+    <string name="openEnvironment_text">Open Environment</string>
+    <!-- Button text to open the daily self assessment tool. -->
+    <string name="openDailySelfAssessmentTool_text">Open Daily Self Assessment</string>
+    <!-- Link text to dismiss a popup. -->
+    <string name="dismiss_text">Later</string>
+    <!-- Link to open My Inhalers. -->
+    <string name="openMyInhalers_text">Manage your registered inhalers</string>
+
+    <!-- Link to Terms of Use. -->
+    <string name="termsOfUseLink_text">Terms of Use</string>
+    <!-- Link to Privacy Notice. -->
+    <string name="privacyNoticeLink_text">Privacy Notice</string>
+    <!-- Link to Notice of Third Party Licenses -->
+    <string name="licensesLink_text">Licenses</string>
+
+    <!-- Welcome message on consent screen. -->
+    <string name="consentWelcomeText_text">Welcome,</string>
+
+    <!-- Invalid date warning message -->
+    <string name="consent_dob_invalid_text">Invalid Date of Birth</string>
+
+    <!-- Consent confirm button text -->
+    <string name="consentConfirm_text">Next</string>
+
+    <!-- Date of Birth label -->
+    <string name="dob_text">Date of Birth</string>
+
+    <!-- Terms consent text -->
+    <string name="consentTerms_text">I have read and accept the #1Terms&nbsp;of&nbsp;Use#\nand #2Privacy&nbsp;Notice#.</string>
+
+    <!-- Message displayed if the user does not confirm the consent items. -->
+    <string name="consentMessage_text">You must confirm the following before\nyou start using $TradeName$</string>
+
+    <!-- App version label -->
+    <string name="appVersion_text">App Version:</string>
+    <!-- App release date label -->
+    <string name="releaseDate_text">Release Date:</string>
+    <!-- Copyright label -->
+    <string name="copyright_text">Copyright: \u00A92017 Teva Pharmaceutical\nIndustries Ltd.</string>
+    <!-- Learn more label on about screen -->
+    <string name="learnMore_text">To learn more please see</string>
+
+
+    <!-- Android specific strings -->
+    <!-- Text for the inhalation error feedback message -->
+    <string name="inhalation_error_feedback_text">
+        Possible Air Vent Block
+    </string>
+    <!-- The title of the dialog displayed for choosing the app to share user report -->
+    <string name="user_report_share_dialog_title_text">Share Report</string>
+    <!-- The bullet for each of the daily self assessment zones -->
+    <string name="dsa_zone_bullet_text">\u2022</string>
+    <!-- The app name -->
+    <string name="app_name">ProAir Digihaler App</string>
+    <!-- The trade name -->
+    <string name="trade_name_text">ProAir Digihaler</string>
+    <!-- The trade name split into multiple lines -->
+    <string name="trade_name_multiline_text">ProAir\nDigihaler</string>
+
+    <!-- instructions for choosing a custom inhaler name -->
+    <string name="customName_instruction_text">Choose a name with maximum 6 characters (A-Z, a-z, 0-9)</string>
+
+    <!-- The title of the menu in the tracker -->
+    <string name="trackerMenu_title_text">Show Report</string>
+
+    <!-- The short name for the week days to display in the tracker -->
+    <string name="tracker_Day_Sunday_text">Sun</string>
+    <string name="tracker_Day_Monday_text">Mon</string>
+    <string name="tracker_Day_Tuesday_text">Tue</string>
+    <string name="tracker_Day_Wednesday_text">Wed</string>
+    <string name="tracker_Day_Thursday_text">Thu</string>
+    <string name="tracker_Day_Friday_text">Fri</string>
+    <string name="tracker_Day_Saturday_text">Sat</string>
+
+    <!-- format strings for date display -->
+    <string name="short_month_day_format_text">LLL d</string>
+    <string name="short_month_format_text">LLL</string>
+    <string name="short_month_day_year_format_text">LLL d, yyyy</string>
+    <string name="month_day_numeric_format_text">M/d</string>
+    <string name="month_day_year_numeric_format_text">MM/dd/yyyy</string>
+    <string name="full_week_day_format_text">EEEE</string>
+
+    <!-- "Allow" text for button -->
+    <string name="allow_text">Allow</string>
+
+    <!-- The title of the app notifications displayed by android -->
+    <string name="service_notification_title_text">ProAir Digihaler</string>
+
+    <!-- The notification displayed when there are no connected devices -->
+    <string name="service_notification_message_zero_text">Enable Bluetooth and make sure to bring your inhaler(s) within
+        range of your mobile device on a regular basis to capture your inhalation events in the App
+    </string>
+    <!-- The notification displayed when there is 1 connected device -->
+    <string name="service_notification_message_one_text">1 inhaler connected</string>
+    <!-- The notification displaying the number of connected devices -->
+    <string name="service_notification_message_many_text">%d inhalers connected</string>
+
+    <!-- The text showing the time for the self assessment reminder -->
+    <string name="notification_settings_self_assessment_time_text">8:00 AM</string>
+    <!-- The text showing the time for the environment reminder -->
+    <string name="notification_settings_environment_time_text">8:30 AM</string>
+
+    <!-- Text indicating that the air quality is unknown -->
+    <string name="environment_air_quality_unknown_text">UNKNOWN</string>
+
+    <!-- Text for air quality values -->
+    <string name="environment_air_quality_50_text">50</string>
+    <string name="environment_air_quality_100_text">100</string>
+    <string name="environment_air_quality_150_text">150</string>
+    <string name="environment_air_quality_200_text">200</string>
+    <string name="environment_air_quality_300_text">300</string>
+    <string name="environment_air_quality_500_text">500</string>
+
+    <!-- Text for air quality source -->
+    <string name="environment_air_quality_source">Source: </string>
+
+    <!-- The symbol for degree in temperature -->
+    <string name="environment_screen_degree_symbol_text">\u00B0</string>
+
+    <!-- The comma space separator between system error codes -->
+    <string name="commaSpace_text">, </string>
+
+    <!-- The location rationale displayed to the user describing the need for enabling location services -->
+    <string name="location_rationale_text">Allow $AppName$ to access your device\'s location to connect your inhaler to the app and to enable the real time Air Quality, Weather, and Pollen information in your (US) location</string>
+
+    <!-- The title of the printable user report -->
+    <string name="user_report_printable_title_text">$TradeName$\nUser Report</string>
+
+    <!-- The description for Daily self assessment green zone in the printable report. <font> is used for specifying text color -->
+    <string name="user_report_printable_dsa_green_description_text"><font color="#58595B">Green Zone:</font> <font color="#848484">Usual cough, wheeze, chest tightness or shortness of breath\nduring the day or night; Can do usual activities</font></string>
+    <!-- The description for Daily self assessment yellow zone in the printable report. <font> is used for specifying text color -->
+    <string name="user_report_printable_dsa_yellow_description_text"><font color="#58595B">Yellow Zone:</font> <font color="#848484">More cough, wheeze, chest tightness or increased shortness\nof breath or more waking at night due to respiratory symptoms or can do\nsome but not all usual activities</font></string>
+    <!-- The description for Daily self assessment red zone in the printable report. <font> is used for specifying text color -->
+    <string name="user_report_printable_dsa_red_description_text"><font color="#58595B">Red Zone:</font> <font color="#848484">Very short of breath or Quick Relief medicines have not helped\nor cannot do usual activities or symptoms are same or worse after\n24 hours in Yellow</font></string>
+
+    <!-- The title of the 1st value proposition page -->
+    <string name="intro_page_1_title">Your ProAir Digihaler&#174;</string>
+
+    <!-- The content text of the 1st value proposition page -->
+    <string name="intro_page_1_content">Your ProAir Digihaler&#174; allows you to take a more active role in controlling your asthma, while allowing better communication with your doctor.</string>
+
+    <!-- The title of the 1st value proposition page -->
+    <string name="intro_page_2_title">Your Health</string>
+
+
+    <!-- The content text of the 1st value proposition page -->
+    <string name="intro_page_2_content">This app automatically tracks your medication usage and inhalation technique, environment, and daily self-assessment, creating a comprehensive view of your asthma.</string>
+
+    <!-- The title of the 1st value proposition page -->
+    <string name="intro_page_3_title">Your Control</string>
+
+    <!-- The content text of the 1st value proposition page -->
+    <string name="intro_page_3_content">When it’s time for your next doctor’s appointment, this information can be used by you and your doctor to develop a personalized plan for managing your asthma.</string>
+
+    <!-- The text of the button at the bottom of the Intro screen. -->
+    <string name="intro_lets_go">Let\'s Get Started</string>
+
+    <!-- The hint text for the month/day/year date format. -->
+    <string name="date_month_day_year_hint">mm / dd / yyyy</string>
+
+    <!-- The hint text for the day/month/year date format. -->
+    <string name="date_day_month_year_hint">mm / dd / yyyy</string>
+
+    <!-- Too young to consent title -->
+    <string name="consent_age_alert_title">Too Young</string>
+
+    <!-- Dependent is too old to be a dependent -->
+    <string name="dependentTooOldErrorTitle_text">Too Old</string>
+
+    <!-- Too young to use the app alert message -->
+    <string name="dependent_age_too_young_to_use">Unfortunately, your dependent is too young to use the ProAir Digihaler App.\n\nIf you have questions, contact Teva Support.</string>
+
+    <!-- Too old to use the app alert message -->
+    <string name="dependentTooOldErrorMessage_text">Unfortunately, your dependent is too old to use the ProAir Digihaler App.\n\nIf you have questions, contact Teva Support.</string>
+
+    <!-- Error message displayed if the user tries to add a profile with a first name and last name that already exist. -->
+    <string name="dependentAlreadyExistsTitle_text">Already exists</string>
+    <string name="dependentAlreadyExistsMessage_text">A profile with this name and birth date already exists.</string>
+
+    <!-- Login Failed title -->
+    <string name="cloudLoginFailedTitle_text">Login Failed</string>
+
+    <!-- Login Failed message -->
+    <string name="cloudLoginFailed_text">We were unable to log you in at this time.\n\nPlease contact Customer Support for assistance, or try again later.</string>
+
+    <!-- Login Failed Incorrect account message -->
+    <string name="cloudLoginIncorrectAccount_text">Your account information is incorrect. Please log in with the account you originally registered with your device.\n\nPlease contact Customer Support for assistance.</string>
+
+    <!-- Profile Setup Failed title -->
+    <string name="profile_setup_failed_alert_title">Profile Setup Failed</string>
+
+    <!-- Profile Setup Failed message -->
+    <string name="profile_setup_failed_alert_message">There was an error setting the active profile.</string>
+
+    <!-- Profile Retrieval Failed title -->
+    <string name="profile_retrieval_failed_alert_title">Profile Information Unavailable</string>
+
+    <!-- Profile Retrieval Failed message -->
+    <string name="profile_retrieval_failed_alert_message">There was an error retrieving the profile information.</string>
+
+    <!-- Profile Setup Failed title -->
+    <string name="add_profile_failed_alert_title">Add dependent Failed</string>
+
+    <!-- Profile Setup Failed message -->
+    <string name="add_profile_failed_alert_message">There was an error adding the dependent.</string>
+
+    <!-- Too young to use the app alert message -->
+    <string name="consent_age_too_young_to_use">We’re sorry, but you’re too young to use the $AppName$.\n\nIf you have questions, have your parent or guardian contact Teva Support.</string>
+
+    <!-- Too young to consent alert message -->
+    <string name="consent_age_too_young_to_consent">We’re sorry, but you’re too young to register an account with the $AppName$.\n\nPlease have your parent or guardian register an account with the $AppName$ using your mobile device.</string>
+
+    <string name="contact_teva_support">Contact Customer Support</string>
+
+    <string name="i_understand_text">I UNDERSTAND</string>
+
+    <!-- The label for hte Profile Setup screen -->
+    <string name="profile_selection_header_label">Who will be using the inhaler(s) connected to this device?</string>
+
+    <string name="profile_selection_only_one_person">You can only add inhalers belonging to <b>one person</b> using this app.</string>
+
+    <!-- Text in the profiles table to add a dependent when dependents already exist. -->
+    <string name="add_dependent">Add an Account</string>
+
+    <string name="add_dependent_description">A family member or dependent</string>
+
+    <!-- Label for the add dependent first name field -->
+    <string name="dependents_first_name">Dependent\'s First Name</string>
+
+    <!-- Label for the add dependent last name field -->
+    <string name="dependents_last_name">Dependent\'s Last Name</string>
+
+    <!-- Label for the add dependent birth date field -->
+    <string name="dependents_birth_date">Dependent\'s Birth Date</string>
+
+    <!-- Label for the add dependent first name field -->
+    <string name="dependents_first_name_hint">First Name</string>
+
+    <!-- Label for the add dependent last name field -->
+    <string name="dependents_last_name_hint">Last Name</string>
+
+    <!-- Log Out hyperlink on the menu -->
+    <string name="log_out">Log Out</string>
+
+    <!-- noCloudSyncFor14Days_text Popup -->
+    <string name="noCloudSyncFor14Days_text">It has been over 14 days\nsince the last successful\nCloud synchronization.</string>
+
+
+    <string name="care_program_title">Healthcare Programs</string>
+
+    <string name="add_care_program">Add Healthcare Program</string>
+
+    <string name="leave_program_hyperlink">Leave Program</string>
+
+    <string name="leaveProgram_text">Leave Program</string>
+
+    <string name="i_consent">I Consent</string>
+
+    <string name="decline">Decline</string>
+
+    <string name="consent_to_share_data">Consent to Share Data</string>
+
+    <string name="add_program_instructions">Enter the 10-digit code provided by your healthcare program:</string>
+
+    <string name="invitation_code">Invitation Code</string>
+
+    <string name="sign_up">Sign Up</string>
+
+    <string name="apps_you_are_using">Apps you are using to share data</string>
+
+    <string name="other_apps_you_can_use">Other apps you can use to share data with this program</string>
+
+    <string name="care_programs_list_empty">It doesn\'t look like you\'re enrolled in any healthcare programs.</string>
+    <string name="add_care_program_add_clipboard">Add to the text field?</string>
+
+    <string name="add_care_program_add_clipboard_hyperlink">Add</string>
+
+    <string name="care_program_acceptance_fail_title">Program Acceptance Fail</string>
+    <string name="care_program_removal_fail_title">Program Removal Fail</string>
+    <string name="care_program_fail_message">Please contact Customer Support if you continue to experience this issue.</string>
+
+
+    <string name="confirm_decline_care_program_title">Are you absolutely sure?</string>
+    <string name="confirm_decline_care_program_message">If you decline the $ProgramName$ Program, you will not be able to join again without a new invitation from your healthcare provider.</string>
+    <string name="confirm_decline_care_program_checkbox_message">I’m sure I’d like to decline this program invitation.</string>
+    <string name="decline_program_invitation">Decline Program Invitation</string>
+
+    <string name="leave_care_program_title">Are you sure you’d like to leave this program?</string>
+    <string name="leave_care_program_message">If you leave the $ProgramName$ Program, you will not be able to join again without a new invitation from your healthcare provider.</string>
+    <string name="leave_care_program_checkbox_message">I’m sure I’d like to leave this program.</string>
+    <string name="leave_program">Leave Program</string>
+
+    <string name="loading">Loading…</string>
+
+    <string name="care_program_consent_message">You have requested to share your data with %s provided by %s (\“the Program\”).\n\nBy clicking \“Share My Data\” below, you consent to Teva sharing with the Program (i) the data collected by this app and (ii) the data collected by any of Teva\’s other connected respiratory apps that you use (whether offered now or in future).\n\nPlease contact the Program directly if you have any questions about how it plans to use your data.  You can stop sharing data with the Program at any time by leaving the Program.</string>
+
+    <string name="apiRequestFailedError_text">"DHP API request failed.</string>
+    <string name="apiRequestFailedPayloadValidationError_text">"DHP API request failed validation error.</string>
+    <string name="addCareProgramInvitationCodeError_text">"Incorrect Invitation Code</string>
+    <string name="invalidProgramNameError_text">"Invalid Program Name</string>
+    <string name="invalidProfileError_text">"Invalid Profile</string>
+    <string name="addCareProgramInvitationCodeExpired_text">"Expired Invitation Code</string>
+    <string name="addCareProgramInvitationCodeAlreadyAccepted_text">"The Invitation Code was already used</string>
+    <string name="alreadyAcceptedSimilarInvitation_text">"You have already joined this program</string>
+    <string name="invalidValueForField_text">"Failed to make request due to invalid value in request.</string>
+    <string name="missingMandatoryField_text">"Failed to make request due to missing value in request.</string>
+    <string name="addCareProgramUnknownError_text">"Unable to Retrieve Healthcare Program Details. Try again later.</string>
+
+    <string name="today">Today</string>
+
+    <string name="tracker_footer_format">Patient: $firstName$ $lastName$ ($dob$)</string>
+    <string name="tracker_footer_no_patient">Patient:</string>
+    <string name="tracker_add_inhaler">Add Personal Inhaler</string>
+
+    // Continue Sharing Data Screen
+    <string name="app_text">"App"</string>
+    <string name="and_text">"and"</string>
+    <string name="continueSharingDataTitle_text">"You're enrolled in a Healthcare program with the $AppList$."</string>
+    <string name="continueSharingDataConsent_text">"Would you like to continue sharing data with $Program$ in the $AppName$ App as well?"</string>
+    <string name="continueSharingData_text">"CONTINUE SHARING DATA"</string>
+
+    // Continue Sharing workflow leave program confirmation alert title.
+    <string name="continueSharingDataAreYouSureTitle_text">"Are you sure?"</string>
+    // Continue Sharing workflow leave program alert text.
+    <string name="continueSharingDataAreYouSureText_text">"If you decline the $Program$ Program using the $AppName$ App, you will be no longer be sharing data with the program in the $AppList$.\n\nYou will need to contact your Healthcare Provider to rejoin the program."</string>
+    // Continue Sharing workflow leave program confirmation alert checkbox text.
+    <string name="continueSharingDataAreYouSureConfirmationCheckbox_text">"I'm sure I'd like to leave this program on all apps."</string>
+    // Button text to confirm to leave program
+    <string name="continueSharingDataLeaveProgram_text">"LEAVE PROGRAM"</string>
+
+    // Message shown when dependent turns 18 in one week
+    <string name ="emancipationIn7DaysTitle_text">"Your birthday is in 1 week!"</string>
+    <string name ="emancipationIn7DaysMessage_text">"Your account was created by a parent or guardian. To continue using your $TradeName$ app, you will need to create a new account on or after your 18th birthday.\n\nAll data from your current account will be lost. Please download your data at any time."</string>
+    <string name ="emancipationIn7DaysBackgroundMessage_text">"Your account was created by a parent or guardian. To continue using your $TradeName$ app, you will need to create a new account on or after your 18th birthday.\n\nAll data from your current account will be lost. Please download your data at any time before your birthday."</string>
+
+    // Message shown when dependent turns 18 tomorrow
+    <string name ="emancipationTomorrowTitle_text">"Your birthday is tomorrow!"</string>
+    <string name ="emancipationTomorrowMessage_text">"Your account was created by a parent or guardian. To continue using your $TradeName$ app, you will need to create a new account on or after your 18th birthday.\n\nToday is the last day you can download your data, or it will be lost."</string>
+    <string name ="emancipationTomorrowBackgroundMessage_text">"Your account was created by a parent or guardian. To continue using your $TradeName$ app, you will need to create a new account on or after your 18th birthday.\n\nToday is the last day you can download your data, or it will be lost."</string>
+
+    // Message shown when dependent turns 18
+    <string name ="emancipatedTitle_text">"Your $TradeName$\naccount is no longer\navailable."</string>
+    <string name ="emancipatedMessage_text">"Your account was created by a parent or\nguardian. To continue you will need to\nreinstall the $TradeName$ app and create\na new account with your personal\ninformation.\n\nIf you have any questions, please contact customer support."</string>
+    <string name ="emancipatedBackgroundMessage_text">"Your account was created by a parent or guardian. To continue you will need to reinstall the $TradeName$ app and create a new account with your personal information.\n\nIf you have any questions, please contact customer support."</string>
+    <string name ="downloadData_text">Download Data</string>
+
+    <string name="jailbreakWarning_text">"Your device appears to be jailbroken. This may cause your data to be at risk."</string>
+
+    <string name="inhaler_name">Inhaler Name</string>
+    <string name="user_report_name_dob">$firstName$ $lastName$ ($dob$)</string>
+    <string name="patient_label">Patient:</string>
+    <string name="birthdate_label">Birthdate:</string>
+
+</resources>
