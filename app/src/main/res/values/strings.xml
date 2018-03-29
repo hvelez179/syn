@@ -109,7 +109,7 @@
     <!-- Access training video on using the inhaler -->
     <string name="improveYourTechnique_text"><u>Instructions for use</u></string>
     <!-- Text for the inhaler module -->
-    <string name="inhaler_text">My Inhalers</string>
+    <string name="inhaler_text">ProAir Digihalers</string>
     <!-- The word "Name" -->
     <string name="name_text">Name</string>
     <!-- Move to next screen -->
@@ -858,7 +858,7 @@
     </string>
     <!-- Notification after 7 days of non-use to tell user to bring inhaler withing range. -->
     <string name="engagementBoosterTracking_text">
-        Enable Bluetooth and make sure to bring your inhaler(s) within range of your mobile device on a regular basis
+        Make sure to bring your inhaler(s) within range of your mobile device on a regular basis
         to capture your inhalation events in the App.
     </string>
 

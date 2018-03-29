@@ -17,15 +17,17 @@
         android:layout_height="match_parent"
         tools:layout_width="328dp"
         tools:layout_height="270dp">
+
         <ImageView
             android:id="@+id/image"
             android:layout_width="@dimen/engagement_booster_connectivity_image_width"
             android:layout_height="@dimen/engagement_booster_connectivity_image_height"
-            android:src="@drawable/ic_engagement_booster_connectivity"
-            android:layout_marginTop="@dimen/engagement_booster_connectivity_image_top_margin"
             android:layout_marginStart="@dimen/popup_horizontal_margin"
-            bind:layout_constraintTop_toTopOf="parent"
-            bind:layout_constraintStart_toStartOf="parent"/>
+            android:layout_marginTop="@dimen/engagement_booster_connectivity_image_top_margin"
+            android:contentDescription="@string/engagementBoosterTracking_text"
+            android:src="@drawable/ic_engagement_booster_connectivity"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/body"
